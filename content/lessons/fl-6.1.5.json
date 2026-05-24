@@ -1,0 +1,25 @@
+{
+  "id": "fl-6.1.5",
+  "chapter": 6,
+  "section": "6.1",
+  "kLevel": "K1",
+  "title": "Introducing Tools in an Organisation",
+  "concept": "Introducing a test tool is a project in itself. Done well, it pays back. Done badly, it generates expensive shelf-ware.\n\n**Selection phase**:\n- Identify the problem the tool will solve (don't start with 'we need automation').\n- Survey candidate tools — short-list 3–5 based on technical fit, cost, vendor stability, community.\n- Define evaluation criteria: features, performance, integration, learning curve, total cost of ownership (licence + training + maintenance), support quality.\n- Pilot the top 2–3 on a representative real problem. Measure objectively.\n- Buy-in from sponsors and the test team.\n\n**Adoption phase**:\n- **Pilot project** — apply the tool on a small, real, low-risk project. Capture lessons.\n- **Training** — formal training plus hands-on mentoring.\n- **Coaching** — embed an expert (internal or vendor) in early projects to model good usage.\n- **Standards and guidelines** — naming, structure, abstractions, review checklist.\n- **Roll-out plan** — gradual extension to more teams/projects, with retrospectives at each step.\n- **Integration** — connect to ALM, defect tracker, CI/CD; otherwise the tool's outputs are stranded.\n\n**Sustaining**:\n- Ongoing maintenance budget, not just initial purchase.\n- Periodic review: is the tool still the best fit? Is the team using it as intended?\n- Reassess at major version upgrades or stack changes.\n\nA common failure mode: pick a tool because a senior person likes it, skip the pilot, train no-one, then declare 'automation doesn't work' when adoption falters. CTFL emphasises the disciplined adoption process.",
+  "keyPoints": [
+    "Tool introduction is a project: select (with pilots and objective criteria), adopt (training, coaching, standards), sustain (ongoing maintenance and reassessment).",
+    "Pilot on a representative real problem before committing; train people; integrate with ALM/CI/CD.",
+    "Common failure mode: pick by preference, skip pilot, skip training — leads to shelf-ware."
+  ],
+  "quiz": {
+    "question": "An organisation has chosen a new test automation tool. Which adoption activity is MOST important to perform BEFORE rolling it out to all teams?",
+    "options": [
+      "Buy as many licences as possible to lock in the price.",
+      "Pilot the tool on a small, representative real project and capture lessons learned.",
+      "Re-brand the tool with the company logo.",
+      "Disable the existing test framework so teams have no alternative."
+    ],
+    "correct": 1,
+    "explanation": "Piloting on a real but small project reveals fit, gaps, and effort before company-wide commitment. Bulk-buying licences before piloting risks shelf-ware; cosmetics and forcing adoption don't address fit or skill gaps."
+  },
+  "exercise": { "type": "none" }
+}

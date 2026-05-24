@@ -1,0 +1,25 @@
+{
+  "id": "fl-5.3.1",
+  "chapter": 5,
+  "section": "5.3",
+  "kLevel": "K1",
+  "title": "Metrics Used in Testing",
+  "concept": "**Test monitoring** collects data on test progress, product quality, and resource usage. Useful metrics fall into categories.\n\n**Test progress metrics**:\n- Number of test cases designed / planned.\n- Number of test cases executed (passed / failed / blocked / not run).\n- Test coverage achieved against plan.\n- Defects found / fixed / open.\n- Effort spent vs. effort planned.\n\n**Product quality metrics**:\n- Defect density (defects per KLOC, per function point, or per requirement).\n- Defect detection percentage (DDP) — defects found in this test level / total defects found in this and later levels.\n- Mean time to failure (MTTF) — for reliability testing.\n- Performance metrics (response time, throughput, resource usage).\n\n**Test design metrics**:\n- Coverage of requirements, code, partitions, branches.\n- Number of test cases per feature / per risk area.\n\n**Trends and rates**:\n- Defect arrival rate (new defects opened per week) — should fall over time.\n- Defect closure rate.\n- Mean time to defect resolution.\n\nMetrics are presented in dashboards updated regularly so stakeholders can spot trends (e.g., 'defects are arriving faster than they're being closed — testing is keeping up but we're not converging').",
+  "keyPoints": [
+    "Metric categories: test progress, product quality, test design, trends/rates.",
+    "Examples: defects open, coverage achieved, defect detection percentage, defect arrival rate.",
+    "Dashboards make trends visible to stakeholders so they can react."
+  ],
+  "quiz": {
+    "question": "Which metric BEST indicates how effective the current test level is at finding defects compared to later levels?",
+    "options": [
+      "Number of test cases executed.",
+      "Defect Detection Percentage (DDP) — defects found here / defects found here + later.",
+      "Effort spent on testing.",
+      "Test environment uptime."
+    ],
+    "correct": 1,
+    "explanation": "DDP directly measures defect-finding effectiveness of a test level: if a level finds 80% of defects that are eventually found, its DDP is 80%. The other metrics measure activity (cases executed, effort) or environment health, not defect-finding effectiveness."
+  },
+  "exercise": { "type": "none" }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "fl-3.2.4",
+  "chapter": 3,
+  "section": "3.2",
+  "kLevel": "K2",
+  "title": "Factors for Successful Reviews",
+  "concept": "Reviews can fail to deliver value despite ticking all the procedural boxes. CTFL lists factors that distinguish effective reviews.\n\n**Clear objectives** — every review should have a stated objective (find defects? build consensus? transfer knowledge?). The objectives shape the technique, the participants, and the success criteria.\n\n**Right people** — reviewers chosen for relevant skills and perspectives. Too few or too narrow a set misses defects.\n\n**Appropriate technique** — chosen to match the objective and the work product. A safety-critical requirements review uses inspection with checklists; a sprint code review uses informal review with a perspective focus.\n\n**Pre-review preparation** — reviewers read the work product *before* the meeting; the meeting is for discussion, not first exposure.\n\n**Manageable scope** — small enough to review thoroughly. Splitting a large work product into smaller chunks dramatically improves defect detection.\n\n**Defects, not solutions** — the review identifies defects; the author fixes them after. Trying to resolve every defect in the meeting wastes time and pulls the meeting off-track.\n\n**Author-friendly culture** — comments target the work product, not the author. Defects are normal.\n\n**Follow-up** — defects are logged, tracked, and verified as resolved. Without follow-up, reviews become theatre.",
+  "keyPoints": [
+    "Success factors: clear objectives, right people, appropriate technique, preparation, manageable scope, defect-focus, supportive culture, follow-up.",
+    "Reviewers must prepare *before* the meeting; live first-reads waste everyone's time.",
+    "The review identifies defects; the author fixes them after — don't solve every defect live."
+  ],
+  "quiz": {
+    "question": "A team holds 2-hour reviews of a 100-page design document and finds few defects. Which adjustment is MOST likely to improve effectiveness?",
+    "options": [
+      "Extend the meeting to 4 hours.",
+      "Split the document into smaller chunks and review each separately with prepared reviewers.",
+      "Skip the review and rely on dynamic testing.",
+      "Have the author present the full document at the meeting."
+    ],
+    "correct": 1,
+    "explanation": "Manageable scope is a key success factor. Splitting a large document into chunks lets reviewers prepare thoroughly and concentrate on each part — far more effective than fatiguing through 100 pages in one meeting. Skipping reviews loses early-defect-detection value; having the author present forfeits independent perspective."
+  },
+  "exercise": { "type": "none" }
+}

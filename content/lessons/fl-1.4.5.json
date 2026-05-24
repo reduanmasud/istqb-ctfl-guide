@@ -1,0 +1,25 @@
+{
+  "id": "fl-1.4.5",
+  "chapter": 1,
+  "section": "1.4",
+  "kLevel": "K1",
+  "title": "Roles in Testing",
+  "concept": "The CTFL syllabus distinguishes two main test-related roles, while recognising that one person often fills many roles in practice.\n\n**Test Management role** — responsible for the overall test effort: producing the test plan, coordinating with stakeholders, monitoring progress, reporting status, managing risks and the test schedule, securing the test environment, and overseeing test process improvement. In smaller projects this may be a test lead or even a senior developer; in larger projects it is a dedicated test manager.\n\n**Testing role** — responsible for performing the technical test activities: analysing the test basis, designing test cases, implementing tests (manual or automated), executing tests, reporting incidents, and contributing to test reports. Within this role, specialisations exist: test designer, test automation engineer, test analyst, exploratory tester, performance tester, security tester, etc.\n\nIn Agile teams, the roles may be blended: developers test their own code (unit testing), a tester embedded in the team handles deeper functional and exploratory testing, and the team collectively owns quality. The role split is logical, not necessarily organisational.\n\nIndependence — a separate role from the developer of the code — generally improves the rigor of testing because testers bring a different cognitive perspective and are less subject to confirmation bias.",
+  "keyPoints": [
+    "Two main roles: test management (planning, monitoring, reporting) and testing (analysis, design, execution).",
+    "Roles are logical: one person may fill both, especially on small or Agile teams.",
+    "Independent testing — performed by someone other than the developer — tends to find more defects due to reduced confirmation bias."
+  ],
+  "quiz": {
+    "question": "On a small Agile team of four developers and one tester, the tester also writes the sprint test report and tracks defect closures. Which roles is the tester filling?",
+    "options": [
+      "Only the testing role.",
+      "Only the test management role.",
+      "Both the testing role and (part of) the test management role.",
+      "Neither — these are developer responsibilities."
+    ],
+    "correct": 2,
+    "explanation": "Writing test reports and tracking defect closures are test management activities; designing and executing tests is the testing role. The tester is filling both roles in a blended way — common and acceptable on small Agile teams."
+  },
+  "exercise": { "type": "none" }
+}

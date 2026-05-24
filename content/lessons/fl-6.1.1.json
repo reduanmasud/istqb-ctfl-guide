@@ -1,0 +1,25 @@
+{
+  "id": "fl-6.1.1",
+  "chapter": 6,
+  "section": "6.1",
+  "kLevel": "K2",
+  "title": "Tool Support for Testing",
+  "concept": "Tools support every test activity by automating repetitive work, enforcing rigor, and producing artifacts for traceability. They don't replace skilled testers — they amplify them.\n\n**Categories of test tools** (CTFL aligned):\n- **Test management and ALM tools** — Jira, Polarion, Azure DevOps, qTest. Track requirements, test cases, executions, defects, traceability.\n- **Static testing tools** — linters, static analysers (SonarQube, ESLint, Checkstyle), code formatters, review tools.\n- **Test design tools** — pairwise/combinatorial generators (PICT, ACTS), model-based testing tools.\n- **Test data tools** — data generators, data masking, test database management.\n- **Test execution / test runner tools** — JUnit, pytest, NUnit, TestNG, Cucumber, SpecFlow.\n- **GUI / web automation** — Selenium, Cypress, Playwright, Appium (mobile).\n- **API testing** — Postman, REST Assured, Karate.\n- **Performance and load** — JMeter, Gatling, k6, LoadRunner.\n- **Security** — OWASP ZAP, Burp Suite, SAST/DAST tools.\n- **Monitoring and observability** — Datadog, New Relic, Prometheus, Grafana — increasingly part of the test ecosystem.\n- **CI/CD pipelines** — Jenkins, GitHub Actions, GitLab CI, CircleCI — orchestrate test runs.\n\nTeams typically use 5–15 tools across these categories, chosen for fit with the tech stack, the lifecycle, and the team's skills.",
+  "keyPoints": [
+    "Tools support every test activity; they amplify, not replace, skilled testers.",
+    "Categories: management/ALM, static, design, data, execution, GUI/API automation, performance, security, monitoring, CI/CD.",
+    "Teams typically use 5–15 tools across categories, chosen for fit with stack and lifecycle."
+  ],
+  "quiz": {
+    "question": "Which category of test tool is BEST for verifying that a REST API endpoint returns the correct JSON response when called with various payloads?",
+    "options": [
+      "Test management tool (e.g., Jira).",
+      "API testing tool (e.g., Postman, REST Assured).",
+      "Performance test tool (e.g., JMeter).",
+      "Static analysis tool (e.g., SonarQube)."
+    ],
+    "correct": 1,
+    "explanation": "API testing tools like Postman or REST Assured are designed for issuing HTTP requests and asserting on responses. Management tools track work; performance tools measure load behaviour; static analysers examine source code without execution."
+  },
+  "exercise": { "type": "none" }
+}

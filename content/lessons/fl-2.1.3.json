@@ -1,0 +1,25 @@
+{
+  "id": "fl-2.1.3",
+  "chapter": 2,
+  "section": "2.1",
+  "kLevel": "K1",
+  "title": "DevOps and Testing",
+  "concept": "**DevOps** is an organisational and cultural approach that unifies software development (Dev) and operations (Ops), with shared responsibility for delivering and operating software reliably and frequently. It is enabled by automation: a **CI/CD pipeline** (continuous integration / continuous delivery / continuous deployment) automatically builds, tests, packages, and deploys every code change.\n\nTesting is central to DevOps because frequent deployments are only safe with automated quality gates. Typical pipeline stages: build → unit tests → static analysis → integration tests → deploy to test environment → system/acceptance tests → deploy to staging → smoke tests → deploy to production → post-deployment checks. Each stage gates the next; a failed test blocks the change from progressing.\n\nDevOps shifts testing both **left** (earlier in the lifecycle, with unit tests, static analysis, shift-left security scanning) and **right** (in production, with monitoring, canary releases, feature flags, A/B testing, and observability). Testers in a DevOps environment focus heavily on **test automation**, **pipeline reliability**, and **production observability** rather than manual execution.",
+  "keyPoints": [
+    "DevOps unifies development and operations with automated CI/CD pipelines as the backbone.",
+    "Pipelines run automated tests as quality gates between stages; a failed gate blocks the change.",
+    "Testing shifts both left (earlier — unit, static, security) and right (in production — monitoring, canary, observability)."
+  ],
+  "quiz": {
+    "question": "In a DevOps CI/CD pipeline, what is the PRIMARY role of automated tests at each stage?",
+    "options": [
+      "To replace human testers entirely.",
+      "To act as quality gates that block faulty changes from progressing to the next stage.",
+      "To generate documentation for stakeholders.",
+      "To slow down releases for safety reasons."
+    ],
+    "correct": 1,
+    "explanation": "Automated tests in a pipeline serve as quality gates: a failure stops the change from progressing. This enables fast, safe delivery. They do not replace human testers (exploratory testing remains valuable), nor do they slow releases — they make rapid release safe."
+  },
+  "exercise": { "type": "none" }
+}

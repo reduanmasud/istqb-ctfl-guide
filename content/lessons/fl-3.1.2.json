@@ -1,0 +1,25 @@
+{
+  "id": "fl-3.1.2",
+  "chapter": 3,
+  "section": "3.1",
+  "kLevel": "K2",
+  "title": "Feedback and Review Process",
+  "concept": "The early-feedback value of reviews is large: each issue found during requirements or design review averts substantial later cost. The CTFL syllabus describes the typical feedback loop.\n\n**Authors** produce work products (requirements, designs, test cases, code). They are too close to their own work to spot all defects.\n\n**Reviewers** examine the work product with a fresh perspective, looking for defects: missing information, ambiguity, inconsistency, incorrectness, non-conformance to standards. Reviewers may include peers, domain experts, end-user representatives, and testers.\n\n**Feedback** is communicated back to the author, who then revises the work product. Multiple review iterations may be needed.\n\nReviews provide more than defect detection: they spread knowledge (reviewers learn about the work product, authors learn about reviewers' perspectives), build team alignment, identify training needs, and contribute to process improvement. In Agile teams, reviews are continuous (pull request reviews, sprint demos) rather than scheduled events.\n\nA healthy review culture requires psychological safety: reviewers comment on the work product, not the author; defects are an artifact of the process, not a personal failing. Without this culture, reviews become defensive and find fewer real defects.",
+  "keyPoints": [
+    "Reviews are bi-directional: authors get defect-detection value; reviewers gain knowledge and shared context.",
+    "Reviews build team alignment, spread knowledge, identify training needs, and improve the process.",
+    "Psychological safety is essential — comments target the work product, not the author."
+  ],
+  "quiz": {
+    "question": "Which of the following is a benefit of reviews BEYOND defect detection?",
+    "options": [
+      "They guarantee defect-free work products.",
+      "They allow the author to skip dynamic testing.",
+      "They spread knowledge across the team and build shared understanding.",
+      "They eliminate the need for static analysis tools."
+    ],
+    "correct": 2,
+    "explanation": "Knowledge sharing, team alignment, and process improvement are recognised benefits of reviews. Reviews do not guarantee defect-free work, do not replace dynamic testing, and complement (rather than eliminate) static analysis."
+  },
+  "exercise": { "type": "none" }
+}

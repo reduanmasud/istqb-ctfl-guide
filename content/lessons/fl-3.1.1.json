@@ -1,0 +1,25 @@
+{
+  "id": "fl-3.1.1",
+  "chapter": 3,
+  "section": "3.1",
+  "kLevel": "K1",
+  "title": "Static Testing Basics",
+  "concept": "**Static testing** examines work products (requirements, design, code, test cases, user manuals) without executing them. It complements dynamic testing, which exercises the running software.\n\nStatic testing comes in two forms:\n\n**Reviews** — humans examine the work product. Reviews range from informal (a colleague glances at the code) to formal (a structured inspection with assigned roles, entry and exit criteria, and metrics).\n\n**Static analysis** — tools automatically examine the work product. For code, static analysers detect type errors, unused variables, security weaknesses, complexity hotspots, and style violations. For documents, tools check spelling, references, and consistency.\n\nStatic testing finds defects directly in the work product (not failures in a running system). It can be performed *before* dynamic testing is even possible — on requirements documents, before any code exists. This makes static testing the **earliest possible defect-removal activity**.\n\nThe ROI of static testing is high because the defects it finds are localised (a vague requirement, a missing edge case, a violated coding standard) and cheap to fix. Compared to a defect that escapes to production, the same defect caught in review can be 10–100x cheaper to fix.",
+  "keyPoints": [
+    "Static testing examines work products without execution: reviews (humans) and static analysis (tools).",
+    "Static testing can be applied earlier than dynamic testing — even to requirements before any code exists.",
+    "Defects caught in static testing are dramatically cheaper to fix than defects that escape to dynamic testing or production."
+  ],
+  "quiz": {
+    "question": "Which of the following is NOT a typical activity of static testing?",
+    "options": [
+      "Reviewing a requirements document for ambiguity.",
+      "Running a static analyser on source code to detect unused variables.",
+      "Executing the application with sample inputs to observe outputs.",
+      "Inspecting test cases for completeness against acceptance criteria."
+    ],
+    "correct": 2,
+    "explanation": "Executing the application is dynamic testing — the software is run. The other three are all static: humans or tools examining work products without execution."
+  },
+  "exercise": { "type": "none" }
+}

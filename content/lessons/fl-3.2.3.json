@@ -1,0 +1,25 @@
+{
+  "id": "fl-3.2.3",
+  "chapter": 3,
+  "section": "3.2",
+  "kLevel": "K2",
+  "title": "Applying Review Techniques",
+  "concept": "Several techniques help reviewers find defects systematically, rather than just reading top-to-bottom and hoping.\n\n**Ad-hoc review** — reviewers read the work product without specific guidance. Relies on the reviewer's experience. Misses defects in unfamiliar areas.\n\n**Checklist-based review** — reviewers work through a predefined checklist of items to look for (e.g., 'Are all error conditions handled?', 'Are all units of measurement specified?'). Reduces dependence on individual experience. Checklists are tailored to the type of work product.\n\n**Scenario-based review** — reviewers walk through realistic scenarios (a typical user task, an error case, a boundary case) and verify the work product handles them. Effective for finding logical defects.\n\n**Perspective-based review** — different reviewers take different perspectives (a tester perspective: 'is this testable?'; a security perspective: 'where could an attacker exploit this?'; a user perspective: 'will the user understand this?'). Diversifies the defects found.\n\n**Role-based review** — similar to perspective-based but using user roles (admin, end user, integrator).\n\nCombining techniques is common: a checklist anchored review augmented with scenario walk-throughs and perspective-based assignment among reviewers.",
+  "keyPoints": [
+    "Techniques: ad-hoc, checklist-based, scenario-based, perspective-based, role-based.",
+    "Checklists make reviews more systematic and less experience-dependent.",
+    "Perspective-based reviews diversify findings by assigning reviewers different lenses (tester, security, user)."
+  ],
+  "quiz": {
+    "question": "A team wants to ensure that requirements reviews catch testability and security defects equally well, given that reviewers have different backgrounds. Which review technique BEST addresses this?",
+    "options": [
+      "Ad-hoc review — let reviewers find what they find.",
+      "Perspective-based review — assign reviewers distinct perspectives (tester, security, user).",
+      "Walkthrough — let the author explain everything.",
+      "Inspection — apply the most formal process."
+    ],
+    "correct": 1,
+    "explanation": "Perspective-based review explicitly assigns each reviewer a lens (tester, security, user, etc.) so the team systematically covers a broad set of quality concerns. Ad-hoc relies on luck; walkthrough is about explanation; inspection is a review type, not a technique for diversifying perspectives."
+  },
+  "exercise": { "type": "none" }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "fl-2.2.3",
+  "chapter": 2,
+  "section": "2.2",
+  "kLevel": "K2",
+  "title": "Confirmation and Regression Testing",
+  "concept": "Two complementary forms of testing are performed after every change to the software.\n\n**Confirmation testing** (also called re-testing) verifies that a defect, once reported and fixed, has indeed been fixed. The original failing test is re-run with the same inputs and expected outputs as when the defect was found. If the test now passes, the fix is confirmed. Confirmation testing is mandatory before a defect can be considered closed.\n\n**Regression testing** verifies that previously-working functionality has not been adversely affected by the change. Whenever code changes — to fix a defect, add a feature, or refactor — there is a risk that other parts of the system stop working. Regression tests are a selected subset of previously-passing tests, ideally automated, run on every change.\n\nRegression test selection is a key skill: testing *all* prior tests on every change is often too expensive. Typical strategies: **risk-based selection** (re-run tests covering the highest-risk areas), **change-based selection** (re-run tests covering modules affected by the change, using impact analysis from traceability), **smoke tests** (a quick subset that catches gross breakage), and **full regression** (everything, run nightly or weekly).\n\nIn DevOps pipelines, the regression suite is the most heavily automated testware: it gates every commit.",
+  "keyPoints": [
+    "Confirmation testing re-runs the test that originally failed to verify the defect is fixed.",
+    "Regression testing re-runs previously-passing tests to verify no regressions were introduced by a change.",
+    "Regression selection uses risk, change impact, or smoke subsets — full regression is too costly per-commit."
+  ],
+  "quiz": {
+    "question": "A developer reports that defect #1234 has been fixed. Which testing activity must be performed FIRST before closing the defect, and what additional testing is needed?",
+    "options": [
+      "Regression testing only — confirmation is the developer's responsibility.",
+      "Confirmation testing to verify the fix works, then regression testing to verify nothing else broke.",
+      "Acceptance testing to verify user needs are still met.",
+      "Static analysis to verify the fix compiles cleanly."
+    ],
+    "correct": 1,
+    "explanation": "First, confirmation testing re-runs the originally-failing test to verify the fix is effective. Then regression testing verifies the fix did not introduce new defects elsewhere. Both are testing responsibilities, not the developer's alone."
+  },
+  "exercise": { "type": "none" }
+}

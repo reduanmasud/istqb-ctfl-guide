@@ -1,0 +1,25 @@
+{
+  "id": "fl-1.1.1",
+  "chapter": 1,
+  "section": "1.1",
+  "kLevel": "K1",
+  "title": "Test Objectives",
+  "concept": "Testing is the process of evaluating a component or system, often with the intention of finding defects, but always with the broader purpose of providing information about the quality of the test object. The ISTQB syllabus identifies several typical testing objectives that may apply alone or in combination on any project.\n\nTypical objectives include: **evaluating work products** such as requirements, user stories, designs, and code; **triggering failures and finding defects**; **ensuring required coverage** of a test object; **reducing risk** of inadequate software quality (for example, undetected failures occurring in production); **verifying** that contractual, legal, or regulatory requirements are met; **validating** that the test object is fit for the user's needs; **building confidence** in the level of quality of the test object; and **complying with standards**.\n\nObjectives vary by context — they depend on the component or system being tested, the test level, the risks, the chosen SDLC, and business or regulatory factors. A stakeholder commissioning user acceptance testing emphasises validation and confidence-building; a unit test author emphasises defect-finding and coverage. Misunderstanding objectives leads to misaligned tests and wasted effort.",
+  "keyPoints": [
+    "Testing has multiple typical objectives: evaluating work products, finding defects, ensuring coverage, reducing risk, verifying compliance, validating fitness, building confidence, and complying with standards.",
+    "Objectives depend on context: component/system, test level, risks, SDLC, and business or regulatory drivers.",
+    "Verification (built right?) and validation (built the right thing?) are distinct but complementary objectives."
+  ],
+  "quiz": {
+    "question": "Which of the following BEST describes a typical objective of testing as defined in the CTFL syllabus?",
+    "options": [
+      "Removing every possible defect from the software before release.",
+      "Providing information about the quality of the test object so stakeholders can make informed decisions.",
+      "Guaranteeing the software will never fail in production.",
+      "Replacing the need for code review and other static activities."
+    ],
+    "correct": 1,
+    "explanation": "Testing provides information about quality to enable risk-based decisions. It cannot exhaustively remove all defects (testing shows the presence of defects, not their absence), cannot guarantee zero failures, and complements — does not replace — static activities."
+  },
+  "exercise": { "type": "none" }
+}

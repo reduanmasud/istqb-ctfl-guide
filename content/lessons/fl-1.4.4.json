@@ -1,0 +1,25 @@
+{
+  "id": "fl-1.4.4",
+  "chapter": 1,
+  "section": "1.4",
+  "kLevel": "K2",
+  "title": "Traceability Between Test Basis and Test Work Products",
+  "concept": "**Traceability** is the ability to identify related items, such as requirements, test conditions, test cases, test results, and defects. Good traceability supports many testing activities:\n\n**Impact analysis** — when a requirement changes, traceability identifies the test cases that must be updated or re-run.\n\n**Coverage measurement** — comparing the set of requirements to the set of test cases that exercise them shows what is and is not tested.\n\n**Audit and compliance** — regulated domains (medical, aerospace, automotive) demand documented evidence that every requirement was tested.\n\n**Defect investigation** — if a test fails, traceability quickly identifies the requirement it covers and helps prioritise the fix.\n\n**Test reporting** — traceability allows reports to be aggregated by feature, requirement, or risk.\n\nIn practice, traceability is maintained using identifiers and tooling: every requirement has an ID; each test case references the requirement IDs it covers; each defect references the failing test case. Tools (ALM, Jira with plugins, Polarion) automate the linkage.",
+  "keyPoints": [
+    "Traceability links test basis (requirements, designs) to test conditions, test cases, results, and defects.",
+    "It supports impact analysis, coverage measurement, audit, defect investigation, and meaningful reporting.",
+    "Maintained via stable IDs and ALM tooling that records the relationships between artifacts."
+  ],
+  "quiz": {
+    "question": "A regulator requests evidence that every requirement in version 2.0 was tested. Which testware property is MOST critical for satisfying this request?",
+    "options": [
+      "Test execution speed.",
+      "Traceability between requirements and test cases.",
+      "Number of automated tests.",
+      "Code coverage percentage of the AUT."
+    ],
+    "correct": 1,
+    "explanation": "Traceability is the property that lets you demonstrate, requirement-by-requirement, which test cases exercise it and what the latest results were. Execution speed, automation counts, and code coverage are useful but do not by themselves answer 'is every requirement tested?'"
+  },
+  "exercise": { "type": "none" }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "fl-5.2.3",
+  "chapter": 5,
+  "section": "5.2",
+  "kLevel": "K2",
+  "title": "Risk-Based Testing",
+  "concept": "**Risk-based testing (RBT)** allocates testing effort proportionally to risk: high-risk areas get more, deeper testing; low-risk areas get less. It is the operational realisation of the testing principle 'exhaustive testing is impossible — focus where it matters'.\n\nRBT workflow:\n\n1. **Identify risks** — workshop with developers, BAs, ops, customer reps. Use checklists, prior defect data, change history.\n2. **Assess risks** — assign likelihood and impact, compute risk level.\n3. **Prioritise** — rank by risk level. Top risks get most attention.\n4. **Mitigate** — design tests proportional to risk:\n   - **High-risk**: more techniques, broader coverage, more thorough types (performance, security, usability), independent testers, formal traceability.\n   - **Medium-risk**: standard techniques, moderate coverage.\n   - **Low-risk**: smoke tests, sample-based testing.\n5. **Track** — monitor whether mitigations are effective; reassess as project evolves.\n\nRBT shapes the test plan (more effort in high-risk areas), the test design (more tests, more variants for high-risk features), the techniques (formal coverage for high-risk; experience-based for low-risk), and the execution order (high-risk first).\n\nRBT requires stakeholder buy-in: stakeholders must accept that low-risk areas get less testing in exchange for high-risk areas getting more — and accept the residual risk that remains.",
+  "keyPoints": [
+    "RBT allocates effort by risk level: high-risk → more/deeper testing; low-risk → less/sampling.",
+    "Workflow: identify, assess, prioritise, mitigate, track.",
+    "Requires stakeholder agreement to accept residual risk in low-risk areas."
+  ],
+  "quiz": {
+    "question": "In risk-based testing, which area MOST deserves additional test effort (more techniques, broader coverage, independent testers)?",
+    "options": [
+      "A static HTML page showing the company's history.",
+      "A payment-processing module handling credit card transactions.",
+      "An internal admin tool used by two operators.",
+      "A debug-only logging utility."
+    ],
+    "correct": 1,
+    "explanation": "Payment processing has high impact (financial and reputational loss, regulatory penalties) and non-trivial likelihood of defects given its complexity — it warrants the deepest testing. The static history page, internal admin tool, and debug utility have far lower impact and warrant lighter testing."
+  },
+  "exercise": { "type": "none" }
+}

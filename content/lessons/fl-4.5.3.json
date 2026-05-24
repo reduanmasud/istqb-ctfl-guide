@@ -1,0 +1,25 @@
+{
+  "id": "fl-4.5.3",
+  "chapter": 4,
+  "section": "4.5",
+  "kLevel": "K2",
+  "title": "Value of White-Box Testing",
+  "concept": "White-box (structure-based) testing has value distinct from black-box testing.\n\n**Coverage of code paths the spec doesn't mention** — code often contains paths handling internal states, error recovery, defensive checks, or legacy logic that the spec is silent about. Black-box tests miss these; white-box exposes them.\n\n**Detection of dead code** — code that no input ever reaches is dead code. Coverage tools highlight statements never executed; investigation reveals whether they should be exercised by a missing test or whether they should be deleted.\n\n**Confidence in coverage-based metrics** — when a test plan declares 'we will achieve 90% branch coverage', a coverage tool can verify the claim. This is impossible with black-box techniques alone.\n\n**Driving test case quality** — chasing higher coverage forces the team to think about edge cases, error paths, and combinations that black-box techniques may not surface.\n\n**Limitations** — white-box does not catch missing functionality: a function that simply doesn't exist has zero statements and therefore contributes nothing to coverage. Missing functionality is caught by black-box and requirements-based techniques. The two are complementary, never substitutes.",
+  "keyPoints": [
+    "White-box catches defects in code that black-box wouldn't reveal: undocumented paths, dead code, error-handling branches.",
+    "It enables objective coverage metrics that the test plan can target.",
+    "It does NOT catch missing functionality — combine with black-box for complete coverage."
+  ],
+  "quiz": {
+    "question": "Which of the following is a defect that white-box testing is MORE likely to catch than black-box testing?",
+    "options": [
+      "A missing requirement: the spec forgot to mention a feature.",
+      "Dead code: a block that no input ever reaches.",
+      "An unfriendly user interface.",
+      "A slow response time under heavy load."
+    ],
+    "correct": 1,
+    "explanation": "Dead code is invisible to black-box testing — by definition no input reaches it, so external behaviour is unchanged. White-box coverage tools highlight statements never executed, exposing dead code. Missing requirements, UI usability, and load performance are detected by other methods (review, usability testing, performance testing)."
+  },
+  "exercise": { "type": "none" }
+}

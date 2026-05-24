@@ -1,10 +1,13 @@
 "use client";
+import { useEffect, useState } from "react";
+import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { ChapterCard } from "@/components/dashboard/ChapterCard";
 import { chapters, getAllLoIds } from "@/lib/content";
 import { useProgress } from "@/hooks/useProgress";
-import Link from "next/link";
-import { BookOpen, Target, Trophy, Zap } from "lucide-react";
+import { isGuideComplete, bestExamSetScore } from "@/lib/progress";
+import { CT_AI_GUIDE_URL, CTFL_TOTAL_LOS } from "@/lib/config";
+import { BookOpen, Target, Trophy, Zap, GraduationCap } from "lucide-react";
 
 const allLoIds = getAllLoIds();
 
@@ -12,14 +15,19 @@ export default function Dashboard() {
   const { progress, overallPct, readinessPct, getChapterProgress } =
     useProgress(allLoIds);
 
-  const bestScore =
-    progress.examAttempts.length > 0
-      ? `${Math.max(
-          ...progress.examAttempts.map((a) =>
-            Math.round((a.score / a.maxScore) * 100)
-          )
-        )}%`
-      : "—";
+  const [guideDone, setGuideDone] = useState(false);
+  const [bestSet, setBestSet] = useState<{ pct: number; passed: boolean }>({
+    pct: 0,
+    passed: false,
+  });
+
+  useEffect(() => {
+    setGuideDone(isGuideComplete(allLoIds));
+    const best = bestExamSetScore();
+    setBestSet({ pct: best.pct, passed: best.passed });
+  }, [progress]);
+
+  const bestScore = bestSet.pct > 0 ? `${bestSet.pct}%` : "—";
 
   const stats = [
     {
@@ -56,17 +64,39 @@ export default function Dashboard() {
     <>
       <Header />
       <main className="mx-auto max-w-6xl px-4 py-8">
+        {guideDone && (
+          <div className="mb-6 rounded-xl border border-green-200 bg-green-50 p-5 flex items-center justify-between gap-4">
+            <div className="flex items-center gap-3 min-w-0">
+              <GraduationCap className="h-8 w-8 text-green-600 shrink-0" />
+              <div className="min-w-0">
+                <p className="text-sm font-bold text-green-700">
+                  🎓 CTFL Complete — You&apos;re ready for CT-AI!
+                </p>
+                <p className="text-xs text-green-600 mt-0.5">
+                  You&apos;ve passed all learning objectives and at least one mock exam.
+                </p>
+              </div>
+            </div>
+            <a
+              href={CT_AI_GUIDE_URL}
+              className="rounded-lg bg-green-600 px-4 py-2 text-sm font-semibold text-white hover:bg-green-700 transition-colors shrink-0"
+            >
+              Start CT-AI Guide →
+            </a>
+          </div>
+        )}
+
         {/* Hero */}
         <div className="mb-8">
           <div className="inline-flex items-center gap-2 rounded-full bg-blue-100 px-3 py-1 text-xs text-blue-700 border border-blue-200 mb-3 font-medium">
             <span className="h-1.5 w-1.5 rounded-full bg-blue-600 animate-pulse" />
-            ISTQB CT-AI v2.0 — 3-day certification
+            ISTQB CTFL v4.0 — Foundation Level certification
           </div>
           <h1 className="text-3xl font-bold text-slate-900">
-            AI Testing Study Guide
+            CTFL v4.0 Study Guide
           </h1>
           <p className="mt-2 text-slate-500">
-            7 chapters · 43 learning objectives · Practice-first approach
+            6 chapters · {CTFL_TOTAL_LOS} learning objectives · 4 mock exam sets · Practice-first approach
           </p>
         </div>
 
@@ -108,7 +138,7 @@ export default function Dashboard() {
               complete
             </span>
             <span>·</span>
-            <span>65% needed to pass exam</span>
+            <span>Pass at least one mock exam set (26/40) to finish</span>
           </div>
         </div>
 
@@ -118,7 +148,7 @@ export default function Dashboard() {
             href="/exam"
             className="rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-blue-700 transition-colors shadow-sm"
           >
-            Take Mock Exam
+            Take a Mock Exam
           </Link>
           <Link
             href="/glossary"

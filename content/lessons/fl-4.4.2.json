@@ -1,0 +1,48 @@
+{
+  "id": "fl-4.4.2",
+  "chapter": 4,
+  "section": "4.4",
+  "kLevel": "K3",
+  "title": "Decision Table — Reduction and Coverage",
+  "concept": "Decision tables grow exponentially. With 5 boolean conditions you have 32 rules; with 10 you have 1024. Two reduction techniques keep tables manageable.\n\n**Reduce by don't-care entries** — if a rule's action depends only on a subset of conditions, the other conditions are marked '—' (don't care). For example, if condition C dominates (C = F → always reject) the rules with C = F can collapse into one rule with don't-cares on the other conditions.\n\n**Reduce by combining equivalent rules** — two rules with the same action and structurally similar conditions can sometimes merge.\n\nFollowing reduction, the coverage criterion can be stated as:\n- **Decision table coverage (collapsed)** — every collapsed rule is exercised. Cheaper but loses information about specific combinations.\n- **Decision table coverage (full)** — every original rule (before collapsing) is exercised. Most thorough.\n\nFor safety-critical and regulated domains, full coverage is preferred. For business systems with moderate risk, collapsed coverage is common.\n\nAfter writing and reducing the table, derive one test case per rule: the inputs are the condition values for that rule; the expected outcome is the action(s).",
+  "keyPoints": [
+    "Reduce decision tables using don't-care entries (—) where conditions don't affect the action.",
+    "Two coverage criteria: collapsed-table coverage (cheaper) and full-table coverage (more thorough).",
+    "Each rule (column) becomes one test case: condition values = inputs, action(s) = expected outcome."
+  ],
+  "quiz": {
+    "question": "A decision table has 4 conditions, giving 16 rules. After reduction with don't-care entries, the team produces 7 collapsed rules. To achieve full decision-table coverage, how many test cases are needed?",
+    "options": [
+      "4",
+      "7",
+      "11",
+      "16"
+    ],
+    "correct": 3,
+    "explanation": "Full decision-table coverage exercises every rule of the *unreduced* table — 16 in this case. Collapsed coverage would need only 7 tests. The choice depends on risk: regulated domains demand full coverage; lower-risk systems often accept collapsed coverage."
+  },
+  "exercise": {
+    "type": "decision-table",
+    "cases": [
+      {
+        "title": "Insurance discount — fill in missing condition values for each rule",
+        "conditions": ["Customer is over 25", "No claims in last 3 years", "Has multi-policy with us"],
+        "rules": [
+          { "values": [true, true, true], "action": "30% discount" },
+          { "values": [true, true, null], "action": "20% discount" },
+          { "values": [true, null, true], "action": "20% discount" },
+          { "values": [null, true, true], "action": "20% discount" },
+          { "values": [false, false, false], "action": "No discount" }
+        ],
+        "answers": [
+          [true, true, true],
+          [true, true, false],
+          [true, false, true],
+          [false, true, true],
+          [false, false, false]
+        ],
+        "explanation": "The structure: all three conditions met → 30%; any two conditions met → 20%; no conditions met → no discount. Filling the blanks: rule 2 means age + no-claims but no multi-policy (F), rule 3 means age + multi-policy but has claims (F), rule 4 means no-claims + multi-policy but under 25 (F). Each maps to 20%."
+      }
+    ]
+  }
+}

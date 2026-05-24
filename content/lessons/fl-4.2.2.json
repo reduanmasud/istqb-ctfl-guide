@@ -1,0 +1,41 @@
+{
+  "id": "fl-4.2.2",
+  "chapter": 4,
+  "section": "4.2",
+  "kLevel": "K3",
+  "title": "Equivalence Partitioning — Coverage and Application",
+  "concept": "Practical application of equivalence partitioning requires care.\n\n**Identify all input variables** that influence behaviour — not just user-visible inputs but configuration values, environment variables, and timing inputs.\n\n**Partition each variable** independently into valid and invalid partitions. Use the specification, requirements, and domain knowledge to find them. Watch for partitions implied but not stated (e.g., 'positive integer' implies an invalid partition of negative integers AND an invalid partition of non-integers).\n\n**Combine partitions** thoughtfully. Two variables with 3 valid partitions each give 9 combinations of valid inputs. Testing all combinations is often overkill; combinatorial techniques (pairwise / all-pairs) reduce the count while preserving coverage.\n\n**Coverage measurement** — count the partitions covered by tests; aim for 100% partition coverage. Coverage = (partitions exercised) / (total partitions) × 100%.\n\n**Limitations** — EP assumes equivalence within a partition. If the implementation behaves differently for different values within a stated partition (e.g., a buggy special case at 42), EP alone won't catch it. Combine with BVA, error guessing, and structural coverage to compensate.",
+  "keyPoints": [
+    "Partition every input variable, including config and environment; use spec + domain knowledge.",
+    "Partition coverage = (partitions tested) / (total partitions) × 100%.",
+    "EP assumes equivalence within partitions — bugs at special values (e.g., 42) still escape; combine with BVA and other techniques."
+  ],
+  "quiz": {
+    "question": "A function accepts an integer day-of-month (1-31). The team identifies partitions {< 1}, {1-28}, {29-30}, {31}, {> 31} (because February only has 28 or 29 days, and not every month has a 31st). How many partitions need at least one test each?",
+    "options": [
+      "1 — only the valid range matters.",
+      "2 — one valid, one invalid.",
+      "5 — every partition needs a representative test.",
+      "31 — every day-of-month needs a separate test."
+    ],
+    "correct": 2,
+    "explanation": "EP coverage requires at least one representative test from each partition. The team identified 5 partitions, so 5 tests are required to achieve 100% partition coverage. Testing every individual day-of-month would be exhaustive testing — which is generally impossible and not what EP requires."
+  },
+  "exercise": {
+    "type": "ep-table",
+    "cases": [
+      {
+        "description": "A grading function maps numeric scores to letter grades. Spec: 0-59 → F, 60-69 → D, 70-79 → C, 80-89 → B, 90-100 → A. Inputs outside 0-100 are invalid.",
+        "values": ["-5", "0", "55", "75", "95", "100", "150"],
+        "validIndices": [1, 2, 3, 4, 5],
+        "explanation": "Valid partition is 0..100 → all of 0, 55, 75, 95, 100 are valid representatives (of partitions F, D-but-tested-with-55-which-is-F, C, A, A respectively — actually 0=F, 55=F, 75=C, 95=A, 100=A). -5 and 150 are outside the valid input range — invalid partitions (too low and too high)."
+      },
+      {
+        "description": "A 'discount %' parameter accepts numeric percentages from 0 to 50 (whole numbers).",
+        "values": ["-10", "0", "25", "50", "51", "100", "12.5"],
+        "validIndices": [1, 2, 3],
+        "explanation": "Valid partition is whole numbers 0..50 → 0, 25, 50 are valid. -10 is below the range; 51 and 100 are above; 12.5 is fractional (the spec says whole numbers). Note that 12.5 belongs to a different invalid partition (non-integer) from 51 (too high)."
+      }
+    ]
+  }
+}

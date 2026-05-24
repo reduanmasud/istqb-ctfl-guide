@@ -1,0 +1,25 @@
+{
+  "id": "fl-5.3.2",
+  "chapter": 5,
+  "section": "5.3",
+  "kLevel": "K2",
+  "title": "Test Reporting",
+  "concept": "**Test reporting** communicates test progress, product quality, and risks to stakeholders so they can make informed decisions. Two kinds of report are typical.\n\n**Test progress report** (interim) — issued periodically during testing. Audience: project manager, product owner, sponsors. Contents:\n- Test execution status (planned / executed / passed / failed / blocked).\n- Defects found / fixed / open by severity.\n- Coverage achieved against plan.\n- Risks (new, changed, retired).\n- Issues blocking progress.\n- Forecast: when will exit criteria be met?\n\n**Test summary report** (final) — issued at the end of a test level or release. Audience: same plus broader stakeholders. Contents:\n- Final test execution numbers.\n- Final defect status (open defects, accepted residual risk).\n- Coverage achieved.\n- Exit criteria status (met / waived).\n- Lessons learned.\n- Recommendations for next release.\n\nGood reports are **actionable** (each finding leads to a decision), **audience-tailored** (an executive cares about residual risk; a developer cares about open defects), **honest** (bad news travels first), and **visualised** (charts beat tables for trends).\n\nIn Agile, much of this reporting is replaced by live dashboards, but a written summary at release time is still common.",
+  "keyPoints": [
+    "Two main reports: progress (interim) and summary (final).",
+    "Contents: execution status, defects, coverage, risks, exit criteria.",
+    "Reports must be actionable, audience-tailored, honest, and visualised."
+  ],
+  "quiz": {
+    "question": "Which item is MOST likely to appear in a final test summary report but NOT in an interim progress report?",
+    "options": [
+      "Test execution status (passed / failed).",
+      "Lessons learned and recommendations for the next release.",
+      "Number of open defects.",
+      "Current coverage achieved."
+    ],
+    "correct": 1,
+    "explanation": "Lessons learned and recommendations for next release are retrospective — they belong in the final summary report after testing completes. Execution status, open defects, and current coverage are progress-report content and continue to appear in the summary."
+  },
+  "exercise": { "type": "none" }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "fl-5.4.2",
+  "chapter": 5,
+  "section": "5.4",
+  "kLevel": "K3",
+  "title": "Defect Management",
+  "concept": "**Defect management** is the lifecycle process of handling defects from discovery to closure. The CTFL syllabus emphasises consistent, evidence-based handling.\n\n**Defect lifecycle (typical states)**: New → Open (assigned) → In Progress → Fixed → Re-test → Verified → Closed. Branches: Rejected (not a defect), Deferred (won't fix this release), Duplicate.\n\n**Defect report contents**:\n- Unique ID.\n- Title (short, descriptive).\n- Severity (impact on system / users): blocker, critical, major, minor, trivial.\n- Priority (urgency to fix): often separate from severity.\n- Steps to reproduce (deterministic, ideally with screenshots / logs).\n- Expected vs actual behaviour.\n- Environment (OS, browser, build version).\n- Test case reference (if any).\n- Reporter and assignee.\n- Status and history.\n\n**Severity vs Priority**: Severity is product-impact; priority is business-urgency. A blocker severity defect in an unused feature may have low priority; a minor cosmetic defect on the homepage may have high priority because every visitor sees it.\n\n**Defect triage**: a periodic meeting (often daily in late testing) where stakeholders review open defects, assign severity/priority, and decide fix-now / fix-later / defer / reject.\n\nGood defect reports save time, drive fix prioritisation, and feed root-cause analysis. Bad reports ('it doesn't work') generate back-and-forth and miss the fix window.",
+  "keyPoints": [
+    "Defect lifecycle: New → Open → In Progress → Fixed → Re-test → Verified → Closed; plus Rejected, Deferred, Duplicate.",
+    "Good defect reports include reproducible steps, expected vs actual, environment, severity, priority.",
+    "Severity (impact) and priority (urgency) are distinct — a severe defect in an unused feature may have low priority."
+  ],
+  "quiz": {
+    "question": "Which statement BEST distinguishes severity from priority of a defect?",
+    "options": [
+      "Severity and priority are two names for the same property.",
+      "Severity measures the impact on the system or users; priority measures the urgency to fix.",
+      "Severity is set by developers; priority is set by testers.",
+      "Severity always equals priority for blocker defects."
+    ],
+    "correct": 1,
+    "explanation": "Severity is about *impact*; priority is about *urgency*. A blocker severity defect in a rarely-used feature may have low priority (defer it). A minor severity defect on the home page may have high priority (every visitor sees it). The two are independent and both are assigned by the team during triage."
+  },
+  "exercise": { "type": "none" }
+}

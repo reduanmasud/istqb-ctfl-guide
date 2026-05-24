@@ -1,0 +1,25 @@
+{
+  "id": "fl-4.5.1",
+  "chapter": 4,
+  "section": "4.5",
+  "kLevel": "K2",
+  "title": "Statement Testing and Coverage",
+  "concept": "**Statement testing** (a white-box / structure-based technique) designs test cases to exercise individual statements of the code.\n\n**Statement coverage** = (executed statements) / (total executable statements) × 100%. Coverage is measured by running tests against the code with a coverage tool (gcov, jacoco, istanbul, etc.) that instruments the code and counts which statements were executed.\n\nWhy it matters: a statement that has never been executed has never been tested. Any defect in such a statement is undetected by the test suite. 100% statement coverage means every statement has run at least once.\n\nLimitations: statement coverage does not measure whether the *outcome* of the statement was checked, nor does it measure branch coverage. A function with an `if` containing two branches achieves 100% statement coverage if just the `then` branch is exercised — the `else` branch's statements run, but their *conditions* (the `if`'s false branch) are not tested.\n\nStatement coverage is the weakest of the structural coverage criteria. It's the minimum bar for code that ships; stronger criteria (branch, decision, MC/DC) apply for higher-risk code.",
+  "keyPoints": [
+    "Statement testing targets every executable statement; coverage = executed / total × 100%.",
+    "100% statement coverage means every statement has run at least once — but does NOT mean every branch was taken.",
+    "It is the weakest structural criterion; use branch/decision/MC/DC for higher rigor."
+  ],
+  "quiz": {
+    "question": "A function has 10 executable statements. The test suite executes 8 of them. What is the statement coverage?",
+    "options": [
+      "20%",
+      "80%",
+      "100%",
+      "Cannot be determined without branch information."
+    ],
+    "correct": 1,
+    "explanation": "Statement coverage = 8 executed / 10 total × 100% = 80%. Branch information is not needed to compute statement coverage — it's purely about which statements ran."
+  },
+  "exercise": { "type": "none" }
+}

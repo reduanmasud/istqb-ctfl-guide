@@ -1,0 +1,34 @@
+{
+  "id": "fl-5.2.1",
+  "chapter": 5,
+  "section": "5.2",
+  "kLevel": "K2",
+  "title": "Risk Definition and Risk Attributes",
+  "concept": "A **risk** is a potential problem that, if it occurs, will have a negative impact. Risks have not yet occurred — they are *probabilistic future events*. Issues, by contrast, are problems that *have* occurred.\n\nTwo attributes characterise any risk:\n\n**Likelihood** (or probability) — how likely is the risk to occur? Often estimated on a scale (high/medium/low or 1–5).\n\n**Impact** — what's the magnitude of the negative effect if it does occur? Also typically scaled (high/medium/low or 1–5).\n\n**Risk level** is a function of these: Risk level = Likelihood × Impact. A 5×5 matrix categorises risks into a heat map (green/yellow/red) that drives prioritisation.\n\nTwo kinds of risk relevant to testers:\n\n**Product risk** — a risk that the product will fail to satisfy stakeholder expectations. Examples: a defect in payment handling losing money; a security weakness exposing data; a performance bottleneck making the app unusable. Product risks drive *what* and *how much* to test.\n\n**Project risk** — a risk that affects the project's ability to deliver. Examples: key tester resignation; test environment unavailability; tool licence expiry; dependency on a third-party API. Project risks drive *how* and *when* to test (mitigation actions).",
+  "keyPoints": [
+    "Risk = potential future negative event; attributes are likelihood and impact; risk level = likelihood × impact.",
+    "Product risks: defects in the product threatening stakeholder expectations.",
+    "Project risks: factors threatening the project's ability to deliver (environment, resources, dependencies)."
+  ],
+  "quiz": {
+    "question": "A test environment is currently unavailable due to a hardware failure. Which is the BEST classification?",
+    "options": [
+      "Product risk — the product may not function correctly.",
+      "Project risk — the project's ability to deliver testing on time is threatened.",
+      "Not a risk — it is an issue, because the failure has already occurred.",
+      "Both a product risk and a project risk."
+    ],
+    "correct": 2,
+    "explanation": "The hardware failure has already happened — this is an *issue*, not a risk. Risks are potential future events. If the team had said 'the environment might fail before the test cycle', that would be a project risk. Recognising the distinction matters for tracking and mitigation."
+  },
+  "exercise": {
+    "type": "dataset-constraint",
+    "constraints": [
+      { "description": "Risk has not yet occurred (otherwise it's an issue)", "passes": true },
+      { "description": "Risk has both a likelihood and an impact", "passes": true },
+      { "description": "Product risks drive the depth and scope of testing", "passes": true },
+      { "description": "Project risks include lack of environment, tools, skills", "passes": true },
+      { "description": "Likelihood × Impact yields a risk level used for prioritisation", "passes": true }
+    ]
+  }
+}

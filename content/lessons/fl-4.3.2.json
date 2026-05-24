@@ -1,0 +1,41 @@
+{
+  "id": "fl-4.3.2",
+  "chapter": 4,
+  "section": "4.3",
+  "kLevel": "K3",
+  "title": "BVA — Coverage and Application",
+  "concept": "Practical BVA application.\n\n**Identify ordered domains** — numeric ranges, string lengths, dates, durations, list sizes. For each, find every boundary stated or implied by the spec.\n\n**Pick a strategy** — two-value or three-value, depending on risk. Three-value is stricter and finds more off-by-one defects but doubles the test count.\n\n**Distinguish single boundaries from joint boundaries** — when two variables interact (e.g., a date range with both start and end), the boundary is the *combination* (start = end, end = start + 1 minute). Joint boundaries need careful enumeration.\n\n**Combine BVA with EP** — EP picks one representative per partition; BVA adds boundary tests. The complete test set is EP-representatives + BVA-boundaries.\n\n**Coverage measurement** — for two-value BVA: (boundary pairs tested) / (total boundary pairs) × 100%. For three-value: (triples tested) / (total triples).\n\n**Pitfalls** — boundaries may be in unexpected places (e.g., a date library treats 02/29 specially; a buffer reaches 1024 bytes; an integer wraps at 2^31). Domain knowledge and code inspection help find non-obvious boundaries.",
+  "keyPoints": [
+    "Find all ordered domains and their boundaries — numeric, string length, date, duration, list size.",
+    "Combine with EP: EP representative + BVA boundary tests = complete coverage.",
+    "Watch for non-obvious boundaries: integer overflow, buffer limits, calendar special cases."
+  ],
+  "quiz": {
+    "question": "A spec says 'orders may contain 1 to 50 items'. Using three-value BVA at both boundaries, how many test cases are needed JUST for boundary coverage?",
+    "options": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "correct": 2,
+    "explanation": "Three-value BVA tests just-below, boundary, just-above at each end. Lower: 0, 1, 2 → 3 tests. Upper: 49, 50, 51 → 3 tests. Total = 6 boundary tests. Two-value BVA would give 4 (0, 1 and 50, 51)."
+  },
+  "exercise": {
+    "type": "bva",
+    "cases": [
+      {
+        "rangeDescription": "Orders contain 1 to 50 items (three-value BVA). Which counts are boundary values?",
+        "candidates": ["-1", "0", "1", "2", "25", "49", "50", "51", "52"],
+        "boundaryIndices": [1, 2, 3, 5, 6, 7],
+        "explanation": "Three-value at each end: 0 (just-below), 1 (boundary), 2 (just-above) at the lower end; 49, 50, 51 at the upper end. -1 is further outside the lower boundary (already covered by partition testing); 25 is mid-partition; 52 is further outside the upper boundary."
+      },
+      {
+        "rangeDescription": "A trial subscription expires after exactly 7 days from sign-up (two-value BVA on day count from sign-up). Which day-counts test the expiry boundary?",
+        "candidates": ["0", "1", "6", "7", "8", "14"],
+        "boundaryIndices": [2, 3, 4],
+        "explanation": "Two-value BVA around day 7: day 6 (last valid trial day) and day 7 itself if the rule is 'expires AT day 7' — but the inclusive boundary is what we test. We need day 6 (still trial), day 7 (boundary), and day 8 (definitely expired). Day 0 is sign-up; day 1 is well within trial; day 14 is well past expiry."
+      }
+    ]
+  }
+}

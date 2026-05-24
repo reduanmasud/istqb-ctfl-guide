@@ -1,0 +1,25 @@
+{
+  "id": "fl-4.4.3",
+  "chapter": 4,
+  "section": "4.4",
+  "kLevel": "K3",
+  "title": "State Transition Testing",
+  "concept": "**State transition testing** models systems whose behaviour depends on history — i.e., the system has internal states and the response to an event depends on the current state. Examples: order management (placed → paid → shipped → delivered), media players (stopped → playing → paused), authentication (logged out → logging in → logged in → locked).\n\nA **state transition diagram** has:\n- **States** (nodes): named conditions of the system.\n- **Transitions** (edges): event-triggered moves from one state to another, optionally producing outputs.\n- **Events** (transition labels): the inputs/triggers that cause transitions.\n- **Actions** (optional, on transitions): side-effects performed during the transition.\n\nCoverage criteria:\n- **All states coverage** — every state visited at least once. Weakest; easy to satisfy but misses transition defects.\n- **All transitions coverage** (also called 0-switch coverage) — every transition exercised at least once. Stronger; the typical baseline.\n- **All transition pairs (1-switch coverage)** — every pair of consecutive transitions exercised. Catches order-dependent defects.\n- **All paths** — every path exercised. Usually impractical (loops give infinite paths).\n\nState transition testing finds defects where the system enters or leaves states incorrectly, accepts invalid events, or produces wrong actions during transitions.",
+  "keyPoints": [
+    "Models systems with history — states, events, transitions, actions.",
+    "Coverage progresses from weakest to strongest: all states < all transitions (0-switch) < transition pairs (1-switch) < all paths.",
+    "All-transitions coverage is the standard baseline; transition pairs catches order-dependent defects."
+  ],
+  "quiz": {
+    "question": "A state diagram has 4 states and 8 transitions. To achieve all-transitions (0-switch) coverage, what is the MINIMUM number of transitions that must be exercised by tests?",
+    "options": [
+      "4 — one per state.",
+      "8 — every transition.",
+      "16 — every transition pair.",
+      "32 — every path."
+    ],
+    "correct": 1,
+    "explanation": "All-transitions coverage requires every transition in the diagram to be exercised at least once. There are 8 transitions, so 8 is the minimum. (Multiple transitions may be covered by a single test that walks several states; the minimum-test count may be less than 8 but the minimum-transition count is 8.)"
+  },
+  "exercise": { "type": "none" }
+}

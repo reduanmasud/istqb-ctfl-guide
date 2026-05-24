@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "points": 1,
+    "loRef": "FL-1.1.1",
+    "chapter": 1,
+    "stem": "Which of the following is a typical objective of testing as defined in the CTFL syllabus?",
+    "options": [
+      "To prove the absence of all defects.",
+      "To provide information to stakeholders about the quality of the test object.",
+      "To debug the code so it compiles successfully.",
+      "To produce a faster build pipeline."
+    ],
+    "correct": 1,
+    "explanation": "Providing information about quality so stakeholders can make informed decisions is one of the canonical objectives. Testing cannot prove absence of defects; debugging is a developer activity; build performance is unrelated."
+  },
+  {
+    "id": 2,
+    "points": 1,
+    "loRef": "FL-1.1.2",
+    "chapter": 1,
+    "stem": "After a developer fixes a defect, who typically performs the confirmation test and what does it verify?",
+    "options": [
+      "The developer; it verifies the fix compiles.",
+      "The tester; it verifies the originally-failing test now passes with the same inputs.",
+      "The product owner; it verifies the user accepts the fix.",
+      "Nobody; confirmation testing is optional."
+    ],
+    "correct": 1,
+    "explanation": "Confirmation testing is a tester activity that re-runs the original failing test to verify the defect has been fixed. The developer debugs; confirmation testing is part of testing, not debugging."
+  },
+  {
+    "id": 3,
+    "points": 1,
+    "loRef": "FL-1.2.1",
+    "chapter": 1,
+    "stem": "Which sequence correctly describes the cause-and-effect chain in the testing terminology of mistake, defect, and failure?",
+    "options": [
+      "Failure -> Defect -> Mistake (a failure causes a defect which causes a mistake).",
+      "Mistake -> Defect -> Failure (a person's mistake creates a defect that, when executed, may produce a failure).",
+      "Defect -> Mistake -> Failure.",
+      "Mistake = Defect = Failure (synonyms)."
+    ],
+    "correct": 1,
+    "explanation": "A human mistake (error) introduces a defect (fault, bug) in a work product; executing the defective code may produce a failure (observable wrong behaviour). The chain runs in that order; the three terms are distinct."
+  },
+  {
+    "id": 4,
+    "points": 1,
+    "loRef": "FL-1.2.3",
+    "chapter": 1,
+    "stem": "Which statement correctly relates Quality Assurance (QA), Quality Control (QC), and testing?",
+    "options": [
+      "QA, QC, and testing are synonyms.",
+      "Testing is a form of QC, which is product-focused; QA is process-focused.",
+      "QA is performed only by managers; QC only by developers.",
+      "QC replaces the need for QA in modern teams."
+    ],
+    "correct": 1,
+    "explanation": "QA is about the process producing quality; QC is about checking the product; testing is a specific QC activity. Mature organisations use both."
+  },
+  {
+    "id": 5,
+    "points": 1,
+    "loRef": "FL-1.3.1",
+    "chapter": 1,
+    "stem": "A test team has run the same regression suite weekly for a year and finds almost no new defects. Which testing principle does this illustrate?",
+    "options": [
+      "Defect clustering.",
+      "Pesticide paradox - tests wear out and need to be revised.",
+      "Exhaustive testing is impossible.",
+      "Absence-of-errors fallacy."
+    ],
+    "correct": 1,
+    "explanation": "The pesticide paradox states that running the same tests repeatedly stops finding new defects. The team must review and add new tests."
+  },
+  {
+    "id": 6,
+    "points": 1,
+    "loRef": "FL-1.4.1",
+    "chapter": 1,
+    "stem": "During which test activity is each abstract test condition elaborated into a concrete test case with specific inputs, expected results, and preconditions?",
+    "options": [
+      "Test analysis.",
+      "Test design.",
+      "Test implementation.",
+      "Test execution."
+    ],
+    "correct": 1,
+    "explanation": "Test design turns abstract test conditions (identified during analysis) into concrete test cases. Implementation prepares the data/environment; execution runs the tests."
+  },
+  {
+    "id": 7,
+    "points": 1,
+    "loRef": "FL-1.4.4",
+    "chapter": 1,
+    "stem": "A regulator asks the team to prove that every requirement in v3.0 has been tested. Which testware property is MOST critical?",
+    "options": [
+      "Test execution speed.",
+      "Traceability between requirements and test cases.",
+      "Number of automated tests.",
+      "Defect arrival rate."
+    ],
+    "correct": 1,
+    "explanation": "Requirement-to-test traceability is the property that lets you demonstrate, requirement-by-requirement, what was tested and with what result."
+  },
+  {
+    "id": 8,
+    "points": 1,
+    "loRef": "FL-2.1.1",
+    "chapter": 2,
+    "stem": "In the V-model, which test level is paired with the system requirements specification?",
+    "options": [
+      "Component testing.",
+      "Integration testing.",
+      "System testing.",
+      "Acceptance testing."
+    ],
+    "correct": 3,
+    "explanation": "The V-model pairs acceptance testing with the original business/system requirements. System testing is paired with system design; integration with architecture; component with detailed design."
+  },
+  {
+    "id": 9,
+    "points": 1,
+    "loRef": "FL-2.1.2",
+    "chapter": 2,
+    "stem": "Which approach describes BDD (Behaviour-Driven Development)?",
+    "options": [
+      "Developers write failing unit tests before any production code.",
+      "Business, dev, and tester agree on Given/When/Then behaviour scenarios that double as executable tests and documentation.",
+      "Exploratory testing of new features.",
+      "Static code analysis on every commit."
+    ],
+    "correct": 1,
+    "explanation": "BDD uses Given/When/Then Gherkin scenarios, typically co-authored by business + dev + tester, executed via tools like Cucumber. They serve as both tests and living documentation."
+  },
+  {
+    "id": 10,
+    "points": 1,
+    "loRef": "FL-2.2.1",
+    "chapter": 2,
+    "stem": "A defect is found where two microservices fail to communicate because one sends XML while the other expects JSON. Which test level is MOST appropriate for finding this?",
+    "options": [
+      "Component testing.",
+      "Integration testing.",
+      "System testing.",
+      "Acceptance testing."
+    ],
+    "correct": 1,
+    "explanation": "Interface-format mismatches between two services is the canonical target of integration testing. Component testing isolates units; system and acceptance testing might catch downstream symptoms but are not the right level."
+  },
+  {
+    "id": 11,
+    "points": 1,
+    "loRef": "FL-2.2.3",
+    "chapter": 2,
+    "stem": "After a developer fixes defect #500, what should the tester do before the defect can be closed?",
+    "options": [
+      "Only acceptance testing.",
+      "Confirmation testing to verify the fix, then regression testing to verify nothing else broke.",
+      "Static analysis only.",
+      "No additional testing - closing the defect is enough."
+    ],
+    "correct": 1,
+    "explanation": "Confirmation testing re-runs the originally failing test. Regression testing verifies that the fix did not break other parts of the system. Both are necessary before closure."
+  },
+  {
+    "id": 12,
+    "points": 1,
+    "loRef": "FL-2.3.2",
+    "chapter": 2,
+    "stem": "An organisation patches a security vulnerability in its production system without otherwise changing functionality. Which type of maintenance testing is MOST relevant?",
+    "options": [
+      "Perfective maintenance testing.",
+      "Corrective maintenance testing.",
+      "Adaptive maintenance testing.",
+      "Preventive maintenance testing."
+    ],
+    "correct": 1,
+    "explanation": "Patching a security vulnerability is corrective maintenance (fixing a defect - the security weakness). Adaptive responds to environment changes; perfective adds new features; preventive refactors for future cost reduction."
+  },
+  {
+    "id": 13,
+    "points": 1,
+    "loRef": "FL-2.4.1",
+    "chapter": 2,
+    "stem": "Which ISO 25010 quality characteristic is BEST associated with a test that measures system availability over a 30-day continuous run?",
+    "options": [
+      "Functional suitability.",
+      "Reliability.",
+      "Portability.",
+      "Maintainability."
+    ],
+    "correct": 1,
+    "explanation": "Availability is a sub-characteristic of reliability in ISO/IEC 25010. Functional suitability is about correctness; portability is about installability/adaptability; maintainability is about modifiability."
+  },
+  {
+    "id": 14,
+    "points": 1,
+    "loRef": "FL-3.1.1",
+    "chapter": 3,
+    "stem": "Which of the following is a static testing activity?",
+    "options": [
+      "Running unit tests against a freshly built binary.",
+      "Reviewing a requirements document for ambiguity.",
+      "Performance testing the deployed application.",
+      "Acceptance testing by an end user."
+    ],
+    "correct": 1,
+    "explanation": "Static testing examines work products without execution. Reviewing a requirements document is static. Running unit tests, performance testing, and acceptance testing all execute the software (dynamic)."
+  },
+  {
+    "id": 15,
+    "points": 1,
+    "loRef": "FL-3.2.1",
+    "chapter": 3,
+    "stem": "Which review type is the MOST formal, with defined entry/exit criteria, pre-assigned roles (moderator, author, reader, scribe, reviewer), and metric collection?",
+    "options": [
+      "Informal review.",
+      "Walkthrough.",
+      "Technical review.",
+      "Inspection."
+    ],
+    "correct": 3,
+    "explanation": "Inspection is the most formal review type, used where high rigor is needed (safety-critical, contractual). The other types are progressively less formal."
+  },
+  {
+    "id": 16,
+    "points": 1,
+    "loRef": "FL-3.2.4",
+    "chapter": 3,
+    "stem": "A team holds a 3-hour review meeting of a large design document and is dissatisfied with the few defects found. Which improvement is MOST likely to help?",
+    "options": [
+      "Skip the review and rely on dynamic testing.",
+      "Split the document into smaller chunks and have reviewers prepare beforehand.",
+      "Extend the meeting to 6 hours.",
+      "Replace the moderator with the document's author."
+    ],
+    "correct": 1,
+    "explanation": "Manageable scope and individual preparation are key success factors. Long meetings without preparation lead to fatigue and missed defects. The author leading the meeting would reduce independence."
+  },
+  {
+    "id": 17,
+    "points": 1,
+    "loRef": "FL-3.2.3",
+    "chapter": 3,
+    "stem": "A team wants reviewers to find a balanced mix of security, usability, and testability defects in a requirements document. Which review technique BEST suits this?",
+    "options": [
+      "Ad-hoc review.",
+      "Perspective-based review.",
+      "Inspection.",
+      "Static analysis."
+    ],
+    "correct": 1,
+    "explanation": "Perspective-based review assigns each reviewer a distinct lens (security, usability, testability), diversifying findings. Ad-hoc relies on luck; inspection is a review type, not a technique to diversify perspectives; static analysis is a tool-based approach."
+  },
+  {
+    "id": 18,
+    "points": 1,
+    "loRef": "FL-4.1.1",
+    "chapter": 4,
+    "stem": "A tester designs test cases by partitioning the input domain into valid and invalid partitions, without reference to the internal source code. Which category of technique is this?",
+    "options": [
+      "Black-box (specification-based).",
+      "White-box (structure-based).",
+      "Experience-based.",
+      "Risk-based."
+    ],
+    "correct": 0,
+    "explanation": "Equivalence partitioning of the input domain from the specification, without code access, is black-box. White-box uses code structure; experience-based uses tester intuition; risk-based is a prioritisation approach."
+  },
+  {
+    "id": 19,
+    "points": 1,
+    "loRef": "FL-4.2.1",
+    "chapter": 4,
+    "stem": "A form accepts integers 1-100. Using equivalence partitioning, what is the MINIMUM number of partitions to test for full partition coverage?",
+    "options": [
+      "1 - only the valid range.",
+      "2 - one valid and one invalid.",
+      "3 - the valid range plus invalid-low and invalid-high.",
+      "100 - every value."
+    ],
+    "correct": 2,
+    "explanation": "EP for a numeric range gives three partitions: valid [1..100], invalid below (< 1), invalid above (> 100). Each needs at least one representative test."
+  },
+  {
+    "id": 20,
+    "points": 1,
+    "loRef": "FL-4.3.1",
+    "chapter": 4,
+    "stem": "A field accepts integers 10 to 50. Using two-value BVA, which set of values should be tested?",
+    "options": [
+      "{10, 50}",
+      "{9, 10, 50, 51}",
+      "{9, 10, 11, 49, 50, 51}",
+      "{0, 10, 25, 50, 100}"
+    ],
+    "correct": 1,
+    "explanation": "Two-value BVA tests the boundary and the value just outside the partition at each end: 9 (just-outside-low), 10 (boundary-low), 50 (boundary-high), 51 (just-outside-high). Three-value would include 11 and 49 as well."
+  },
+  {
+    "id": 21,
+    "points": 1,
+    "loRef": "FL-4.4.1",
+    "chapter": 4,
+    "stem": "A system's behaviour is driven by 4 boolean conditions. How many rules does the FULL (uncollapsed) decision table have?",
+    "options": [
+      "4",
+      "8",
+      "16",
+      "24"
+    ],
+    "correct": 2,
+    "explanation": "With n boolean conditions, the full decision table has 2^n rules. 2^4 = 16. Full coverage requires one test per rule."
+  },
+  {
+    "id": 22,
+    "points": 1,
+    "loRef": "FL-4.4.3",
+    "chapter": 4,
+    "stem": "A state transition diagram has 5 states and 12 transitions. What is the minimum number of transitions exercised for all-transitions (0-switch) coverage?",
+    "options": [
+      "5",
+      "10",
+      "12",
+      "60"
+    ],
+    "correct": 2,
+    "explanation": "All-transitions (0-switch) coverage exercises every transition at least once: 12 transitions -> minimum 12. Multiple transitions may be covered by a single test that walks several states, but the transition count itself is 12."
+  },
+  {
+    "id": 23,
+    "points": 1,
+    "loRef": "FL-4.5.2",
+    "chapter": 4,
+    "stem": "Given `if (x > 0) print('a'); print('b');` and a test with x = 5, the print('b') always runs. Which statement is true?",
+    "options": [
+      "Statement coverage 100%, branch coverage 100%.",
+      "Statement coverage 100%, branch coverage 50%.",
+      "Statement coverage 50%, branch coverage 50%.",
+      "Statement coverage 50%, branch coverage 100%."
+    ],
+    "correct": 1,
+    "explanation": "x=5 makes the if-condition true, so both prints execute (100% statement coverage). Only one of two branches (the true branch) was taken (50% branch coverage). This illustrates that statement coverage is strictly weaker than branch coverage."
+  },
+  {
+    "id": 24,
+    "points": 1,
+    "loRef": "FL-4.6.2",
+    "chapter": 4,
+    "stem": "Which scenario is MOST suitable for exploratory testing?",
+    "options": [
+      "Running stable nightly regression on a 5-year-old product.",
+      "Investigating a newly-built feature whose acceptance criteria are still evolving.",
+      "Audit-quality testing of a regulated medical device.",
+      "Code-coverage measurement of unit tests."
+    ],
+    "correct": 1,
+    "explanation": "Exploratory testing shines when the system is new and specs are evolving - the tester uses curiosity and emerging understanding to find defects. Stable regression suits scripted automation; regulated audit testing prefers documented scripted tests."
+  },
+  {
+    "id": 25,
+    "points": 1,
+    "loRef": "FL-4.7.1",
+    "chapter": 4,
+    "stem": "BA, developer, and tester meet before a story enters development to agree on concrete acceptance examples. What is this practice called?",
+    "options": [
+      "Three amigos.",
+      "Daily standup.",
+      "Sprint review.",
+      "Pair programming."
+    ],
+    "correct": 0,
+    "explanation": "The three amigos practice has business, development, and testing perspectives collaboratively define acceptance examples for each story before implementation."
+  },
+  {
+    "id": 26,
+    "points": 1,
+    "loRef": "FL-4.8.2",
+    "chapter": 4,
+    "stem": "Why is Modified Condition / Decision Coverage (MC/DC) chosen in safety-critical avionics software?",
+    "options": [
+      "It is cheap and easy.",
+      "It is mandated by regulatory standards (e.g., DO-178C Level A).",
+      "It replaces all other testing techniques.",
+      "It guarantees no defects remain."
+    ],
+    "correct": 1,
+    "explanation": "MC/DC is mandated by safety-critical standards like DO-178C Level A. It is rigorous and expensive; it does not replace other techniques and does not guarantee zero defects."
+  },
+  {
+    "id": 27,
+    "points": 1,
+    "loRef": "FL-5.1.3",
+    "chapter": 5,
+    "stem": "Which is the BEST example of an EXIT criterion for system testing?",
+    "options": [
+      "Test environment matches production-like configuration.",
+      "All component tests have passed.",
+      "All severity-1 defects resolved; required coverage achieved; open defects accepted by stakeholders.",
+      "Test plan approved by stakeholders."
+    ],
+    "correct": 2,
+    "explanation": "Exit criteria gate the *end* of testing - resolution of high-severity defects, coverage achievement, and stakeholder acceptance of open defects are typical exit criteria. The other items are entry criteria."
+  },
+  {
+    "id": 28,
+    "points": 1,
+    "loRef": "FL-5.1.4",
+    "chapter": 5,
+    "stem": "Using PERT (three-point) estimation with optimistic 3 days, most likely 5 days, pessimistic 13 days, what is the expected effort?",
+    "options": [
+      "5 days",
+      "6 days",
+      "7 days",
+      "8 days"
+    ],
+    "correct": 1,
+    "explanation": "PERT: (O + 4M + P) / 6 = (3 + 4x5 + 13) / 6 = (3 + 20 + 13) / 6 = 36 / 6 = 6 days."
+  },
+  {
+    "id": 29,
+    "points": 1,
+    "loRef": "FL-5.2.1",
+    "chapter": 5,
+    "stem": "Which of the following is BEST classified as a project risk (not a product risk)?",
+    "options": [
+      "A defect in the payment module could lose customer money.",
+      "The test environment may be unavailable for the integration test window.",
+      "The login screen may have a SQL injection vulnerability.",
+      "The checkout page may fail to meet the 2-second SLA."
+    ],
+    "correct": 1,
+    "explanation": "Test environment availability is a *project* risk - it threatens the team's ability to deliver testing. The other items are potential product defects (product risks) addressed by testing."
+  },
+  {
+    "id": 30,
+    "points": 1,
+    "loRef": "FL-5.2.3",
+    "chapter": 5,
+    "stem": "Which area MOST deserves additional testing effort under risk-based testing?",
+    "options": [
+      "The site's static About page.",
+      "The credit card payment processing module.",
+      "An internal admin tool with two users.",
+      "A debug-only logging utility."
+    ],
+    "correct": 1,
+    "explanation": "Payment processing has high impact (financial, regulatory, reputational) and non-trivial likelihood of defects. The other items have far lower impact and warrant lighter testing."
+  },
+  {
+    "id": 31,
+    "points": 1,
+    "loRef": "FL-5.2.4",
+    "chapter": 5,
+    "stem": "Which risk assessment technique uses a Risk Priority Number = Severity x Occurrence x Detection?",
+    "options": [
+      "HAZOP",
+      "FMEA",
+      "Risk poker",
+      "PRAT"
+    ],
+    "correct": 1,
+    "explanation": "FMEA (Failure Modes and Effects Analysis) uses the RPN = Severity x Occurrence x Detection formula."
+  },
+  {
+    "id": 32,
+    "points": 1,
+    "loRef": "FL-5.3.1",
+    "chapter": 5,
+    "stem": "Which metric BEST measures how effective a test level is at catching defects before later levels?",
+    "options": [
+      "Number of test cases executed.",
+      "Defect Detection Percentage (DDP).",
+      "Test environment uptime.",
+      "Test effort spent."
+    ],
+    "correct": 1,
+    "explanation": "DDP = (defects found at this level) / (defects found at this level + later levels). High DDP means the level catches most defects before they escape downstream."
+  },
+  {
+    "id": 33,
+    "points": 1,
+    "loRef": "FL-5.4.2",
+    "chapter": 5,
+    "stem": "Severity and priority of a defect are:",
+    "options": [
+      "Two names for the same property.",
+      "Severity is impact; priority is urgency - independent properties.",
+      "Both assigned only by developers.",
+      "Always equal for blocker defects."
+    ],
+    "correct": 1,
+    "explanation": "Severity is about impact (how badly the defect affects the system/users); priority is about urgency (how quickly it must be fixed). They are independent - a severe defect in an unused feature may have low priority."
+  },
+  {
+    "id": 34,
+    "points": 1,
+    "loRef": "FL-5.4.1",
+    "chapter": 5,
+    "stem": "A defect found on Monday cannot be reproduced on Tuesday after 12 commits and an environment rebuild. Which configuration management practice would BEST help?",
+    "options": [
+      "Daily standups.",
+      "Tagging the build, testware, and environment configuration at the time of the defect.",
+      "Adding more testers.",
+      "Reducing the number of automated tests."
+    ],
+    "correct": 1,
+    "explanation": "Tagging the exact combination lets the team return to that baseline to reproduce and diagnose the defect."
+  },
+  {
+    "id": 35,
+    "points": 1,
+    "loRef": "FL-5.1.5",
+    "chapter": 5,
+    "stem": "A team picks the 30 regression tests that cover recently-changed modules to run on tonight's release. Which prioritisation strategy is this?",
+    "options": [
+      "Customer-priority-based.",
+      "Recency-based.",
+      "Coverage-based.",
+      "Requirements-based."
+    ],
+    "correct": 1,
+    "explanation": "Selecting tests covering recently-changed code is recency-based prioritisation - based on where regression is most likely."
+  },
+  {
+    "id": 36,
+    "points": 1,
+    "loRef": "FL-6.1.1",
+    "chapter": 6,
+    "stem": "Which tool category is BEST suited to issuing HTTP requests to an API and asserting on the JSON response?",
+    "options": [
+      "Test management tool.",
+      "API testing tool (e.g., Postman, REST Assured).",
+      "Static analysis tool.",
+      "Performance test tool."
+    ],
+    "correct": 1,
+    "explanation": "API testing tools issue requests and assert responses. Test management tools track work; static analysers examine source; performance tools measure load characteristics."
+  },
+  {
+    "id": 37,
+    "points": 1,
+    "loRef": "FL-6.1.2",
+    "chapter": 6,
+    "stem": "Which is generally the BEST candidate for test automation?",
+    "options": [
+      "Exploratory testing of a new feature with unstable acceptance criteria.",
+      "A stable, frequently-run regression check for a critical workflow.",
+      "Subjective usability evaluation by an expert.",
+      "A one-time security audit."
+    ],
+    "correct": 1,
+    "explanation": "Frequent, stable regression pays back automation investment quickly. Exploratory and subjective tasks need humans; one-time work does not pay back the cost."
+  },
+  {
+    "id": 38,
+    "points": 1,
+    "loRef": "FL-6.1.3",
+    "chapter": 6,
+    "stem": "A team has many flaky automated tests. What is the MOST important action?",
+    "options": [
+      "Ignore them - they pass eventually.",
+      "Diagnose and fix or delete each flaky test; flakiness destroys trust in the whole suite.",
+      "Add more tests to dilute the impact.",
+      "Abandon automation and revert to manual."
+    ],
+    "correct": 1,
+    "explanation": "Flaky tests train teams to ignore failures. Each flaky test must be investigated and fixed (e.g., proper waits, deterministic data) or deleted. Diluting and abandoning are anti-patterns."
+  },
+  {
+    "id": 39,
+    "points": 1,
+    "loRef": "FL-6.1.4",
+    "chapter": 6,
+    "stem": "A team wants non-programmer testers to author automated tests while a developer maintains the underlying code. Which approach BEST fits?",
+    "options": [
+      "Capture/playback recording.",
+      "Keyword-driven testing.",
+      "Model-based testing.",
+      "Pure programmatic unit tests."
+    ],
+    "correct": 1,
+    "explanation": "Keyword-driven testing lets non-programmers compose tests from high-level keywords; programmers maintain the underlying keyword implementations."
+  },
+  {
+    "id": 40,
+    "points": 1,
+    "loRef": "FL-6.1.5",
+    "chapter": 6,
+    "stem": "An organisation selected a new test automation tool. What is the MOST important activity before rolling it out to all teams?",
+    "options": [
+      "Bulk-buy licences to lock in pricing.",
+      "Pilot the tool on a small, representative real project; capture lessons.",
+      "Re-brand the tool with the company logo.",
+      "Disable existing test frameworks to force adoption."
+    ],
+    "correct": 1,
+    "explanation": "A pilot on a real but small project reveals fit, gaps, and effort before company-wide commitment. Bulk-buying before piloting risks shelf-ware; cosmetics and forced adoption don't address fit or skill gaps."
+  }
+]

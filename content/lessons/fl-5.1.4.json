@@ -1,0 +1,25 @@
+{
+  "id": "fl-5.1.4",
+  "chapter": 5,
+  "section": "5.1",
+  "kLevel": "K3",
+  "title": "Estimating the Effort of Testing",
+  "concept": "Estimating test effort is essential for planning and budgeting. CTFL describes several techniques.\n\n**Expert estimation** — experienced testers estimate based on their judgement. Quick and often surprisingly accurate, but subjective and varies by individual.\n\n**Wideband Delphi / Planning Poker** — multiple experts estimate independently, then discuss outliers and re-estimate until consensus. Reduces individual bias.\n\n**Three-point estimation** — for each item, estimate optimistic (O), most likely (M), and pessimistic (P) effort. Expected effort = (O + 4M + P) / 6 (PERT formula). Captures uncertainty better than a single point.\n\n**Function point analysis** — counts the size of the system in function points, then applies a productivity rate (hours/function point) to get effort.\n\n**Test point analysis** — like function point analysis but specifically for testing, weighted by complexity and dependencies.\n\n**Analogy-based** — find a similar past project, take its testing effort, adjust for known differences. Empirical and easy to defend.\n\n**Decomposition** — break the test effort into activities (planning, design, execution per test type, reporting), estimate each, sum.\n\nEstimates should account for: defect re-test cycles, environment setup, learning curves, holidays, and contingency. Tracking actuals against estimates and refining the model improves future estimates.",
+  "keyPoints": [
+    "Techniques: expert, Delphi/planning poker, three-point PERT, function/test point, analogy, decomposition.",
+    "Three-point PERT formula: (O + 4M + P) / 6 — captures uncertainty.",
+    "Track actuals vs estimates to calibrate future estimates."
+  ],
+  "quiz": {
+    "question": "A team estimates testing for a feature: optimistic 4 days, most likely 7 days, pessimistic 16 days. Using the three-point (PERT) formula, what is the expected effort?",
+    "options": [
+      "7 days",
+      "8 days",
+      "9 days",
+      "10 days"
+    ],
+    "correct": 1,
+    "explanation": "PERT formula: (O + 4M + P) / 6 = (4 + 4×7 + 16) / 6 = (4 + 28 + 16) / 6 = 48 / 6 = 8 days. The formula weights the most-likely estimate heavily but lets the pessimistic case inflate the expectation appropriately."
+  },
+  "exercise": { "type": "none" }
+}

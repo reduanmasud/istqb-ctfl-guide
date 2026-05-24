@@ -1,0 +1,25 @@
+{
+  "id": "fl-1.4.3",
+  "chapter": 1,
+  "section": "1.4",
+  "kLevel": "K2",
+  "title": "Testware",
+  "concept": "**Testware** is the collective term for the work products created during the test process. Testware is delivered alongside the software and must be maintained in the same way: under configuration management, with versions, traceability, and reviews.\n\nExamples of testware include: **test plan**, **test schedule**, **risk register**, **test conditions**, **test cases** (with their inputs, expected results, preconditions, postconditions), **test data**, **test execution schedules**, **test scripts (automated)**, **test logs and incident reports**, **test summary reports**, **test environment setup scripts**, and **test tool configurations**.\n\nTestware needs configuration management for the same reasons code does: changes need to be tracked, versions need to align with the software versions they test (a test case may be valid for v1.0 but invalid for v1.1 after a requirement change), and testware reused across releases needs to be findable.\n\nReusing testware is a major source of value: a well-organised regression suite gives confidence that previously-fixed defects do not reappear, and avoiding re-derivation of test cases saves significant time on each release.",
+  "keyPoints": [
+    "Testware = all work products produced by the test process: plans, cases, data, scripts, logs, reports, environment configs.",
+    "Testware must be under configuration management, with versions aligned to the software it tests.",
+    "Reusable testware (regression suites) is one of the most valuable assets a test team builds."
+  ],
+  "quiz": {
+    "question": "Which of the following is NOT considered testware?",
+    "options": [
+      "The test plan for the next release.",
+      "Automated regression scripts in the team's repository.",
+      "The source code of the application under test.",
+      "The test data files used during system testing."
+    ],
+    "correct": 2,
+    "explanation": "Source code of the AUT is the test object, not testware. Testware is the work products produced for and by the testing activity itself — plans, scripts, data, logs, reports."
+  },
+  "exercise": { "type": "none" }
+}

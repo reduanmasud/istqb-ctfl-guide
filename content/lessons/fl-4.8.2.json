@@ -1,0 +1,25 @@
+{
+  "id": "fl-4.8.2",
+  "chapter": 4,
+  "section": "4.8",
+  "kLevel": "K2",
+  "title": "Selecting Test Techniques",
+  "concept": "Choosing the right test technique for a given situation is a core skill. The CTFL syllabus identifies factors that drive the choice.\n\n**Type of system** — embedded systems often need more white-box; data-driven systems lean on EP/BVA; rule-driven systems need decision tables; stateful systems need state transitions.\n\n**Regulatory requirements** — safety-critical domains mandate specific techniques (MC/DC for DO-178C Level A; structural coverage thresholds for ISO 26262 ASIL D).\n\n**Customer or contractual requirements** — contracts may specify coverage criteria or techniques to apply.\n\n**Risk level** — higher risk demands more rigorous techniques and stricter coverage.\n\n**Available documentation** — formal techniques need a specification; in its absence, experience-based techniques fill the gap.\n\n**Tester skill and experience** — apply techniques the team can execute well; partially-applied formal techniques can give false confidence.\n\n**Time and budget** — exhaustive coverage is expensive; risk-based prioritisation chooses where to invest.\n\n**Development lifecycle** — Agile teams favour collaboration-based and exploratory techniques; sequential teams plan more formally up front.\n\n**Object type and complexity** — interfaces benefit from boundary testing; complex algorithms benefit from structural coverage; user interfaces benefit from exploratory testing and checklists.\n\nThe test plan should document which techniques are used where and why.",
+  "keyPoints": [
+    "Selection drivers: system type, regulations, contracts, risk, documentation, skills, budget, lifecycle, object complexity.",
+    "Safety-critical work prescribes specific techniques (MC/DC, decision tables, structural thresholds).",
+    "Document technique choices and their rationale in the test plan."
+  ],
+  "quiz": {
+    "question": "A team must demonstrate to a regulator that every condition in every Boolean decision was independently tested (Modified Condition / Decision Coverage). Which factor is the PRIMARY driver of this technique choice?",
+    "options": [
+      "Tester preference.",
+      "Regulatory requirement (e.g., DO-178C Level A in avionics).",
+      "Budget constraints.",
+      "Agile lifecycle norms."
+    ],
+    "correct": 1,
+    "explanation": "MC/DC is mandated by safety-critical regulatory standards such as DO-178C Level A. It is too expensive and rigorous to be chosen by preference or by Agile norms; budget constraints would push *against* MC/DC because it is costly."
+  },
+  "exercise": { "type": "none" }
+}

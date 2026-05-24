@@ -1,0 +1,38 @@
+{
+  "id": "fl-5.1.1",
+  "chapter": 5,
+  "section": "5.1",
+  "kLevel": "K2",
+  "title": "Purpose and Content of a Test Plan",
+  "concept": "A **test plan** is a document describing the scope, approach, resources, and schedule of intended test activities. It is the contract between the test team and the wider organisation about what testing will be done, why, and how.\n\nTypical contents (per IEEE 829 / ISO 29119-3):\n- **Context and scope** — the test object, what is in/out of scope, lifecycle context.\n- **Objectives** — what testing aims to achieve (defect detection, coverage, compliance, confidence).\n- **Stakeholders** — who needs results, what decisions they will make.\n- **Test approach** — test levels, test types, techniques, entry/exit criteria, suspension/resumption criteria.\n- **Test deliverables** — plans, designs, cases, scripts, reports, logs.\n- **Schedule and milestones** — when each activity happens.\n- **Resources** — people, environments, tools, budgets.\n- **Risks and contingencies** — testing risks and mitigation strategies.\n- **Communication and reporting** — formats, frequency, channels.\n\nThe test plan is a living document — updated as the project evolves and as monitoring/control activities reveal deviations. In Agile, a lightweight test plan or test strategy at the release level is often combined with sprint-level test approaches.",
+  "keyPoints": [
+    "Test plan covers: scope, objectives, approach, deliverables, schedule, resources, risks, communication.",
+    "It is a living document — updated as conditions change.",
+    "Agile typically uses a lightweight release-level test strategy plus sprint-level approaches."
+  ],
+  "quiz": {
+    "question": "Which of the following is NOT typically a section of a test plan?",
+    "options": [
+      "Test approach (levels, types, techniques).",
+      "Entry and exit criteria.",
+      "Detailed source code of the test object.",
+      "Schedule and milestones."
+    ],
+    "correct": 2,
+    "explanation": "A test plan documents *what and how the testing will be done* — approach, criteria, schedule, resources. The source code of the AUT is not part of the test plan; it is the test object that the plan refers to."
+  },
+  "exercise": {
+    "type": "workflow-sequencer",
+    "stages": [
+      "Define context and scope",
+      "Identify stakeholders and objectives",
+      "Decide test approach (levels, types, techniques)",
+      "Define entry / exit criteria",
+      "Estimate effort and resources",
+      "Schedule activities and milestones",
+      "Identify and mitigate test risks",
+      "Document communication and reporting",
+      "Review and approve the test plan"
+    ]
+  }
+}

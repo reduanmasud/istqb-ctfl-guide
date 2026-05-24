@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "points": 1,
+    "loRef": "FL-1.1.1",
+    "chapter": 1,
+    "stem": "Which of the following is a TYPICAL testing objective?",
+    "options": [
+      "Guaranteeing zero defects in production.",
+      "Reducing the risk of inadequate software quality.",
+      "Replacing the need for design reviews.",
+      "Demonstrating the developer is at fault."
+    ],
+    "correct": 1,
+    "explanation": "Reducing risk of inadequate quality is a canonical objective. Zero-defect guarantees are impossible; reviews and testing are complementary; testing is not blame allocation."
+  },
+  {
+    "id": 2,
+    "points": 1,
+    "loRef": "FL-1.1.2",
+    "chapter": 1,
+    "stem": "Debugging is performed by which role and what activity follows it?",
+    "options": [
+      "By testers; followed by acceptance testing.",
+      "By developers; followed by confirmation testing and regression testing.",
+      "By management; followed by report writing.",
+      "By customers; followed by approval."
+    ],
+    "correct": 1,
+    "explanation": "Developers debug (locate and fix the defect). Testers then perform confirmation testing (does the fix work?) and regression testing (did anything else break?)."
+  },
+  {
+    "id": 3,
+    "points": 1,
+    "loRef": "FL-1.2.1",
+    "chapter": 1,
+    "stem": "A developer types `<=` instead of `<` but the affected branch is never executed in any test. Which is correct?",
+    "options": [
+      "No defect exists because no failure occurred.",
+      "A mistake created a defect; no failure has occurred because the defective code wasn't executed.",
+      "A failure occurred without a defect.",
+      "All three (mistake, defect, failure) exist."
+    ],
+    "correct": 1,
+    "explanation": "A defect can exist dormantly without producing a failure. The mistake creates the defect; execution is required for the defect to manifest as a failure."
+  },
+  {
+    "id": 4,
+    "points": 1,
+    "loRef": "FL-1.3.1",
+    "chapter": 1,
+    "stem": "Which principle says even a defect-free system can be useless if it doesn't meet user needs?",
+    "options": [
+      "Pesticide paradox.",
+      "Absence-of-errors fallacy.",
+      "Defect clustering.",
+      "Early testing saves time."
+    ],
+    "correct": 1,
+    "explanation": "The absence-of-errors fallacy reminds us that verification (built right) is not sufficient - validation (built the right thing) is also needed."
+  },
+  {
+    "id": 5,
+    "points": 1,
+    "loRef": "FL-1.4.1",
+    "chapter": 1,
+    "stem": "Which test activity is concerned with preparing test data and configuring test environments?",
+    "options": [
+      "Test analysis.",
+      "Test design.",
+      "Test implementation.",
+      "Test execution."
+    ],
+    "correct": 2,
+    "explanation": "Test implementation arranges everything needed to run tests - data, environments, scripts, suites. Analysis identifies what to test; design produces concrete cases; execution runs them."
+  },
+  {
+    "id": 6,
+    "points": 1,
+    "loRef": "FL-1.4.4",
+    "chapter": 1,
+    "stem": "Traceability between requirements and test cases supports all of the following EXCEPT:",
+    "options": [
+      "Impact analysis when a requirement changes.",
+      "Coverage measurement against requirements.",
+      "Audit evidence for regulators.",
+      "Guaranteeing the absence of defects."
+    ],
+    "correct": 3,
+    "explanation": "Traceability supports impact analysis, coverage, audit, and defect investigation. It cannot guarantee defect-free software - that contradicts the first testing principle."
+  },
+  {
+    "id": 7,
+    "points": 1,
+    "loRef": "FL-1.4.5",
+    "chapter": 1,
+    "stem": "Why does independent testing (by someone other than the developer) tend to find more defects?",
+    "options": [
+      "Testers are more skilled than developers.",
+      "Independent perspective reduces confirmation bias and brings new viewpoints.",
+      "Testers have access to secret tools.",
+      "Independence is mandated by law."
+    ],
+    "correct": 1,
+    "explanation": "Confirmation bias makes us see what we expect. An independent tester brings a different cognitive perspective and tests with different scenarios."
+  },
+  {
+    "id": 8,
+    "points": 1,
+    "loRef": "FL-2.1.1",
+    "chapter": 2,
+    "stem": "Which lifecycle pairs each development phase with a corresponding test level (left side dev, right side test)?",
+    "options": [
+      "Waterfall.",
+      "V-model.",
+      "Scrum.",
+      "Kanban."
+    ],
+    "correct": 1,
+    "explanation": "The V-model explicitly visualises and pairs development phases (left) with test levels (right): requirements<->acceptance, system design<->system testing, etc."
+  },
+  {
+    "id": 9,
+    "points": 1,
+    "loRef": "FL-2.1.3",
+    "chapter": 2,
+    "stem": "DevOps emphasises 'shifting testing both left and right'. What does 'shifting right' mean?",
+    "options": [
+      "Moving testing later into the schedule.",
+      "Doing more testing in production (monitoring, canary, A/B, observability).",
+      "Increasing the number of testers.",
+      "Removing testers from the team."
+    ],
+    "correct": 1,
+    "explanation": "'Shifting right' means leveraging production observability, canary releases, feature flags, and monitoring as part of the test strategy. 'Shifting left' moves activities earlier."
+  },
+  {
+    "id": 10,
+    "points": 1,
+    "loRef": "FL-2.2.1",
+    "chapter": 2,
+    "stem": "Which test level has the BUSINESS process as its primary test basis?",
+    "options": [
+      "Component testing.",
+      "Integration testing.",
+      "System testing.",
+      "Acceptance testing."
+    ],
+    "correct": 3,
+    "explanation": "Acceptance testing's test basis is business processes, user requirements, and contracts. Other levels use detailed design, architecture, and system requirements respectively."
+  },
+  {
+    "id": 11,
+    "points": 1,
+    "loRef": "FL-2.2.2",
+    "chapter": 2,
+    "stem": "Which test type is based on the SPECIFICATION without reference to internal code structure?",
+    "options": [
+      "White-box.",
+      "Black-box (specification-based).",
+      "Static.",
+      "Experience-based."
+    ],
+    "correct": 1,
+    "explanation": "Black-box / specification-based testing derives cases from the external spec. White-box uses code structure; static doesn't execute; experience-based uses intuition."
+  },
+  {
+    "id": 12,
+    "points": 1,
+    "loRef": "FL-2.3.2",
+    "chapter": 2,
+    "stem": "A company upgrades its operating system without changing the application code. What kind of maintenance testing applies?",
+    "options": [
+      "Corrective.",
+      "Adaptive.",
+      "Perfective.",
+      "No testing is needed."
+    ],
+    "correct": 1,
+    "explanation": "Adapting to an environment change (new OS) is adaptive maintenance. Regression testing is essential because OS behaviours/APIs may have changed subtly."
+  },
+  {
+    "id": 13,
+    "points": 1,
+    "loRef": "FL-2.4.1",
+    "chapter": 2,
+    "stem": "Testing whether a web app is accessible by screen readers and conforms to WCAG 2.1 AA primarily addresses which ISO 25010 characteristic?",
+    "options": [
+      "Reliability.",
+      "Usability (including accessibility).",
+      "Maintainability.",
+      "Portability."
+    ],
+    "correct": 1,
+    "explanation": "Accessibility is a sub-characteristic of usability in ISO/IEC 25010."
+  },
+  {
+    "id": 14,
+    "points": 1,
+    "loRef": "FL-3.1.1",
+    "chapter": 3,
+    "stem": "Which is the EARLIEST possible defect-removal activity in a project?",
+    "options": [
+      "Component testing.",
+      "Static testing - reviews of requirements before any code exists.",
+      "Acceptance testing.",
+      "Production monitoring."
+    ],
+    "correct": 1,
+    "explanation": "Static testing can be applied to requirements before any code exists - it is the earliest possible defect-removal activity."
+  },
+  {
+    "id": 15,
+    "points": 1,
+    "loRef": "FL-3.2.4",
+    "chapter": 3,
+    "stem": "Which is a key success factor for reviews?",
+    "options": [
+      "Long meetings without preparation.",
+      "Reviewers preparing in advance and small, manageable scope per review.",
+      "The author leading every review.",
+      "Skipping follow-up to save time."
+    ],
+    "correct": 1,
+    "explanation": "Preparation, manageable scope, defect (not solution) focus, and follow-up are recognised success factors. Long unprepared meetings and skipping follow-up are anti-patterns."
+  },
+  {
+    "id": 16,
+    "points": 1,
+    "loRef": "FL-3.2.2",
+    "chapter": 3,
+    "stem": "Who plans, leads, and follows up on a formal review (especially an inspection)?",
+    "options": [
+      "The author.",
+      "The reader.",
+      "The moderator.",
+      "The scribe."
+    ],
+    "correct": 2,
+    "explanation": "The moderator (review leader) plans and chairs the review, enforces entry/exit criteria, and ensures follow-up happens. The author does NOT lead inspections to avoid bias."
+  },
+  {
+    "id": 17,
+    "points": 1,
+    "loRef": "FL-3.2.3",
+    "chapter": 3,
+    "stem": "A team uses a list of items ('error conditions handled?', 'units of measurement specified?') to guide a review. Which technique is this?",
+    "options": [
+      "Ad-hoc review.",
+      "Checklist-based review.",
+      "Inspection.",
+      "Scenario-based review."
+    ],
+    "correct": 1,
+    "explanation": "Working through a predefined list of items is checklist-based review. It reduces dependence on individual experience."
+  },
+  {
+    "id": 18,
+    "points": 1,
+    "loRef": "FL-4.1.1",
+    "chapter": 4,
+    "stem": "Which category of test technique uses internal code structure as the basis for designing tests?",
+    "options": [
+      "Black-box (specification-based).",
+      "White-box (structure-based).",
+      "Experience-based.",
+      "Acceptance-based."
+    ],
+    "correct": 1,
+    "explanation": "White-box techniques use internal structure (statements, branches, paths) to design tests."
+  },
+  {
+    "id": 19,
+    "points": 1,
+    "loRef": "FL-4.2.1",
+    "chapter": 4,
+    "stem": "A password field accepts 8-20 characters. Which partition list is CORRECT for EP?",
+    "options": [
+      "Only {8-20}.",
+      "{1-7}, {8-20}, {21+}.",
+      "{0}, {1-100}.",
+      "{8-20}, {21+}."
+    ],
+    "correct": 1,
+    "explanation": "EP needs the valid partition (8-20) plus invalid-low (1-7) and invalid-high (21+), each with a representative test."
+  },
+  {
+    "id": 20,
+    "points": 1,
+    "loRef": "FL-4.3.1",
+    "chapter": 4,
+    "stem": "Why does BVA complement EP?",
+    "options": [
+      "BVA replaces EP because boundaries are all that matters.",
+      "Defects cluster at boundaries (off-by-one, wrong operator), so testing the boundaries catches these.",
+      "EP only works on text inputs.",
+      "BVA is required by ISO 25010."
+    ],
+    "correct": 1,
+    "explanation": "BVA explicitly targets boundary defects (off-by-one, `<` vs `<=`) that EP alone might miss because EP picks an arbitrary representative per partition."
+  },
+  {
+    "id": 21,
+    "points": 1,
+    "loRef": "FL-4.4.1",
+    "chapter": 4,
+    "stem": "A decision table represents complex business rules. Each column represents:",
+    "options": [
+      "A condition.",
+      "An action.",
+      "A unique rule (combination of condition values mapped to actions).",
+      "A test case template."
+    ],
+    "correct": 2,
+    "explanation": "Each column of a decision table is a rule - a unique combination of condition values with the corresponding action(s)."
+  },
+  {
+    "id": 22,
+    "points": 1,
+    "loRef": "FL-4.4.3",
+    "chapter": 4,
+    "stem": "Which test technique is BEST for verifying that a music player handles 'play', 'pause', and 'stop' correctly from any starting state?",
+    "options": [
+      "Equivalence partitioning.",
+      "Boundary value analysis.",
+      "State transition testing.",
+      "Statement coverage."
+    ],
+    "correct": 2,
+    "explanation": "A media player is a stateful system - behaviour depends on current state. State transition testing models states, events, and transitions explicitly."
+  },
+  {
+    "id": 23,
+    "points": 1,
+    "loRef": "FL-4.5.2",
+    "chapter": 4,
+    "stem": "Which structural criterion is STRICTLY stronger (implies more) than statement coverage?",
+    "options": [
+      "Function coverage.",
+      "Branch coverage.",
+      "Module coverage.",
+      "Line count."
+    ],
+    "correct": 1,
+    "explanation": "100% branch coverage implies 100% statement coverage (every branch direction is taken, executing all reachable statements). The reverse does not hold."
+  },
+  {
+    "id": 24,
+    "points": 1,
+    "loRef": "FL-4.6.2",
+    "chapter": 4,
+    "stem": "Exploratory testing emphasises:",
+    "options": [
+      "Pre-scripted test cases executed verbatim.",
+      "Concurrent test design, execution, and learning, often charter-based.",
+      "Only fully-automated tests.",
+      "Documentation written months in advance."
+    ],
+    "correct": 1,
+    "explanation": "Exploratory testing is concurrent design, execution, and learning, usually within a time-boxed charter. It is not the same as scripted or automated testing."
+  },
+  {
+    "id": 25,
+    "points": 1,
+    "loRef": "FL-4.7.1",
+    "chapter": 4,
+    "stem": "Specification by Example (SBE), often implemented via BDD tools, replaces:",
+    "options": [
+      "Unit tests.",
+      "Abstract acceptance criteria with concrete examples that double as executable tests.",
+      "All static testing.",
+      "Code reviews."
+    ],
+    "correct": 1,
+    "explanation": "SBE uses concrete examples in place of abstract rules. Each example becomes an executable test (e.g., via Cucumber). It complements - not replaces - unit testing and reviews."
+  },
+  {
+    "id": 26,
+    "points": 1,
+    "loRef": "FL-4.8.2",
+    "chapter": 4,
+    "stem": "Which factor MOST drives the selection of MC/DC as a structural coverage criterion?",
+    "options": [
+      "Tester preference.",
+      "Regulatory mandate in safety-critical domains (e.g., DO-178C Level A).",
+      "Budget constraints (it is cheaper).",
+      "Agile lifecycle norms."
+    ],
+    "correct": 1,
+    "explanation": "MC/DC is required by safety-critical standards like DO-178C Level A. It is expensive and rigorous; no team would choose it by preference or budget."
+  },
+  {
+    "id": 27,
+    "points": 1,
+    "loRef": "FL-5.1.5",
+    "chapter": 5,
+    "stem": "A team prioritises tests by 'tests covering high-impact requirements run first'. Which strategy is this?",
+    "options": [
+      "Recency-based.",
+      "Risk-based (using impact as the dominant factor).",
+      "Coverage-based.",
+      "Failure-rate-based."
+    ],
+    "correct": 1,
+    "explanation": "Prioritising by impact of failure is risk-based prioritisation (risk = likelihood x impact, dominated here by impact)."
+  },
+  {
+    "id": 28,
+    "points": 1,
+    "loRef": "FL-5.1.3",
+    "chapter": 5,
+    "stem": "Which is BEST classified as an ENTRY criterion for system testing?",
+    "options": [
+      "All severity-1 defects resolved.",
+      "Coverage target of 90% met.",
+      "Component-level testing completed and the system build deployed to a production-like test environment.",
+      "Test summary report approved."
+    ],
+    "correct": 2,
+    "explanation": "Entry criteria are conditions that must be met *before* starting. The other items are exit criteria."
+  },
+  {
+    "id": 29,
+    "points": 1,
+    "loRef": "FL-5.1.4",
+    "chapter": 5,
+    "stem": "Which estimation technique uses 'find a similar past project and adjust for known differences'?",
+    "options": [
+      "PERT three-point.",
+      "Wideband Delphi.",
+      "Analogy-based estimation.",
+      "Function point analysis."
+    ],
+    "correct": 2,
+    "explanation": "Analogy-based estimation explicitly anchors on a past project. The others use formulas, expert voting, or quantitative size measures."
+  },
+  {
+    "id": 30,
+    "points": 1,
+    "loRef": "FL-5.2.3",
+    "chapter": 5,
+    "stem": "What is the central principle of risk-based testing?",
+    "options": [
+      "Test every requirement equally to be fair.",
+      "Allocate test effort proportionally to risk - more for high-risk areas.",
+      "Test only the features that work.",
+      "Skip testing of low-priority features."
+    ],
+    "correct": 1,
+    "explanation": "RBT allocates testing effort proportionally to risk: high-risk areas get more, deeper testing; low-risk areas get less. 'Skip' is too strong - low-risk areas may still get smoke tests."
+  },
+  {
+    "id": 31,
+    "points": 1,
+    "loRef": "FL-5.2.4",
+    "chapter": 5,
+    "stem": "HAZOP is a risk assessment technique that uses:",
+    "options": [
+      "RPN = Severity x Occurrence x Detection.",
+      "Guide words (NO, MORE, LESS, REVERSE) applied to parameters.",
+      "Voting via planning-poker cards.",
+      "Random sampling of past defects."
+    ],
+    "correct": 1,
+    "explanation": "HAZOP (Hazard and Operability Study) uses guide words applied to parameters to systematically explore hazards. FMEA uses the RPN formula; risk poker uses voting."
+  },
+  {
+    "id": 32,
+    "points": 1,
+    "loRef": "FL-5.3.2",
+    "chapter": 5,
+    "stem": "Which audience is BEST served by a high-level dashboard showing trend lines for open defects and coverage?",
+    "options": [
+      "Developers fixing specific defects.",
+      "Executive stakeholders monitoring release readiness.",
+      "Auditors reviewing line-by-line traceability.",
+      "End users."
+    ],
+    "correct": 1,
+    "explanation": "Trend dashboards target stakeholders who need a quick view of release readiness. Developers and auditors need detail; end users get the released product, not reports."
+  },
+  {
+    "id": 33,
+    "points": 1,
+    "loRef": "FL-5.3.1",
+    "chapter": 5,
+    "stem": "Which is a TEST PROGRESS metric (not a product quality metric)?",
+    "options": [
+      "Mean time to failure (MTTF).",
+      "Defects per KLOC.",
+      "Number of test cases executed.",
+      "Performance throughput."
+    ],
+    "correct": 2,
+    "explanation": "Number of cases executed is a progress metric. MTTF, defects-per-KLOC, and throughput are product-quality metrics."
+  },
+  {
+    "id": 34,
+    "points": 1,
+    "loRef": "FL-5.4.1",
+    "chapter": 5,
+    "stem": "DevOps automates configuration management end-to-end. What is the BEST description of this?",
+    "options": [
+      "Each pipeline run pins specific versions of code, testware, and environment for reproducibility.",
+      "All testing is performed manually for safety.",
+      "Configuration files are kept secret.",
+      "Configuration is not relevant in DevOps."
+    ],
+    "correct": 0,
+    "explanation": "In DevOps the pipeline pins exact versions of code, testware, and environment for every run, making test executions deterministic and reproducible."
+  },
+  {
+    "id": 35,
+    "points": 1,
+    "loRef": "FL-5.4.2",
+    "chapter": 5,
+    "stem": "What is the typical first step in the defect lifecycle after a tester reports a defect?",
+    "options": [
+      "Closed.",
+      "Open / Assigned (assigned for analysis).",
+      "Rejected.",
+      "Deferred."
+    ],
+    "correct": 1,
+    "explanation": "A reported defect typically moves from New -> Open (assigned). Closed, rejected, and deferred are later states or outcomes."
+  },
+  {
+    "id": 36,
+    "points": 1,
+    "loRef": "FL-6.1.1",
+    "chapter": 6,
+    "stem": "Which tool category INTEGRATES requirements, test cases, executions, and defects under one roof?",
+    "options": [
+      "Static analyser.",
+      "Test management / ALM tool.",
+      "Load test tool.",
+      "Code formatter."
+    ],
+    "correct": 1,
+    "explanation": "Test management / ALM tools (Jira+plugins, Azure DevOps, Polarion, qTest) provide unified tracking and traceability."
+  },
+  {
+    "id": 37,
+    "points": 1,
+    "loRef": "FL-6.1.2",
+    "chapter": 6,
+    "stem": "Which is NOT a recognised benefit of automation?",
+    "options": [
+      "Speed and frequency.",
+      "Repeatability.",
+      "Replacement of all manual testing (including exploratory).",
+      "Frees tester time for high-value activities."
+    ],
+    "correct": 2,
+    "explanation": "Automation does not replace manual testing - particularly exploratory testing, which requires human curiosity and judgement. The other items are recognised benefits."
+  },
+  {
+    "id": 38,
+    "points": 1,
+    "loRef": "FL-6.1.3",
+    "chapter": 6,
+    "stem": "Which is the silent killer of automation programmes?",
+    "options": [
+      "High licence fees.",
+      "Flaky tests that pass sometimes and fail other times.",
+      "Lack of executive sponsorship.",
+      "Slow CPUs."
+    ],
+    "correct": 1,
+    "explanation": "Flaky tests train teams to ignore failures, destroying trust in the suite. Each flaky test must be fixed or deleted."
+  },
+  {
+    "id": 39,
+    "points": 1,
+    "loRef": "FL-6.1.4",
+    "chapter": 6,
+    "stem": "Capture/playback recording produces tests that are:",
+    "options": [
+      "Highly maintainable across UI changes.",
+      "Brittle - they often break with cosmetic UI changes.",
+      "The industry's current best practice.",
+      "Programmer-only authoring."
+    ],
+    "correct": 1,
+    "explanation": "Capture/playback ties scripts to specific UI element identifiers, so any cosmetic change breaks them. It is generally a stepping stone to better approaches (page objects, keyword/BDD)."
+  },
+  {
+    "id": 40,
+    "points": 1,
+    "loRef": "FL-6.1.5",
+    "chapter": 6,
+    "stem": "A common failure mode when introducing a new test tool is:",
+    "options": [
+      "Spending too much on training.",
+      "Picking by senior preference, skipping pilots, skipping training - leading to shelf-ware.",
+      "Excessive documentation of tool usage.",
+      "Over-integration with CI/CD."
+    ],
+    "correct": 1,
+    "explanation": "Skipping pilots and training while picking by preference is the canonical failure mode. The CTFL syllabus emphasises disciplined adoption."
+  }
+]

@@ -1,0 +1,25 @@
+{
+  "id": "fl-5.1.2",
+  "chapter": 5,
+  "section": "5.1",
+  "kLevel": "K3",
+  "title": "Tester's Contribution to Iteration and Release Planning",
+  "concept": "In Agile and incremental lifecycles, the tester contributes actively to planning rather than receiving requirements over the wall.\n\n**Release planning** — the tester estimates testing effort per feature, identifies dependencies (test data, environments, third-party readiness), highlights risks, and influences the release scope based on testability.\n\n**Iteration (sprint) planning** — the tester reviews the stories proposed for the sprint and assesses:\n- Are the acceptance criteria clear and testable? If not, refine them with the team (three amigos).\n- What testing is needed for each story (test types, techniques, depth)?\n- Are the dependencies (data, environment, tools) ready? If not, what's the impact?\n- Are there cross-cutting tests (regression, integration with previous sprint output)?\n- What's the effort to design, automate, and execute?\n\nThe tester's input shapes the sprint commitment: stories that are not testable in time are pulled out or split; stories needing infrastructure work get the infrastructure planned alongside.\n\n**Backlog grooming** — testers participate in grooming sessions to refine upcoming stories, surface ambiguities, and prepare acceptance criteria.\n\nWithout the tester in planning, ambiguous stories enter sprints, test debt accumulates, and end-of-sprint surprises (untestable, infrastructure missing, regression breaking) become routine.",
+  "keyPoints": [
+    "Testers contribute to release planning (effort, dependencies, risks, scope) and sprint planning (testability, acceptance criteria, test infra).",
+    "They drive acceptance-criteria clarity via three amigos and example mapping.",
+    "Excluding testers from planning leads to ambiguous stories and end-of-sprint surprises."
+  ],
+  "quiz": {
+    "question": "During sprint planning a tester identifies that one of the proposed stories cannot be tested because the third-party API is not yet available. What is the MOST appropriate action?",
+    "options": [
+      "Accept the story and hope the API arrives in time.",
+      "Raise the dependency and the risk to the team so the story is deferred, split, or has a contingency plan.",
+      "Silently note it and bring it up at the retrospective.",
+      "Refuse to test the story when it's delivered."
+    ],
+    "correct": 1,
+    "explanation": "Active testers raise dependencies and risks during planning so the team can decide: defer the story, split it (test what's testable now, defer the rest), or arrange a stub/contract. Silently accepting causes end-of-sprint surprises; refusing later doesn't help; waiting for retro misses the chance to adjust."
+  },
+  "exercise": { "type": "none" }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "fl-4.5.2",
+  "chapter": 4,
+  "section": "4.5",
+  "kLevel": "K3",
+  "title": "Branch Testing and Coverage",
+  "concept": "**Branch testing** designs test cases to exercise every branch (each possible outcome) of every decision point in the code: each `if/else`, `switch/case`, conditional loop, and short-circuit operator.\n\n**Branch coverage** = (executed branches) / (total branches) × 100%. For a simple `if (x > 0) {A} else {B}` there are 2 branches; tests must take both directions of the condition for 100% branch coverage.\n\n**Decision coverage** is closely related: every decision outcome is exercised. For boolean conditions, decision coverage equals branch coverage. For multi-way switches and compound conditions there are subtle differences but they are practically interchangeable at CTFL level.\n\n100% branch coverage implies 100% statement coverage (taking every branch executes every statement, except dead code). The reverse is not true: 100% statement coverage may leave half the branches untaken.\n\nBranch coverage catches defects that statement coverage misses: missing else clauses, incorrect conditions, off-by-one errors in loop bounds. It is the typical baseline for safety-relevant code; MC/DC (Modified Condition / Decision Coverage) is the next level up, required for the most critical avionics and medical software (DO-178C Level A).",
+  "keyPoints": [
+    "Branch testing exercises every branch outcome of every decision point.",
+    "100% branch coverage implies 100% statement coverage; the reverse does NOT hold.",
+    "Branch is the typical baseline for safety-relevant code; MC/DC is the next level up."
+  ],
+  "quiz": {
+    "question": "Consider: `if (x > 0) { print('pos'); } print('end');`. With one test using x = 5, the print('end') statement runs once. What are the statement and branch coverages?",
+    "options": [
+      "Statement 100%, branch 100%.",
+      "Statement 100%, branch 50%.",
+      "Statement 50%, branch 100%.",
+      "Statement 50%, branch 50%."
+    ],
+    "correct": 1,
+    "explanation": "x = 5 triggers the true branch, so both print statements execute → 100% statement coverage. But only one branch (the true branch) was taken; the false branch (where the if condition is false) was not → 50% branch coverage. This illustrates why branch coverage is strictly stronger than statement coverage."
+  },
+  "exercise": { "type": "none" }
+}

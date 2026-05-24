@@ -6,6 +6,9 @@ import { RedTeamingPrompter } from "@/components/exercises/RedTeamingPrompter";
 import { DatasetConstraintTester } from "@/components/exercises/DatasetConstraintTester";
 import { MetamorphicWorkshop } from "@/components/exercises/MetamorphicWorkshop";
 import { EdaExplorer } from "@/components/exercises/EdaExplorer";
+import { EPTableExercise } from "@/components/exercises/EPTableExercise";
+import { BVAExercise } from "@/components/exercises/BVAExercise";
+import { DecisionTableExercise } from "@/components/exercises/DecisionTableExercise";
 
 interface Props {
   exercise: ExerciseData;
@@ -63,6 +66,27 @@ export function ExerciseShell({ exercise, onComplete }: Props) {
       return (
         <EdaExplorer
           data={rest as { [key: string]: unknown }}
+          onComplete={onComplete}
+        />
+      );
+    case "ep-table":
+      return (
+        <EPTableExercise
+          data={rest as never}
+          onComplete={onComplete}
+        />
+      );
+    case "bva":
+      return (
+        <BVAExercise
+          data={rest as never}
+          onComplete={onComplete}
+        />
+      );
+    case "decision-table":
+      return (
+        <DecisionTableExercise
+          data={rest as never}
           onComplete={onComplete}
         />
       );

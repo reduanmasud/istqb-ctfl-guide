@@ -1,0 +1,25 @@
+{
+  "id": "fl-6.1.2",
+  "chapter": 6,
+  "section": "6.1",
+  "kLevel": "K1",
+  "title": "Benefits of Test Automation",
+  "concept": "Automated tests bring substantial benefits when applied to the right test cases.\n\n**Speed and frequency** — automated tests run orders of magnitude faster than manual execution. A regression suite that takes a week manually may run in 30 minutes automated, enabling continuous integration.\n\n**Repeatability** — the same inputs produce the same checks every time, eliminating human inconsistency. Defects detected by automation are usually reproducible.\n\n**Coverage** — automation enables tests that are infeasible manually: thousands of input combinations, long-running soak tests, parallel cross-browser checks, load tests with thousands of users.\n\n**Cost over time** — though up-front investment is high, the per-execution cost is low. Tests that run hundreds of times pay back rapidly.\n\n**Documentation** — well-written test scripts document expected behaviour and serve as living examples for new developers.\n\n**Tester focus** — manual time freed from regression is reinvested in exploration, design, and high-value activities that humans do better than tools.\n\nThe benefits are *not automatic*: poorly designed automation creates flaky tests, false confidence, and maintenance burden that exceeds the original manual effort. Realising benefits requires up-front design, ongoing maintenance, and judicious selection of what to automate.",
+  "keyPoints": [
+    "Benefits: speed/frequency, repeatability, coverage, cost-over-time, documentation, freeing testers for exploration.",
+    "Benefits require disciplined design and maintenance — poor automation creates more cost than value.",
+    "Automate stable, repeated, high-value tests; keep volatile or human-judgement tests manual."
+  ],
+  "quiz": {
+    "question": "Which kind of test is generally BEST suited to automation?",
+    "options": [
+      "Exploratory testing of a brand-new, rapidly-changing feature.",
+      "A daily regression check of a stable, frequently-run feature.",
+      "Subjective usability evaluation by an expert.",
+      "A one-time security audit of legacy code."
+    ],
+    "correct": 1,
+    "explanation": "Stable, frequently-run regression checks are ideal candidates: they pay back the automation investment quickly and run reliably. Exploratory and subjective usability tests need human judgement; one-time tests don't pay back the automation cost."
+  },
+  "exercise": { "type": "none" }
+}

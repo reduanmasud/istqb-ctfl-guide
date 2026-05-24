@@ -1,0 +1,25 @@
+{
+  "id": "fl-4.6.1",
+  "chapter": 4,
+  "section": "4.6",
+  "kLevel": "K2",
+  "title": "Error Guessing",
+  "concept": "**Error guessing** is an experience-based test technique. The tester uses knowledge of how systems typically fail, of past defects in similar systems, and of the type of developer mistakes that occur, to anticipate where defects are likely to be — and tests there.\n\nTypical sources of guesses:\n- **Past defect lists** — areas where defects have appeared before tend to harbour more (defect clustering).\n- **Common developer mistakes** — off-by-one errors, null pointer dereferences, missing input validation, integer overflow, race conditions, time-zone bugs, locale-sensitive parsing.\n- **Domain knowledge** — known weak spots in particular technologies, libraries, or patterns.\n- **Risk areas** — modules with high complexity, recent change, or low test coverage.\n\nError guessing is informal but not random — it is structured by experience. It is most valuable as a complement to systematic black-box and white-box techniques: systematic techniques achieve broad coverage; error guessing focuses on the high-risk corners.\n\n**Fault attacks** are a related approach: an explicit list of common defect types (the 'fault model') is consulted, and tests are designed to provoke each fault type.",
+  "keyPoints": [
+    "Error guessing uses tester experience to anticipate where defects are likely to be.",
+    "Sources: past defect lists, common mistakes, domain knowledge, risk areas.",
+    "Complements systematic techniques: broad coverage + targeted attacks on weak spots."
+  ],
+  "quiz": {
+    "question": "A tester reviews the recent defect history of a system and notes that date-parsing defects are common. The tester then designs additional tests that include leap days, daylight-saving transitions, and dates in 2099 and 1900. Which technique is this an example of?",
+    "options": [
+      "Equivalence partitioning",
+      "Boundary value analysis",
+      "Error guessing",
+      "Statement coverage"
+    ],
+    "correct": 2,
+    "explanation": "Using past defect knowledge (recent date-parsing defects) to anticipate where new defects might be and designing targeted tests is the essence of error guessing. EP/BVA are systematic; statement coverage is a structural metric."
+  },
+  "exercise": { "type": "none" }
+}

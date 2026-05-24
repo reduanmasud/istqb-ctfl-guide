@@ -1,0 +1,25 @@
+{
+  "id": "fl-1.1.2",
+  "chapter": 1,
+  "section": "1.1",
+  "kLevel": "K2",
+  "title": "Testing and Debugging",
+  "concept": "Testing and debugging are different activities with different goals, performed by people in different roles at different times.\n\n**Testing** can show that failures exist that are caused by defects in the software. A failure is the observable manifestation of a defect (a wrong output, crash, unexpected behaviour). Testing is performed primarily by testers (or by developers when running their own unit tests). Dynamic testing executes the software; static testing examines work products without execution.\n\n**Debugging** is the activity that finds, analyses, and fixes the defects that caused the failures. Debugging is performed by developers. The debugging workflow generally is: reproduce the failure → diagnose (find the defect) → fix the code → re-test that the original failure no longer occurs, and run regression tests to ensure no new failures have been introduced.\n\nThe distinction matters because confirmation testing (re-testing after a fix) and regression testing are testing activities — not debugging — and they should be planned and performed by testers using systematic techniques rather than left to the developer who made the fix.",
+  "keyPoints": [
+    "Testing reveals failures; debugging finds, analyses, and fixes the underlying defects that caused them.",
+    "Debugging is followed by confirmation testing (does the fix work?) and regression testing (did the fix break anything else?).",
+    "Testers test; developers debug — though in practice the same person may do both at different times in their workflow."
+  ],
+  "quiz": {
+    "question": "Which statement BEST captures the difference between testing and debugging?",
+    "options": [
+      "Testing and debugging are synonyms for the same activity.",
+      "Testing finds defects by reading the code; debugging executes the system to find failures.",
+      "Testing reveals failures caused by defects; debugging locates and fixes the defects, after which confirmation and regression testing are performed.",
+      "Debugging is performed before testing in every SDLC."
+    ],
+    "correct": 2,
+    "explanation": "Testing shows that failures occur; debugging is the developer activity of locating and fixing the defect. After a fix, the tester performs confirmation testing and regression testing — these are testing activities, not debugging."
+  },
+  "exercise": { "type": "none" }
+}

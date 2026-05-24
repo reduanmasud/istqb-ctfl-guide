@@ -1,0 +1,25 @@
+{
+  "id": "fl-3.1.3",
+  "chapter": 3,
+  "section": "3.1",
+  "kLevel": "K1",
+  "title": "Static Testing Objectives",
+  "concept": "Static testing has multiple objectives that overlap with — but are distinct from — those of dynamic testing.\n\n**Defect detection in work products** — finding ambiguities, contradictions, missing pieces, errors. Because static testing examines the artifact directly, it finds the defect at its source rather than via downstream symptoms.\n\n**Improving the quality of the work product** — reviews and static analysis catch quality issues (clarity, maintainability, conformance) that dynamic testing cannot.\n\n**Conformance to standards** — reviews and static analysis check whether the work product follows applicable standards (coding standards, regulatory standards, organisational templates).\n\n**Building consensus** — reviews bring stakeholders together around the work product and surface disagreements early.\n\n**Knowledge transfer** — review participants learn the content of the work product and gain shared understanding.\n\n**Risk identification** — reviewers may flag risks (unclear assumptions, missing edge cases, performance concerns) that drive subsequent test planning.\n\nA test plan should state which objectives apply for each review; tracking review effectiveness against these objectives is part of test process improvement.",
+  "keyPoints": [
+    "Static testing objectives: detect defects, improve quality, check standards conformance, build consensus, transfer knowledge, identify risks.",
+    "Different reviews target different objectives — a code inspection emphasises defect detection; a sprint demo emphasises consensus.",
+    "Tracking which objectives each review meets helps tune the review process."
+  ],
+  "quiz": {
+    "question": "Which static testing objective is BEST served by a structured peer review of newly-written acceptance criteria with the product owner, developer, and tester present?",
+    "options": [
+      "Building consensus among stakeholders that the criteria are clear and complete.",
+      "Measuring code coverage.",
+      "Detecting runtime memory leaks.",
+      "Stress-testing the system under load."
+    ],
+    "correct": 0,
+    "explanation": "Reviewing acceptance criteria with multiple stakeholders is the classic 'three amigos' meeting whose primary objective is building consensus on what 'done' means. Memory leaks and stress testing are dynamic activities; code coverage is measured during dynamic execution."
+  },
+  "exercise": { "type": "none" }
+}

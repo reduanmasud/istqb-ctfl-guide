@@ -1,0 +1,25 @@
+{
+  "id": "fl-2.4.2",
+  "chapter": 2,
+  "section": "2.4",
+  "kLevel": "K1",
+  "title": "Test Levels and Test Types in Practice",
+  "concept": "Test levels and test types are independent dimensions: at any level, you can perform any type. In practice, certain combinations dominate.\n\n**Component testing** is heavily functional + white-box. Developers exercise their unit's logic, covering statements and branches. Non-functional tests at this level focus on time- and memory-bounded units (e.g., a sort that must run in O(n log n) within 100 ms).\n\n**Integration testing** is functional + black-box at the interface level (does the API contract hold?), plus non-functional (does the interface handle load? does it time out gracefully?). White-box techniques are used for protocol coverage.\n\n**System testing** is dominated by functional + black-box (end-to-end scenarios from requirements) and non-functional + black-box (performance, security, usability of the whole system). Some white-box techniques (e.g., transaction flow coverage) appear too.\n\n**Acceptance testing** is functional + black-box (business scenarios against user requirements) plus selected non-functional checks (does the system meet contractual response-time SLA? is it usable enough for the operator?).\n\nThe table of combinations is a useful tool when planning: for each level, decide which types and which techniques.",
+  "keyPoints": [
+    "Levels (component, integration, system, acceptance) and types (functional, non-functional, black-box, white-box) are independent dimensions.",
+    "Component testing emphasises white-box functional; system and acceptance emphasise black-box functional plus non-functional.",
+    "Mapping test types to test levels in the test plan ensures balanced coverage of quality characteristics."
+  ],
+  "quiz": {
+    "question": "Which combination of test level and test type is MOST typical for verifying that a sorting function processes 10,000 items in under 200 ms?",
+    "options": [
+      "Acceptance + functional",
+      "Component + non-functional (performance)",
+      "System + black-box",
+      "Integration + white-box"
+    ],
+    "correct": 1,
+    "explanation": "A timing constraint on a single function is exercised at the component level (the function is the unit) and is non-functional (it's about performance, not correctness of the sort output). The other combinations test broader scopes than needed."
+  },
+  "exercise": { "type": "none" }
+}

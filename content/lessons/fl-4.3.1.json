@@ -1,0 +1,47 @@
+{
+  "id": "fl-4.3.1",
+  "chapter": 4,
+  "section": "4.3",
+  "kLevel": "K3",
+  "title": "Boundary Value Analysis",
+  "concept": "**Boundary Value Analysis (BVA)** complements equivalence partitioning by adding tests at the boundaries of partitions. Defects cluster at boundaries: off-by-one errors, `<` vs `<=` mistakes, missing edge-case handling. Testing the boundary values catches these.\n\nTwo common BVA strategies:\n\n**Two-value BVA** — for each boundary, test the boundary value and the value just outside the partition. For a partition [1, 100]: boundaries are 1 and 100. Two-value testing uses {0, 1} at the lower boundary and {100, 101} at the upper. Total: 4 boundary tests per range partition.\n\n**Three-value BVA** — test the value just below, the boundary, and the value just above. For [1, 100]: {0, 1, 2} and {99, 100, 101}. Total: 6 boundary tests per range partition. More thorough but more expensive.\n\nNon-numeric examples: for a string field of 1-50 characters, the lower boundary tests use a 0-char and a 1-char string (two-value) or 0, 1, and 2 chars (three-value); the upper boundary tests use 50-char and 51-char strings.\n\nBVA only applies where there is an ordering of values (numeric ranges, lengths, dates, time durations). For unordered sets (currencies, country codes) BVA does not apply — use EP alone.",
+  "keyPoints": [
+    "BVA targets defects at partition boundaries (off-by-one, `<` vs `<=`).",
+    "Two-value BVA: boundary + just outside. Three-value BVA: just below + boundary + just above.",
+    "BVA requires an ordering of values — applies to numeric ranges, lengths, dates; not to unordered sets."
+  ],
+  "quiz": {
+    "question": "A field accepts integers 1 to 100. Using two-value BVA, which set of values should be tested at the lower boundary?",
+    "options": [
+      "{1, 2}",
+      "{0, 1}",
+      "{0, 1, 2}",
+      "{-1, 0, 1}"
+    ],
+    "correct": 1,
+    "explanation": "Two-value BVA at the lower boundary tests the boundary value (1) and the value just outside the partition (0). Three-value BVA would add 2 as well. {1, 2} is two valid values, not a boundary pair."
+  },
+  "exercise": {
+    "type": "bva",
+    "cases": [
+      {
+        "rangeDescription": "Valid range: 1 to 10 (two-value BVA). Which values are boundary values?",
+        "candidates": ["0", "1", "2", "9", "10", "11"],
+        "boundaryIndices": [0, 1, 4, 5],
+        "explanation": "Two-value BVA at each end uses the boundary and the value just outside. Lower boundary: 0 (just-outside) and 1 (boundary). Upper boundary: 10 (boundary) and 11 (just-outside). The values 2 and 9 are inside the partition but not at the boundary."
+      },
+      {
+        "rangeDescription": "Password length 8 to 20 characters (three-value BVA). Which lengths are boundary values?",
+        "candidates": ["6", "7", "8", "9", "12", "19", "20", "21", "22"],
+        "boundaryIndices": [1, 2, 3, 5, 6, 7],
+        "explanation": "Three-value BVA covers just-below, boundary, and just-above at each end. Lower boundary: 7 (just-below), 8 (boundary), 9 (just-above). Upper boundary: 19 (just-below), 20 (boundary), 21 (just-above). Lengths 6, 12, and 22 are not boundary values (6 and 22 are too far out; 12 is mid-partition)."
+      },
+      {
+        "rangeDescription": "A discount percentage between 5% and 25% (two-value BVA). Which percentages are boundary values?",
+        "candidates": ["4", "5", "6", "15", "24", "25", "26"],
+        "boundaryIndices": [0, 1, 5, 6],
+        "explanation": "Two-value BVA: 4 and 5 at the lower boundary; 25 and 26 at the upper. 6, 15, and 24 are inside the partition (not at boundary)."
+      }
+    ]
+  }
+}

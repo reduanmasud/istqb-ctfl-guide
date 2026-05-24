@@ -1,58 +1,120 @@
 [
   {
     "id": 1,
-    "title": "Introduction to Artificial Intelligence",
+    "title": "Fundamentals of Testing",
     "duration": 180,
     "color": "blue",
-    "description": "AI types, technologies, hardware, hosting, frameworks, and regulations.",
-    "loIds": ["ai-1.1.1","ai-1.1.2","ai-1.1.3","ai-1.1.4","ai-1.1.5","ai-1.1.6","ai-1.1.7","ai-1.1.8","ho-1.1.9"]
+    "description": "Test objectives, the seven testing principles, the test process, and the testing mindset.",
+    "loIds": [
+      "fl-1.1.1",
+      "fl-1.1.2",
+      "fl-1.2.1",
+      "fl-1.2.2",
+      "fl-1.2.3",
+      "fl-1.3.1",
+      "fl-1.4.1",
+      "fl-1.4.2",
+      "fl-1.4.3",
+      "fl-1.4.4",
+      "fl-1.4.5"
+    ]
   },
   {
     "id": 2,
-    "title": "Quality Characteristics for AI-Based Systems",
-    "duration": 90,
+    "title": "Testing Throughout the SDLC",
+    "duration": 130,
     "color": "purple",
-    "description": "ISO/IEC 25059 quality characteristics, safety considerations, and acceptance criteria.",
-    "loIds": ["ai-2.1.1","ai-2.1.2","ai-2.2.1"]
+    "description": "Test activities across the software development lifecycle, test levels, test types, and maintenance testing.",
+    "loIds": [
+      "fl-2.1.1",
+      "fl-2.1.2",
+      "fl-2.1.3",
+      "fl-2.2.1",
+      "fl-2.2.2",
+      "fl-2.2.3",
+      "fl-2.3.1",
+      "fl-2.3.2",
+      "fl-2.4.1",
+      "fl-2.4.2"
+    ]
   },
   {
     "id": 3,
-    "title": "Machine Learning",
-    "duration": 270,
+    "title": "Static Testing",
+    "duration": 80,
     "color": "green",
-    "description": "ML forms, workflow, data preparation, confusion matrix metrics, and neural networks.",
-    "loIds": ["ai-3.1.1","ai-3.1.2","ai-3.1.4","ai-3.2.1","ai-3.2.3","ai-3.3.1","ai-3.4.1","ai-3.4.3","ho-3.1.3","ho-3.2.2","ho-3.3.2"]
+    "description": "Static testing basics, feedback and review process, review types, roles, and techniques.",
+    "loIds": [
+      "fl-3.1.1",
+      "fl-3.1.2",
+      "fl-3.1.3",
+      "fl-3.2.1",
+      "fl-3.2.2",
+      "fl-3.2.3",
+      "fl-3.2.4"
+    ]
   },
   {
     "id": 4,
-    "title": "Testing AI-Based Systems",
-    "duration": 195,
+    "title": "Test Analysis and Design",
+    "duration": 390,
     "color": "orange",
-    "description": "Locked vs adaptive systems, statistical testing, test oracles, GenAI testing, red teaming, test levels.",
-    "loIds": ["ai-4.1.1","ai-4.1.2","ai-4.1.3","ai-4.2.1","ai-4.2.2","ai-4.3.1","ai-4.3.2","ho-4.2.3"]
+    "description": "Test techniques: black-box (EP, BVA, decision tables, state transition), white-box, experience-based, and collaboration-based.",
+    "loIds": [
+      "fl-4.1.1",
+      "fl-4.1.2",
+      "fl-4.2.1",
+      "fl-4.2.2",
+      "fl-4.3.1",
+      "fl-4.3.2",
+      "fl-4.4.1",
+      "fl-4.4.2",
+      "fl-4.4.3",
+      "fl-4.5.1",
+      "fl-4.5.2",
+      "fl-4.5.3",
+      "fl-4.6.1",
+      "fl-4.6.2",
+      "fl-4.6.3",
+      "fl-4.7.1",
+      "fl-4.8.1",
+      "fl-4.8.2"
+    ]
   },
   {
     "id": 5,
-    "title": "Input Data Testing for Machine Learning Systems",
-    "duration": 180,
+    "title": "Managing the Test Activities",
+    "duration": 335,
     "color": "yellow",
-    "description": "Bias testing, data pipeline testing, representativeness, dataset constraints, label correctness.",
-    "loIds": ["ai-5.1.1","ai-5.1.2","ai-5.1.3","ai-5.1.4","ai-5.1.5","ai-5.1.6","ho-5.1.7"]
+    "description": "Test planning, risk management, monitoring and control, configuration management, defect management.",
+    "loIds": [
+      "fl-5.1.1",
+      "fl-5.1.2",
+      "fl-5.1.3",
+      "fl-5.1.4",
+      "fl-5.1.5",
+      "fl-5.2.1",
+      "fl-5.2.2",
+      "fl-5.2.3",
+      "fl-5.2.4",
+      "fl-5.3.1",
+      "fl-5.3.2",
+      "fl-5.4.1",
+      "fl-5.4.2"
+    ]
   },
   {
     "id": 6,
-    "title": "Model Testing for Machine Learning Systems",
-    "duration": 225,
-    "color": "red",
-    "description": "Model risks, documentation review, performance testing, adversarial testing, metamorphic testing, drift, overfitting, A/B and back-to-back testing.",
-    "loIds": ["ai-6.1.1","ai-6.1.2","ai-6.1.3","ai-6.1.4","ai-6.1.5","ai-6.1.7","ai-6.1.8","ai-6.1.9","ai-6.1.10","ho-6.1.6"]
-  },
-  {
-    "id": 7,
-    "title": "Machine Learning Development Testing",
-    "duration": 30,
+    "title": "Test Tools",
+    "duration": 20,
     "color": "teal",
-    "description": "ML development risks and deployment testing types.",
-    "loIds": ["ai-7.1.1","ai-7.1.2"]
+    "description": "Tool support for testing, categories of test tools, benefits and risks, and tool selection.",
+    "loIds": [
+      "fl-6.1.1",
+      "fl-6.1.2",
+      "fl-6.1.3",
+      "fl-6.1.4",
+      "fl-6.1.5"
+    ]
   }
 ]

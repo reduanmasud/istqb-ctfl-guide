@@ -1,0 +1,37 @@
+{
+  "id": "fl-2.1.1",
+  "chapter": 2,
+  "section": "2.1",
+  "kLevel": "K2",
+  "title": "Testing and Software Development Lifecycle",
+  "concept": "Testing must be embedded in the chosen Software Development Lifecycle (SDLC) — it is not an afterthought. Each SDLC handles testing differently.\n\n**Sequential lifecycles (waterfall, V-model)** define phases performed in order: requirements → design → implementation → testing → maintenance. The **V-model** explicitly pairs each development phase with a corresponding test level: requirements ↔ acceptance testing, system design ↔ system testing, architectural design ↔ integration testing, detailed design ↔ component testing. The V-model emphasises that test design should begin as soon as the corresponding development artifact is available — even though execution happens later.\n\n**Iterative and incremental lifecycles (RUP, spiral, prototyping)** break the work into phases that are repeated. Each iteration produces a slice of working software which is tested before the next iteration begins. Risk-driven iteration (spiral) prioritises tackling the highest-risk areas first.\n\n**Agile lifecycles (Scrum, XP, Kanban)** produce working software every sprint or continuously. Testing happens throughout each sprint: test planning at sprint planning, test design alongside development, execution before the sprint ends, regression and acceptance test automation continuously.\n\nThe key principle: every SDLC includes all the testing activities, but with different timing, granularity, and formality.",
+  "keyPoints": [
+    "Sequential lifecycles separate phases; the V-model maps each dev phase to a corresponding test level.",
+    "Iterative and incremental lifecycles repeat phases on shorter cycles, testing each increment.",
+    "Agile teams perform all test activities continuously, with heavy automation to keep up with each sprint."
+  ],
+  "quiz": {
+    "question": "In the V-model, which test level is MOST closely paired with the requirements specification?",
+    "options": [
+      "Component testing",
+      "Integration testing",
+      "System testing",
+      "Acceptance testing"
+    ],
+    "correct": 3,
+    "explanation": "Acceptance testing verifies that the system meets the original business requirements and user needs — the V-model pairs it with the requirements phase. System testing is paired with system design, integration with architectural design, and component testing with detailed design."
+  },
+  "exercise": {
+    "type": "workflow-sequencer",
+    "stages": [
+      "Requirements analysis (with acceptance test design)",
+      "System design (with system test design)",
+      "Architecture design (with integration test design)",
+      "Detailed design (with component test design)",
+      "Coding and component testing",
+      "Integration testing",
+      "System testing",
+      "Acceptance testing"
+    ]
+  }
+}

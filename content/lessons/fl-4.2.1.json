@@ -1,0 +1,47 @@
+{
+  "id": "fl-4.2.1",
+  "chapter": 4,
+  "section": "4.2",
+  "kLevel": "K3",
+  "title": "Equivalence Partitioning",
+  "concept": "**Equivalence Partitioning (EP)** divides the input domain (or output domain, or internal value range, or time domain) into partitions where the system is *expected* to behave the same way. The assumption: if one value in a partition triggers a defect, all values in that partition would trigger the same defect — so one representative test per partition is sufficient.\n\nPartitions can be **valid** (within the specified range or set) or **invalid** (outside the specified range or set). For each input, the tester identifies all relevant partitions, then selects a representative value from each.\n\nExample: a field accepts integers 1 to 100.\n- Valid partition: 1 ≤ x ≤ 100 → pick e.g. 50\n- Invalid partition (too low): x < 1 → pick e.g. 0 or -5\n- Invalid partition (too high): x > 100 → pick e.g. 101 or 999\n\nFor non-numeric inputs the partitions might be sets: 'currencies' = {USD, EUR, GBP, JPY} (each a valid partition) and 'unsupported currencies' (invalid).\n\nCoverage criterion: every partition is covered by at least one test. EP is most powerful when combined with boundary value analysis (BVA), which adds tests at the partition boundaries where defects most often hide.",
+  "keyPoints": [
+    "EP divides the input/output domain into partitions where behaviour is expected to be the same.",
+    "Each partition is either valid (inside spec) or invalid (outside spec); one representative test per partition.",
+    "Coverage: every partition covered by ≥ 1 test. Typically combined with BVA for boundary defects."
+  ],
+  "quiz": {
+    "question": "A login system requires a password of 8 to 20 characters. Using equivalence partitioning, which set of partitions is correct?",
+    "options": [
+      "{1-7}, {8-20}, {21+} — three partitions: one valid (8-20), two invalid (too short, too long).",
+      "Only {8-20} — only valid inputs need to be tested.",
+      "{0}, {1-100} — just zero and any non-zero length.",
+      "{8-20}, {21+} — invalid below 8 is not a defect."
+    ],
+    "correct": 0,
+    "explanation": "EP for a numeric range covers the valid partition and each invalid partition adjacent to it. Lengths 1-7 are invalid (too short); 8-20 are valid; 21+ are invalid (too long). Each partition gets a representative test."
+  },
+  "exercise": {
+    "type": "ep-table",
+    "cases": [
+      {
+        "description": "An online form's 'Age' field accepts integers from 18 to 65 inclusive.",
+        "values": ["17", "18", "40", "65", "66", "-1"],
+        "validIndices": [1, 2, 3],
+        "explanation": "Valid partition is 18..65, so 18, 40, and 65 are valid. 17 is below the minimum (invalid-low), 66 is above the maximum (invalid-high), and -1 is also invalid-low. EP needs one representative from each partition; for the valid partition, 40 is sufficient — 18 and 65 are actually boundary values useful for BVA."
+      },
+      {
+        "description": "A currency dropdown accepts the values USD, EUR, GBP only.",
+        "values": ["USD", "EUR", "GBP", "JPY", "CAD", "AUD"],
+        "validIndices": [0, 1, 2],
+        "explanation": "USD, EUR, GBP each belong to the valid partition (the set of supported currencies). JPY, CAD, AUD all belong to a single invalid partition (any other currency). EP says to test at least one valid (any of USD/EUR/GBP) and at least one invalid (any of JPY/CAD/AUD); selecting one per labelled partition is the canonical answer."
+      },
+      {
+        "description": "A discount code field accepts a 6-character alphanumeric string (A-Z, 0-9 only).",
+        "values": ["ABC123", "abc123", "AB12", "ABCD1234", "AB-123", "AB CD3"],
+        "validIndices": [0],
+        "explanation": "Valid: exactly 6 characters using A-Z and 0-9 — only ABC123 qualifies. 'abc123' has lowercase letters (invalid alphabet partition); 'AB12' is too short; 'ABCD1234' is too long; 'AB-123' contains an unsupported character; 'AB CD3' contains a space. Each invalid value belongs to a different invalid partition."
+      }
+    ]
+  }
+}

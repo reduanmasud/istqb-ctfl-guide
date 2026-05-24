@@ -1,0 +1,25 @@
+{
+  "id": "fl-6.1.3",
+  "chapter": 6,
+  "section": "6.1",
+  "kLevel": "K1",
+  "title": "Risks of Test Automation",
+  "concept": "Automation carries risks that, mismanaged, can erase its benefits or even create net negative value.\n\n**Unrealistic expectations** — stakeholders assume automation will find more defects than manual testing. In reality, automation primarily *re-runs* tests; new defects are found by humans designing new tests.\n\n**Underestimated maintenance cost** — scripts must be updated as the UI, API, or data model changes. A poorly designed suite of 1000 scripts can take an FTE just to keep green.\n\n**Flaky tests** — tests that intermittently pass or fail (timing, asynchronous operations, shared data, environment instability) undermine trust in the suite. Teams start ignoring failures; real failures slip through.\n\n**Brittle abstractions** — scripts tied to UI element IDs break with cosmetic UI changes; scripts tied to specific data rows break when data refreshes.\n\n**Tool dependency / vendor lock-in** — investments in proprietary tools can be hard to migrate away from.\n\n**Skill gap** — automation requires programming skills the test team may not have; training and recruitment take time.\n\n**False confidence** — green tests can mask defects in untested paths; teams must remember automation is one part of testing, not all of it.\n\nMitigations include: realistic ROI analysis up-front, page-object / API-wrapper abstractions for maintainability, deterministic test data, ruthless triage of flaky tests, and clear scope statements about what automation does and does not cover.",
+  "keyPoints": [
+    "Risks: unrealistic expectations, maintenance cost, flaky tests, brittle abstractions, vendor lock-in, skill gap, false confidence.",
+    "Flaky tests are the silent killer of automation programmes — fix or delete them immediately.",
+    "Use page-object / API-wrapper abstractions to insulate scripts from cosmetic changes."
+  ],
+  "quiz": {
+    "question": "A team's automated regression suite has 200 tests, but 30 of them fail intermittently due to timing issues. What is the MOST important action?",
+    "options": [
+      "Ignore the flaky tests — they pass eventually.",
+      "Investigate and fix (or delete) the flaky tests; flakiness destroys trust in the whole suite.",
+      "Add more tests to dilute the failures.",
+      "Stop running automation and revert to manual testing."
+    ],
+    "correct": 1,
+    "explanation": "Flaky tests train teams to ignore failures, which is the most dangerous outcome for an automation programme. Each flaky test must be investigated, fixed (e.g., with proper waits or deterministic data), or removed. Ignoring or diluting the problem makes it worse; abandoning automation throws away the benefits."
+  },
+  "exercise": { "type": "none" }
+}

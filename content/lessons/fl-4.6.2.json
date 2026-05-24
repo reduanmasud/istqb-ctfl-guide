@@ -1,0 +1,25 @@
+{
+  "id": "fl-4.6.2",
+  "chapter": 4,
+  "section": "4.6",
+  "kLevel": "K2",
+  "title": "Exploratory Testing",
+  "concept": "**Exploratory testing** is concurrent test design, execution, and learning. The tester explores the system, designs tests on the fly based on what they find, executes them immediately, and uses the results to design the next tests.\n\nUnlike scripted testing (where tests are designed in advance and executed verbatim), exploratory testing emphasises:\n- **Concurrent design and execution** — the tester's mind is engaged with the system as it behaves, allowing intuition and curiosity to drive discovery.\n- **Charter-based organisation** — a charter is a short, time-boxed mission ('explore the cart functionality, focus on quantity edge cases'). Charters keep exploration focused.\n- **Note-taking and debriefing** — the tester records what was tried, what was found, and what wasn't covered. Findings feed back into formal test design.\n\nExploratory testing is particularly valuable when:\n- The specification is incomplete or rapidly evolving.\n- The system is new or unfamiliar.\n- Time-boxed deep dives are needed to discover unknown unknowns.\n- Scripted tests have run dry (pesticide paradox) and the team needs fresh defects.\n\nIt is not the entire test strategy — pairing it with scripted regression suites gives both breadth (regression) and depth (exploration). Skilled exploratory testers find defects that pure scripted approaches miss.",
+  "keyPoints": [
+    "Exploratory testing = concurrent test design, execution, and learning, often guided by a charter.",
+    "Best for incomplete specs, new systems, unknown unknowns, or when scripted tests have stopped finding defects.",
+    "Pairs with scripted regression — exploratory provides depth, scripted provides breadth."
+  ],
+  "quiz": {
+    "question": "Which scenario is exploratory testing MOST appropriate for?",
+    "options": [
+      "Re-running a stable regression suite on every nightly build.",
+      "Verifying a 200-page formal requirements specification meets a regulatory standard.",
+      "Investigating a newly-built feature whose acceptance criteria are still being refined.",
+      "Measuring code coverage of the unit test suite."
+    ],
+    "correct": 2,
+    "explanation": "Exploratory testing shines when specs are evolving and the system is new — the tester uses curiosity and emerging understanding to discover defects and shape acceptance criteria. Regression and regulated/specified testing prefer scripted approaches; coverage measurement is structural."
+  },
+  "exercise": { "type": "none" }
+}

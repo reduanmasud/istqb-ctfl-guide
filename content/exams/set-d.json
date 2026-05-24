@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "points": 1,
+    "loRef": "FL-1.1.2",
+    "chapter": 1,
+    "stem": "Which statement BEST captures the difference between testing and debugging?",
+    "options": [
+      "They are synonyms.",
+      "Testing reveals failures; debugging locates and fixes the underlying defects.",
+      "Testing fixes defects; debugging reveals them.",
+      "Both are exclusively developer activities."
+    ],
+    "correct": 1,
+    "explanation": "Testing reveals failures that are caused by defects. Debugging is the developer activity that locates and fixes the defects, followed by confirmation and regression testing."
+  },
+  {
+    "id": 2,
+    "points": 1,
+    "loRef": "FL-1.2.2",
+    "chapter": 1,
+    "stem": "Which of the following is the EARLIEST contribution of testing in a project?",
+    "options": [
+      "Catching defects during system testing.",
+      "Preventing defects by participating in requirements reviews.",
+      "Releasing the product to production.",
+      "Writing the test summary report."
+    ],
+    "correct": 1,
+    "explanation": "Defect prevention via early review involvement is the earliest contribution. Defects prevented in requirements never need to be fixed later."
+  },
+  {
+    "id": 3,
+    "points": 1,
+    "loRef": "FL-1.2.3",
+    "chapter": 1,
+    "stem": "Which is process-focused rather than product-focused?",
+    "options": [
+      "Quality Assurance (QA).",
+      "Quality Control (QC).",
+      "Testing.",
+      "Defect triage."
+    ],
+    "correct": 0,
+    "explanation": "QA focuses on the process that produces quality. QC, testing, and triage focus on the product."
+  },
+  {
+    "id": 4,
+    "points": 1,
+    "loRef": "FL-1.3.1",
+    "chapter": 1,
+    "stem": "Which testing principle states that testing approaches should differ for safety-critical avionics vs a marketing web page?",
+    "options": [
+      "Defect clustering.",
+      "Pesticide paradox.",
+      "Testing is context-dependent.",
+      "Early testing saves money."
+    ],
+    "correct": 2,
+    "explanation": "The context-dependent principle: how you test depends on the domain, risk, regulations, and stakeholders - there is no one-size-fits-all approach."
+  },
+  {
+    "id": 5,
+    "points": 1,
+    "loRef": "FL-1.4.1",
+    "chapter": 1,
+    "stem": "Which activity runs THROUGHOUT the test process to keep testing aligned with the plan?",
+    "options": [
+      "Test analysis.",
+      "Test monitoring and control.",
+      "Test design.",
+      "Test execution."
+    ],
+    "correct": 1,
+    "explanation": "Monitoring and control runs continuously: collect metrics, compare against plan, take corrective action when conditions change."
+  },
+  {
+    "id": 6,
+    "points": 1,
+    "loRef": "FL-1.4.2",
+    "chapter": 1,
+    "stem": "Which lifecycle compresses all seven test activities into every sprint?",
+    "options": [
+      "Sequential (V-model / waterfall).",
+      "Agile (Scrum, XP, Kanban).",
+      "Big-bang.",
+      "Documentation-driven."
+    ],
+    "correct": 1,
+    "explanation": "Agile teams perform all test activities (planning, monitoring, analysis, design, implementation, execution, completion) within each sprint."
+  },
+  {
+    "id": 7,
+    "points": 1,
+    "loRef": "FL-2.1.1",
+    "chapter": 2,
+    "stem": "Which lifecycle iteratively produces working software, with each iteration tested before the next starts?",
+    "options": [
+      "Strict waterfall.",
+      "V-model with single delivery.",
+      "Iterative / incremental.",
+      "Documentation-only."
+    ],
+    "correct": 2,
+    "explanation": "Iterative/incremental lifecycles produce working software in slices, testing each before proceeding. Pure waterfall and single-delivery V-model don't iterate."
+  },
+  {
+    "id": 8,
+    "points": 1,
+    "loRef": "FL-2.1.2",
+    "chapter": 2,
+    "stem": "Which approach has the team agree on concrete acceptance examples BEFORE coding starts?",
+    "options": [
+      "Test-Driven Development (TDD).",
+      "Acceptance Test-Driven Development (ATDD).",
+      "Smoke testing.",
+      "Random testing."
+    ],
+    "correct": 1,
+    "explanation": "ATDD has business + dev + tester collaborate on concrete acceptance examples before implementation. TDD is unit-level; smoke is a sub-suite; random is unrelated."
+  },
+  {
+    "id": 9,
+    "points": 1,
+    "loRef": "FL-2.2.1",
+    "chapter": 2,
+    "stem": "Operational Acceptance Testing (OAT) is a subtype of which test level?",
+    "options": [
+      "Component testing.",
+      "Integration testing.",
+      "System testing.",
+      "Acceptance testing."
+    ],
+    "correct": 3,
+    "explanation": "OAT is a subtype of acceptance testing focused on operational concerns (backup/restore, security operations, maintenance procedures)."
+  },
+  {
+    "id": 10,
+    "points": 1,
+    "loRef": "FL-2.2.3",
+    "chapter": 2,
+    "stem": "Which testing activity is responsible for re-running the originally failing test after a fix?",
+    "options": [
+      "Regression testing.",
+      "Confirmation testing.",
+      "Smoke testing.",
+      "Static analysis."
+    ],
+    "correct": 1,
+    "explanation": "Confirmation testing re-runs the originally failing test to verify the fix. Regression testing verifies the fix didn't break other things; both are typically done."
+  },
+  {
+    "id": 11,
+    "points": 1,
+    "loRef": "FL-2.3.1",
+    "chapter": 2,
+    "stem": "Which change MOST clearly requires impact analysis?",
+    "options": [
+      "Adding a comment to the source code.",
+      "Updating a third-party library to a new minor version.",
+      "Changing the README typo.",
+      "Renaming a private internal variable that nothing depends on."
+    ],
+    "correct": 1,
+    "explanation": "Library updates can change behaviour subtly across many call sites. Impact analysis (which modules and tests depend on the library?) is essential."
+  },
+  {
+    "id": 12,
+    "points": 1,
+    "loRef": "FL-2.4.1",
+    "chapter": 2,
+    "stem": "Which is NOT one of the 8 ISO 25010 product quality characteristics?",
+    "options": [
+      "Functional suitability.",
+      "Performance efficiency.",
+      "Brand recognition.",
+      "Reliability."
+    ],
+    "correct": 2,
+    "explanation": "Brand recognition is not a product quality characteristic in ISO 25010. The 8 are: functional suitability, performance efficiency, compatibility, usability, reliability, security, maintainability, portability."
+  },
+  {
+    "id": 13,
+    "points": 1,
+    "loRef": "FL-2.4.2",
+    "chapter": 2,
+    "stem": "Which combination is MOST typical for testing the time complexity of a sort function?",
+    "options": [
+      "Acceptance + functional.",
+      "Component + non-functional (performance).",
+      "Integration + black-box.",
+      "System + white-box."
+    ],
+    "correct": 1,
+    "explanation": "A timing constraint on a single function is component-level (the function is the unit) and non-functional (about performance, not correctness)."
+  },
+  {
+    "id": 14,
+    "points": 1,
+    "loRef": "FL-3.1.1",
+    "chapter": 3,
+    "stem": "Static testing has the highest ROI when:",
+    "options": [
+      "Defects are caught late, just before release.",
+      "Defects are caught early, in requirements or design, before they propagate.",
+      "Tools are bought regardless of process.",
+      "Reviews are skipped to save time."
+    ],
+    "correct": 1,
+    "explanation": "Catching defects early in requirements or design avoids the cost of propagation through implementation. The cost ratio can be 10-100x compared to production."
+  },
+  {
+    "id": 15,
+    "points": 1,
+    "loRef": "FL-3.1.2",
+    "chapter": 3,
+    "stem": "A healthy review culture requires:",
+    "options": [
+      "Aggressive critique of the author to motivate improvement.",
+      "Psychological safety where comments target the work product, not the author.",
+      "Anonymous reviewers to avoid embarrassment.",
+      "Reviewers paid per defect found."
+    ],
+    "correct": 1,
+    "explanation": "Psychological safety enables candid review and learning. Aggressive critique reduces participation; anonymous reviews dodge accountability; per-defect payment incentivises inflation."
+  },
+  {
+    "id": 16,
+    "points": 1,
+    "loRef": "FL-3.2.4",
+    "chapter": 3,
+    "stem": "Why should reviewers prepare BEFORE the review meeting?",
+    "options": [
+      "To impress the moderator.",
+      "Live first-read during the meeting wastes everyone's time and reduces defect detection.",
+      "Because regulations require it for all reviews.",
+      "Preparation is optional in modern practice."
+    ],
+    "correct": 1,
+    "explanation": "Preparation is a key success factor: the meeting is for discussion and consolidation, not first exposure. Without preparation, defect detection drops dramatically."
+  },
+  {
+    "id": 17,
+    "points": 1,
+    "loRef": "FL-4.1.2",
+    "chapter": 4,
+    "stem": "Why is 100% statement coverage NOT sufficient to declare a function defect-free?",
+    "options": [
+      "Statement coverage cannot be measured.",
+      "Statements may have been executed without exercising all branch directions, all data values, or concurrency conditions.",
+      "Statement coverage requires manual testing.",
+      "Defect-free software is impossible to define."
+    ],
+    "correct": 1,
+    "explanation": "100% statement coverage means every statement ran. It does NOT mean every branch was taken in both directions, all input values were tried, or all concurrency was tested. Defects can still exist."
+  },
+  {
+    "id": 18,
+    "points": 1,
+    "loRef": "FL-4.2.2",
+    "chapter": 4,
+    "stem": "When designing EP partitions for a 'positive integer' input, you should include:",
+    "options": [
+      "Only the valid range.",
+      "Valid (positive integers) plus invalid partitions for zero, negative numbers, and non-integers.",
+      "Only the boundary at zero.",
+      "Only random values."
+    ],
+    "correct": 1,
+    "explanation": "'Positive integer' implies multiple invalid partitions: zero, negatives, and non-integers (decimals, strings). Each is a different invalid partition needing a representative test."
+  },
+  {
+    "id": 19,
+    "points": 1,
+    "loRef": "FL-4.3.2",
+    "chapter": 4,
+    "stem": "BVA applies only when:",
+    "options": [
+      "There is a Boolean condition.",
+      "There is an ordering of values (numeric, length, date, duration).",
+      "The system has multiple states.",
+      "Static testing has finished."
+    ],
+    "correct": 1,
+    "explanation": "BVA requires an ordering of values so 'just inside' and 'just outside' the boundary make sense. For unordered sets (currencies, country codes), BVA does not apply - use EP alone."
+  },
+  {
+    "id": 20,
+    "points": 1,
+    "loRef": "FL-4.4.2",
+    "chapter": 4,
+    "stem": "Don't-care entries (-) in a decision table:",
+    "options": [
+      "Indicate undefined behaviour.",
+      "Mark conditions whose value doesn't affect the action for that rule, enabling reduction.",
+      "Are equivalent to True.",
+      "Are equivalent to False."
+    ],
+    "correct": 1,
+    "explanation": "Don't-care entries mark conditions whose value is irrelevant for the rule's action. They enable table reduction by collapsing rules that differ only on don't-care positions."
+  },
+  {
+    "id": 21,
+    "points": 1,
+    "loRef": "FL-4.4.3",
+    "chapter": 4,
+    "stem": "Which state transition coverage criterion is the strongest practical baseline (catches order-dependent defects without being intractable)?",
+    "options": [
+      "All states.",
+      "All transitions (0-switch).",
+      "Transition pairs (1-switch).",
+      "All paths."
+    ],
+    "correct": 2,
+    "explanation": "Transition pairs (1-switch) catches order-dependent defects by exercising every pair of consecutive transitions. All-paths is intractable due to loops; all-states/all-transitions miss order defects."
+  },
+  {
+    "id": 22,
+    "points": 1,
+    "loRef": "FL-4.5.1",
+    "chapter": 4,
+    "stem": "A function has 12 statements. 3 are never executed by any test. Statement coverage is:",
+    "options": [
+      "25%",
+      "33%",
+      "75%",
+      "100%"
+    ],
+    "correct": 2,
+    "explanation": "Executed = 12 - 3 = 9. Coverage = 9 / 12 x 100% = 75%."
+  },
+  {
+    "id": 23,
+    "points": 1,
+    "loRef": "FL-4.5.3",
+    "chapter": 4,
+    "stem": "Which CANNOT be caught by white-box testing alone?",
+    "options": [
+      "Dead code.",
+      "Unreachable branch.",
+      "Missing functionality (a feature the spec called for but was never coded).",
+      "Statements never executed by the test suite."
+    ],
+    "correct": 2,
+    "explanation": "White-box examines existing code; missing functionality has no code to examine. Black-box / requirements-based techniques catch missing features."
+  },
+  {
+    "id": 24,
+    "points": 1,
+    "loRef": "FL-4.6.1",
+    "chapter": 4,
+    "stem": "Error guessing is most valuable when:",
+    "options": [
+      "Used alone in place of systematic techniques.",
+      "Used to COMPLEMENT systematic techniques, targeting known weak spots.",
+      "The tester has zero experience.",
+      "The system has no past defect history."
+    ],
+    "correct": 1,
+    "explanation": "Error guessing complements systematic techniques (EP, BVA, decision tables, state transitions, structural coverage). It draws on experience and past defects to target high-risk corners."
+  },
+  {
+    "id": 25,
+    "points": 1,
+    "loRef": "FL-4.6.3",
+    "chapter": 4,
+    "stem": "Sources for checklist content typically include all EXCEPT:",
+    "options": [
+      "Published standards (WCAG, OWASP).",
+      "Past defects encountered by the team.",
+      "Heuristics like SFDIPOT.",
+      "Astrology charts."
+    ],
+    "correct": 3,
+    "explanation": "Standards, past defects, and heuristics are recognised checklist sources. Astrology is not."
+  },
+  {
+    "id": 26,
+    "points": 1,
+    "loRef": "FL-4.8.1",
+    "chapter": 4,
+    "stem": "Effective testing typically combines:",
+    "options": [
+      "Only black-box techniques.",
+      "Only white-box techniques.",
+      "Black-box + white-box + experience-based techniques.",
+      "Only experience-based techniques."
+    ],
+    "correct": 2,
+    "explanation": "Different techniques catch different defects. A practical strategy combines black-box (functional coverage), white-box (structural coverage), and experience-based (unknown unknowns)."
+  },
+  {
+    "id": 27,
+    "points": 1,
+    "loRef": "FL-5.1.1",
+    "chapter": 5,
+    "stem": "A test plan is BEST described as:",
+    "options": [
+      "An immutable contract.",
+      "A living document updated as the project evolves and as monitoring reveals deviations.",
+      "Optional in Agile teams.",
+      "Only needed for safety-critical projects."
+    ],
+    "correct": 1,
+    "explanation": "Test plans are living documents. Agile teams use lightweight strategy + sprint approaches but still plan."
+  },
+  {
+    "id": 28,
+    "points": 1,
+    "loRef": "FL-5.1.2",
+    "chapter": 5,
+    "stem": "Which is a tester's contribution to sprint planning?",
+    "options": [
+      "Estimating story points for all stories.",
+      "Assessing testability, surfacing acceptance-criteria ambiguity, and flagging dependencies (data, environments).",
+      "Approving the sprint goal.",
+      "Deciding the release date."
+    ],
+    "correct": 1,
+    "explanation": "Testers assess testability and dependencies, refine acceptance criteria (via three amigos), and flag risks during sprint planning. They don't unilaterally estimate or approve sprints."
+  },
+  {
+    "id": 29,
+    "points": 1,
+    "loRef": "FL-5.1.5",
+    "chapter": 5,
+    "stem": "Which prioritisation strategy uses 'tests that have failed in the past tend to fail again'?",
+    "options": [
+      "Customer-priority-based.",
+      "Failure-rate-based.",
+      "Requirements-based.",
+      "Coverage-based."
+    ],
+    "correct": 1,
+    "explanation": "Failure-rate-based prioritisation leverages defect clustering: areas that have shown defects keep showing them. Tests covering those areas run first."
+  },
+  {
+    "id": 30,
+    "points": 1,
+    "loRef": "FL-5.2.1",
+    "chapter": 5,
+    "stem": "An event that has ALREADY occurred is:",
+    "options": [
+      "A risk.",
+      "An issue.",
+      "A defect.",
+      "Both a risk and an issue."
+    ],
+    "correct": 1,
+    "explanation": "Risks are potential future events; once they occur they become issues. Defects are a different concept (faults in work products)."
+  },
+  {
+    "id": 31,
+    "points": 1,
+    "loRef": "FL-5.2.2",
+    "chapter": 5,
+    "stem": "Which is a PRODUCT risk?",
+    "options": [
+      "Key tester resignation.",
+      "Test environment unavailability.",
+      "Performance under peak load may not meet the SLA.",
+      "Tool licence expiry before end of testing."
+    ],
+    "correct": 2,
+    "explanation": "Performance not meeting SLA is a property of the product -> product risk. The others are project risks affecting delivery ability."
+  },
+  {
+    "id": 32,
+    "points": 1,
+    "loRef": "FL-5.2.4",
+    "chapter": 5,
+    "stem": "Which lightweight workshop technique scores risks on likelihood and impact (e.g., 1-5) to drive test priorities?",
+    "options": [
+      "FMEA.",
+      "HAZOP.",
+      "PRAT (Pragmatic Risk Analysis and Testing).",
+      "ISO 25010."
+    ],
+    "correct": 2,
+    "explanation": "PRAT is the lightweight workshop technique well-suited to software projects without the heavy formality of FMEA or HAZOP."
+  },
+  {
+    "id": 33,
+    "points": 1,
+    "loRef": "FL-5.3.1",
+    "chapter": 5,
+    "stem": "Which is a product quality metric (not a progress metric)?",
+    "options": [
+      "Number of test cases executed.",
+      "Number of test cases planned.",
+      "Defect density (defects per KLOC).",
+      "Effort spent on test design."
+    ],
+    "correct": 2,
+    "explanation": "Defect density (defects per KLOC, per FP, per requirement) is a product quality metric. The others are progress metrics."
+  },
+  {
+    "id": 34,
+    "points": 1,
+    "loRef": "FL-5.3.2",
+    "chapter": 5,
+    "stem": "A good test report is:",
+    "options": [
+      "Long, detailed, and identical for every audience.",
+      "Actionable, audience-tailored, honest, and visualised.",
+      "Only narrative text - charts confuse stakeholders.",
+      "Confidential to the test team."
+    ],
+    "correct": 1,
+    "explanation": "Reports must drive decisions (actionable), match the audience (executive vs. developer), tell the truth even when bad, and use visualisation for trends."
+  },
+  {
+    "id": 35,
+    "points": 1,
+    "loRef": "FL-5.4.2",
+    "chapter": 5,
+    "stem": "A good defect report ALWAYS includes:",
+    "options": [
+      "An accusation against the developer.",
+      "Steps to reproduce, expected vs actual behaviour, environment, severity.",
+      "A proposed code change.",
+      "The reporter's home address."
+    ],
+    "correct": 1,
+    "explanation": "Reproducible steps, expected vs actual, environment, and severity are essential. Defect reports describe the problem, not blame; proposing fixes is not the tester's job; personal data is irrelevant."
+  },
+  {
+    "id": 36,
+    "points": 1,
+    "loRef": "FL-6.1.1",
+    "chapter": 6,
+    "stem": "Which tool category includes Selenium, Cypress, and Playwright?",
+    "options": [
+      "API testing tools.",
+      "GUI / web automation tools.",
+      "Performance tools.",
+      "Static analysis tools."
+    ],
+    "correct": 1,
+    "explanation": "Selenium, Cypress, and Playwright are GUI/web automation tools that drive browsers."
+  },
+  {
+    "id": 37,
+    "points": 1,
+    "loRef": "FL-6.1.2",
+    "chapter": 6,
+    "stem": "Which testing activity is BEST KEPT MANUAL rather than automated?",
+    "options": [
+      "Daily regression check of a stable workflow.",
+      "Exploratory testing and subjective usability evaluation.",
+      "API contract verification.",
+      "Smoke tests in CI."
+    ],
+    "correct": 1,
+    "explanation": "Exploratory and usability tasks rely on human judgement, curiosity, and aesthetic evaluation - manual is appropriate. Regression, API contracts, and smoke tests are excellent automation candidates."
+  },
+  {
+    "id": 38,
+    "points": 1,
+    "loRef": "FL-6.1.3",
+    "chapter": 6,
+    "stem": "Which abstraction MOST helps insulate automated GUI tests from cosmetic UI changes?",
+    "options": [
+      "Recording each test from scratch every release.",
+      "Page Object Model (POM) - encapsulate page locators and actions in classes.",
+      "Hard-coding XPath in every test.",
+      "Skipping GUI tests."
+    ],
+    "correct": 1,
+    "explanation": "POM centralises locators and actions in page-object classes. A UI change requires updating one class, not every test. Hard-coded XPath is the brittle alternative."
+  },
+  {
+    "id": 39,
+    "points": 1,
+    "loRef": "FL-6.1.4",
+    "chapter": 6,
+    "stem": "Test management tools should be chosen primarily for:",
+    "options": [
+      "The flashiest user interface.",
+      "Integration with the team's existing ALM, source control, defect tracker, and CI/CD.",
+      "Lowest licence cost regardless of fit.",
+      "Vendor's marketing budget."
+    ],
+    "correct": 1,
+    "explanation": "Integration with the existing stack determines whether the tool's outputs feed into the rest of the lifecycle. Standalone tools with great UIs but no integration become silos."
+  },
+  {
+    "id": 40,
+    "points": 1,
+    "loRef": "FL-6.1.5",
+    "chapter": 6,
+    "stem": "After selecting a tool, which is the FIRST adoption activity?",
+    "options": [
+      "Roll out to all teams immediately.",
+      "Pilot on a small, representative real project and capture lessons.",
+      "Cancel the existing test framework.",
+      "Buy all licences upfront for cost negotiation."
+    ],
+    "correct": 1,
+    "explanation": "Piloting reveals fit, gaps, and effort before company-wide commitment. Rolling out without piloting, cancelling alternatives, and bulk-licensing without evidence are anti-patterns."
+  }
+]

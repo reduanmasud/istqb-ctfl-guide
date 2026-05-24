@@ -1,0 +1,46 @@
+{
+  "id": "fl-4.4.1",
+  "chapter": 4,
+  "section": "4.4",
+  "kLevel": "K3",
+  "title": "Decision Table Testing",
+  "concept": "**Decision tables** model complex business rules where the system's behaviour depends on combinations of conditions. Each column of a decision table represents a rule: a unique combination of condition values and the corresponding action(s) the system should take.\n\nStructure:\n- **Conditions** (rows in the top half): the input conditions that drive behaviour. Boolean is most common (T/F); multi-valued conditions are also possible.\n- **Rules** (columns): each is a unique combination of condition values.\n- **Actions** (rows in the bottom half): the system response for each rule.\n\nExample: a loan-approval system depends on (a) credit score ≥ 700 and (b) income ≥ $50k. The decision table has 2 conditions and 4 rules (T/T, T/F, F/T, F/F), each mapping to an action: approve, manual review, reject.\n\nDecision tables make complex logic explicit and ensure no combination is missed. They are particularly valuable when requirements are ambiguous: writing the table often surfaces the missing rules and contradictions.\n\nCoverage criterion: every rule (column) is exercised by at least one test. With *n* boolean conditions, there are 2^n rules — combinatorial explosion. Practical use either tests every rule (full coverage) or applies condition reduction (collapsing dependent rules where one condition's value doesn't matter given another).",
+  "keyPoints": [
+    "Decision tables model behaviour driven by combinations of conditions; each rule (column) is a unique combination.",
+    "With n boolean conditions, there are 2^n rules — explicit enumeration catches missing combinations.",
+    "Coverage: each rule exercised by at least one test. Reduce rules where conditions are dependent (don't-care entries)."
+  ],
+  "quiz": {
+    "question": "A system has 3 boolean conditions that drive behaviour. How many rules does the full decision table have, and how many tests are needed for full decision-table coverage?",
+    "options": [
+      "3 rules and 3 tests.",
+      "6 rules and 6 tests.",
+      "8 rules and 8 tests.",
+      "9 rules and 9 tests."
+    ],
+    "correct": 2,
+    "explanation": "With n boolean conditions there are 2^n rules. 2^3 = 8 rules. Full coverage requires one test per rule, so 8 tests. Reductions (don't-care entries) may collapse some rules, but without them the answer is 8."
+  },
+  "exercise": {
+    "type": "decision-table",
+    "cases": [
+      {
+        "title": "Loan approval — fill in the missing condition values",
+        "conditions": ["Credit score >= 700", "Income >= $50k"],
+        "rules": [
+          { "values": [true, true], "action": "Approve" },
+          { "values": [true, null], "action": "Manual review" },
+          { "values": [null, true], "action": "Manual review" },
+          { "values": [false, false], "action": "Reject" }
+        ],
+        "answers": [
+          [true, true],
+          [true, false],
+          [false, true],
+          [false, false]
+        ],
+        "explanation": "Rule 2: high credit, low income → manual review (income missing → false). Rule 3: low credit, high income → manual review (credit missing → false). These two manual-review rules sit between the strong-approve and strong-reject rules. Filling the blanks with F gives the canonical 4-rule decision table for two boolean conditions."
+      }
+    ]
+  }
+}

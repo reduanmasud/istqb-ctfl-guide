@@ -1,0 +1,25 @@
+{
+  "id": "fl-5.1.3",
+  "chapter": 5,
+  "section": "5.1",
+  "kLevel": "K2",
+  "title": "Entry and Exit Criteria",
+  "concept": "**Entry criteria** are conditions that must be met before a test activity (or test level, or specific tests) can start. **Exit criteria** are conditions that must be met before the activity is declared complete.\n\nTypical **entry criteria** for system testing:\n- All component testing completed and component-level exit criteria met.\n- Build successfully deployed to the test environment.\n- Test environment matches production-like configuration.\n- Required test data prepared.\n- Test cases reviewed and approved.\n\nTypical **exit criteria** for system testing:\n- Planned test cases executed (or formally deferred).\n- Coverage target met (e.g., all high-risk requirements covered).\n- All severity-1 defects resolved; severity-2 defects below threshold.\n- Open defects assessed and accepted by stakeholders.\n- Test summary report approved.\n\nWell-defined criteria support **definition of ready** (entry) and **definition of done** (exit) in Agile, and gate decisions in stage-gated lifecycles. Without them, testing slips into 'we'll know when it's done' — a recipe for endless testing or premature release.\n\nCriteria are negotiated with stakeholders, documented in the test plan, and reviewed during monitoring. Exit criteria may be relaxed by formal exception when overall risk is acceptable — but never silently.",
+  "keyPoints": [
+    "Entry criteria gate the *start* of a test activity; exit criteria gate the *end*.",
+    "Examples: environment readiness, build deployed, coverage achieved, severity-1 defects resolved.",
+    "Criteria support Agile definition-of-ready/done and stage-gate decisions; relaxations must be explicit and approved."
+  ],
+  "quiz": {
+    "question": "Which of the following is BEST classified as an exit criterion for system testing?",
+    "options": [
+      "All component tests have passed and the test environment is set up.",
+      "Test cases have been reviewed and approved.",
+      "All severity-1 defects have been resolved and the coverage target is met.",
+      "The test plan has been approved by stakeholders."
+    ],
+    "correct": 2,
+    "explanation": "Exit criteria gate the *end* of an activity: resolving severity-1 defects and meeting coverage targets are typical exit criteria. The other options are typical *entry* criteria — they must be met before testing can start."
+  },
+  "exercise": { "type": "none" }
+}

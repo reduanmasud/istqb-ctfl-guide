@@ -1,0 +1,25 @@
+{
+  "id": "fl-3.2.1",
+  "chapter": 3,
+  "section": "3.2",
+  "kLevel": "K2",
+  "title": "Review Types",
+  "concept": "CTFL recognises four canonical review types, ordered roughly from least to most formal.\n\n**Informal review** — no defined process, no entry/exit criteria, no documentation. A developer asks a colleague to glance at the code. Cheap and fast; relies on the goodwill of participants. Common in Agile teams as part of pull request review.\n\n**Walkthrough** — the author presents the work product, step by step, to an audience. The author 'walks the audience through' the artifact and answers questions. Useful for knowledge transfer and finding misunderstandings. Typically led by the author.\n\n**Technical review** — a documented, defined process led by a trained moderator (not the author). Reviewers prepare in advance. Aims for technical consensus and finds defects through expert analysis. Often used for architectural reviews.\n\n**Inspection** — the most formal type. A trained moderator (not the author) leads the inspection. Defined entry criteria (e.g., the document compiles, prior reviews are complete) and exit criteria (e.g., all major defects resolved). Roles are pre-assigned: moderator, author, reader (paraphrases the work product), recorder, reviewer. Defects are logged, classified, and metrics collected. Used where high rigor is needed (safety-critical software, contractual deliverables).\n\nChoosing the right type depends on the risk of the work product and the team's culture and process maturity.",
+  "keyPoints": [
+    "Four review types: informal, walkthrough, technical review, inspection — ordered from low to high formality.",
+    "Walkthroughs are author-led and emphasise explanation; inspections are moderator-led with defined roles, entry/exit criteria, and metrics.",
+    "Choice depends on risk: informal for low-risk routine code; inspections for safety-critical or contractual deliverables."
+  ],
+  "quiz": {
+    "question": "A safety-critical software team must produce evidence of every defect found in the design document, including type, severity, and resolution. Which review type is MOST appropriate?",
+    "options": [
+      "Informal review",
+      "Walkthrough",
+      "Technical review",
+      "Inspection"
+    ],
+    "correct": 3,
+    "explanation": "Inspections are the most formal review type, with pre-assigned roles, entry/exit criteria, and defect metrics — exactly what safety-critical evidence requires. Informal reviews and walkthroughs are too lightweight; technical reviews focus on consensus but lack the inspection's defect-logging rigor."
+  },
+  "exercise": { "type": "none" }
+}

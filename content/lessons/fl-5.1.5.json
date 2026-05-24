@@ -1,0 +1,25 @@
+{
+  "id": "fl-5.1.5",
+  "chapter": 5,
+  "section": "5.1",
+  "kLevel": "K3",
+  "title": "Test Prioritisation",
+  "concept": "When time and budget are constrained — they always are — testers must decide *which* tests to run first. Several prioritisation strategies are commonly applied.\n\n**Risk-based prioritisation** — tests covering high-risk areas run first. Risk = probability of defect × impact of failure. A defect in payment processing (high impact) probably ranks higher than one in the about-page footer.\n\n**Coverage-based prioritisation** — order tests to maximise coverage in early runs (requirements coverage first, then variant coverage).\n\n**Requirements-based prioritisation** — tests covering MoSCoW 'Must have' requirements run first, then 'Should have', etc.\n\n**Recency-based prioritisation** — tests covering recently-changed code run first; they're most likely to find regressions.\n\n**Failure-rate-based prioritisation** — tests that have failed in the past tend to fail again (defect clustering); they run first.\n\n**Customer-priority-based** — VIP customer scenarios are tested before edge cases.\n\nIn practice multiple factors combine. A risk-and-recency strategy ('test high-risk areas, especially those recently changed, first') is a common pragmatic default. The chosen strategy is documented in the test plan so stakeholders understand which tests they're getting when, and what they're not getting if time runs out.",
+  "keyPoints": [
+    "Prioritisation strategies: risk-based, coverage-based, requirements-based, recency-based, failure-rate-based, customer-priority-based.",
+    "Risk = probability × impact; risk-based prioritisation is the default for most projects.",
+    "Document the strategy in the test plan so stakeholders know which tests they're getting first."
+  ],
+  "quiz": {
+    "question": "A team has 200 regression tests and only enough time to run 50 before tonight's release. They choose to run the 50 tests that cover modules most recently changed. Which prioritisation strategy is this?",
+    "options": [
+      "Customer-priority-based",
+      "Recency-based",
+      "Risk-based",
+      "Requirements-based"
+    ],
+    "correct": 1,
+    "explanation": "Selecting tests because they cover recently-changed code is recency-based prioritisation. Risk-based would consider the impact and probability of defect, not just recency; customer-priority focuses on key scenarios; requirements-based ranks by MoSCoW priority of requirements."
+  },
+  "exercise": { "type": "none" }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "fl-2.1.2",
+  "chapter": 2,
+  "section": "2.1",
+  "kLevel": "K2",
+  "title": "Testing as a Driver for Software Development",
+  "concept": "Several modern development approaches put testing in the driver's seat: tests are written *first*, and the code is then created to satisfy them. These are forms of **test-first** development.\n\n**Test-Driven Development (TDD)** — the developer writes a failing unit test, writes the minimum code to make it pass, then refactors. This cycle (red → green → refactor) drives the design from the inside-out: the public API of each unit emerges from how it's exercised by tests.\n\n**Acceptance Test-Driven Development (ATDD)** — the team collaborates (business, dev, test) to agree on acceptance criteria expressed as concrete examples *before* implementation starts. The acceptance tests become the executable specification.\n\n**Behaviour-Driven Development (BDD)** — extends ATDD with a structured language (Given/When/Then in Gherkin) that non-technical stakeholders can read. Tests describe behaviours from the user's perspective and become living documentation.\n\nAll three approaches share the principle that testable specifications written first prevent ambiguity, drive better design, and produce automated regression suites as a natural side-effect rather than as an extra deliverable.",
+  "keyPoints": [
+    "TDD: failing test → minimum code → refactor. Drives unit design from the outside-in.",
+    "ATDD: business + dev + test agree on concrete acceptance examples before coding.",
+    "BDD: behaviour-focused Given/When/Then format produces tests that double as living documentation."
+  ],
+  "quiz": {
+    "question": "Which approach BEST describes a workflow where developers write a failing unit test before any production code, then write the minimum code to make it pass, then refactor?",
+    "options": [
+      "Behaviour-Driven Development (BDD)",
+      "Acceptance Test-Driven Development (ATDD)",
+      "Test-Driven Development (TDD)",
+      "Exploratory Testing"
+    ],
+    "correct": 2,
+    "explanation": "TDD is the canonical red-green-refactor cycle at the unit level. BDD focuses on behaviour scenarios in Gherkin; ATDD focuses on collaborative acceptance criteria; exploratory testing is unscripted dynamic testing."
+  },
+  "exercise": { "type": "none" }
+}

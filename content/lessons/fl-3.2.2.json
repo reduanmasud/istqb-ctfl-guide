@@ -1,0 +1,25 @@
+{
+  "id": "fl-3.2.2",
+  "chapter": 3,
+  "section": "3.2",
+  "kLevel": "K1",
+  "title": "Roles and Responsibilities in Reviews",
+  "concept": "Formal reviews assign specific roles to participants. The same person may fill multiple roles in less formal reviews.\n\n**Manager** — decides what should be reviewed, allocates resources, and acts on review results (e.g., authorising rework). Does not typically attend the review itself.\n\n**Author** — created the work product. Attends to answer questions and clarify intent. In informal reviews and walkthroughs the author may lead; in inspections the author does *not* lead (to avoid bias).\n\n**Moderator (Review Leader)** — plans, leads, and follows up on the review. Trained in the review process. In inspections, the moderator enforces entry/exit criteria and chairs the meeting.\n\n**Scribe (Recorder)** — documents the review: defects found, decisions made, action items. Maintains the review minutes and the defect log.\n\n**Reviewer** — examines the work product and reports findings. Reviewers should be selected for diverse perspectives: peer developers, testers, domain experts, security/usability specialists.\n\n**Reader (Inspection only)** — paraphrases the work product to the group, one section at a time. Forces explicit articulation that often surfaces hidden assumptions.\n\nClear role assignment prevents reviews from drifting into ungoverned discussion and ensures that essential activities (defect logging, follow-up) actually happen.",
+  "keyPoints": [
+    "Roles: manager, author, moderator (review leader), scribe (recorder), reviewer; inspections add a reader role.",
+    "The moderator (not the author) leads formal reviews to avoid author bias.",
+    "Clear roles ensure defects are logged, decisions captured, and follow-up performed."
+  ],
+  "quiz": {
+    "question": "In a formal inspection, who is PRIMARILY responsible for paraphrasing the work product to the inspection team, section by section?",
+    "options": [
+      "The author",
+      "The moderator",
+      "The reader",
+      "The scribe"
+    ],
+    "correct": 2,
+    "explanation": "The reader is unique to inspections: they paraphrase the work product to the group, forcing explicit articulation that often surfaces hidden defects and assumptions. The author answers questions but does not paraphrase; the moderator chairs the meeting; the scribe records findings."
+  },
+  "exercise": { "type": "none" }
+}

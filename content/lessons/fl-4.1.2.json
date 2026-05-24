@@ -1,0 +1,25 @@
+{
+  "id": "fl-4.1.2",
+  "chapter": 4,
+  "section": "4.1",
+  "kLevel": "K2",
+  "title": "Coverage and Test Completion Criteria",
+  "concept": "**Coverage** is the degree to which a specified element has been exercised by a test suite. Different techniques target different coverage items.\n\n**Specification-based coverage** measures how much of the specification has been exercised. Examples: every requirement covered by at least one test; every equivalence partition covered; every business rule covered.\n\n**Structure-based coverage** measures how much of the internal structure has been exercised. Examples: statement coverage (percent of statements executed), branch coverage (percent of conditional branches taken in both directions), decision coverage, path coverage.\n\n**Test completion criteria** (also called exit criteria) define when testing for a particular test level or feature is considered done. They typically combine coverage thresholds with other measures: '100% of high-risk requirements covered, branch coverage ≥ 80%, no open severity-1 defects, all blocking defects resolved'.\n\nCoverage is a necessary but not sufficient quality indicator. 100% branch coverage means every branch was exercised — but the tests may still miss defects in data values, in concurrency, in edge conditions outside the partitions chosen.",
+  "keyPoints": [
+    "Coverage = degree to which specified elements have been exercised by tests.",
+    "Specification-based coverage targets requirements, partitions, rules; structure-based targets statements, branches, paths.",
+    "Test completion criteria combine coverage thresholds with defect-status and risk-status measures."
+  ],
+  "quiz": {
+    "question": "A team measures that 100% of code statements were executed by their tests. Which statement is MOST accurate?",
+    "options": [
+      "The software is now defect-free.",
+      "Every requirement has been tested.",
+      "Every statement was executed but defects may still exist (in data values, concurrency, missing branches, etc.).",
+      "Branch coverage is also 100% by definition."
+    ],
+    "correct": 2,
+    "explanation": "Statement coverage measures only that every statement ran at least once. It does not imply that all branches were taken in both directions, all data values were tried, or all defects were found. 100% statement coverage is compatible with significant remaining risk."
+  },
+  "exercise": { "type": "none" }
+}

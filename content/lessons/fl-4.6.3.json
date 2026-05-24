@@ -1,0 +1,25 @@
+{
+  "id": "fl-4.6.3",
+  "chapter": 4,
+  "section": "4.6",
+  "kLevel": "K2",
+  "title": "Checklist-Based Testing",
+  "concept": "**Checklist-based testing** is an experience-based technique where the tester executes tests based on a checklist of conditions, items, or scenarios to verify. Each checklist item is exercised against the system; deviations are logged as potential defects.\n\nChecklists can be derived from:\n- **Standards** (e.g., WCAG 2.1 accessibility checklist, OWASP Top 10 security checklist).\n- **Past experience** — known problem patterns curated by the test team over time.\n- **Tester intuition** — generic 'gotcha' lists (forms with no input; boundary dates; very long strings; rapid double-clicks).\n- **Heuristics** — the 'SFDIPOT' mnemonic (Structure, Function, Data, Interfaces, Platform, Operations, Time) or 'HICCUPPS' for oracles.\n\nChecklists are typically **high-level** — they guide the tester to verify aspects rather than prescribe exact inputs. This keeps them reusable across many features. The tester still chooses specific values and scenarios to exercise each item.\n\nValue: checklists encode institutional knowledge, ensure consistent baseline coverage across testers, and surface defects that a less experienced tester might miss. They are cheap to maintain and easy to onboard new testers with.\n\nCompared to scripted tests, checklists are lighter weight; compared to pure exploratory, they are more systematic. A balanced test strategy combines all three.",
+  "keyPoints": [
+    "Checklist-based testing uses high-level lists of conditions/items to guide test execution.",
+    "Sources: standards (WCAG, OWASP), past defects, heuristics, intuition.",
+    "Encodes institutional knowledge cheaply; sits between scripted and exploratory testing in formality."
+  ],
+  "quiz": {
+    "question": "A tester runs through a WCAG 2.1 AA checklist to verify accessibility of a web page. Which technique is being applied?",
+    "options": [
+      "Equivalence partitioning",
+      "Branch coverage testing",
+      "Checklist-based testing",
+      "State transition testing"
+    ],
+    "correct": 2,
+    "explanation": "Using a published checklist (WCAG 2.1) to systematically verify aspects of the system is the definition of checklist-based testing. EP/BVA target specific input partitions; state transition models systems with history; branch coverage is a structural code metric."
+  },
+  "exercise": { "type": "none" }
+}

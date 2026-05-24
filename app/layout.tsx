@@ -9,9 +9,9 @@ const jakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "ISTQB CT-AI v2.0 Study Guide",
+  title: "CTFL v4.0 Study Guide | ISTQB",
   description:
-    "Interactive practice-first learning guide for the ISTQB Certified Tester AI Testing v2.0 certification",
+    "Interactive practice-first learning guide for the ISTQB Certified Tester Foundation Level (CTFL) v4.0 certification",
 };
 
 export default function RootLayout({

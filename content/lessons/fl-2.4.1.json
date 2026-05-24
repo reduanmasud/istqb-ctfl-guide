@@ -1,0 +1,25 @@
+{
+  "id": "fl-2.4.1",
+  "chapter": 2,
+  "section": "2.4",
+  "kLevel": "K2",
+  "title": "Quality Characteristics for Testing (ISO 25010)",
+  "concept": "**ISO/IEC 25010** defines a product quality model with eight characteristics. Each can be the target of one or more test types.\n\n**Functional suitability** — does the product provide the right functions correctly and appropriately? Sub-characteristics: functional completeness, correctness, appropriateness.\n\n**Performance efficiency** — time behaviour, resource utilisation, capacity. Tested with load tests, stress tests, spike tests.\n\n**Compatibility** — co-existence with other products, interoperability with other systems.\n\n**Usability** — appropriateness recognisability, learnability, operability, user error protection, accessibility, aesthetic UI.\n\n**Reliability** — maturity, availability, fault tolerance, recoverability. Tested with long-duration runs, fault injection, recovery scenarios.\n\n**Security** — confidentiality, integrity, non-repudiation, accountability, authenticity. Tested with penetration tests, security scans, threat modelling exercises.\n\n**Maintainability** — modularity, reusability, analysability, modifiability, testability.\n\n**Portability** — adaptability, installability, replaceability.\n\nFunctional testing covers functional suitability; everything else is non-functional. The model gives teams a vocabulary for talking about quality and ensures they don't overlook a characteristic by accident.",
+  "keyPoints": [
+    "ISO/IEC 25010 names 8 quality characteristics: functional suitability, performance efficiency, compatibility, usability, reliability, security, maintainability, portability.",
+    "Functional suitability maps to functional testing; the other seven map to non-functional testing.",
+    "The model serves as a checklist so teams cover all relevant quality characteristics in their test plan."
+  ],
+  "quiz": {
+    "question": "A test verifies that a web application is readable by screen readers and conforms to WCAG 2.1 AA. Which ISO 25010 quality characteristic does this test PRIMARILY address?",
+    "options": [
+      "Reliability",
+      "Usability (including accessibility)",
+      "Functional suitability",
+      "Portability"
+    ],
+    "correct": 1,
+    "explanation": "Accessibility (screen reader support, WCAG conformance) is a sub-characteristic of usability in ISO/IEC 25010. Reliability is about availability and fault tolerance; functional suitability is about correctness of functions; portability is about installability/adaptability across environments."
+  },
+  "exercise": { "type": "none" }
+}

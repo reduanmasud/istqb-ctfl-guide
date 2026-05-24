@@ -1,0 +1,25 @@
+{
+  "id": "fl-2.3.1",
+  "chapter": 2,
+  "section": "2.3",
+  "kLevel": "K1",
+  "title": "Impact of Software Change",
+  "concept": "Every software change carries the risk of introducing new defects or of revealing latent defects. The CTFL syllabus emphasises understanding the impact of changes as a core skill.\n\n**Sources of change**: defect fixes, new features, refactoring, library updates, infrastructure changes, configuration changes, environment changes. Even seemingly trivial changes (a library minor version bump) can cause regression.\n\n**Impact analysis** is the activity of identifying everything that might be affected by a change. It uses traceability: trace from the changed code/requirement to other code that depends on it, to test cases that exercise it, to other requirements that interact with it.\n\nGood impact analysis answers: which other modules might break? Which test cases need to re-run? Which acceptance criteria might be affected? Which documents (architecture, user manual, training) need updating?\n\nThe cost of poor impact analysis is high: missed regressions reach production, customer-facing failures occur, and the team loses trust. Tooling helps: dependency graphs from build systems, requirement traceability matrices, test management tools that show coverage, static analysis that detects affected call chains.",
+  "keyPoints": [
+    "Every change — even a library bump — can introduce regression.",
+    "Impact analysis identifies all components, tests, requirements, and documents affected by a change.",
+    "Good traceability and tooling (dependency graphs, traceability matrices) make impact analysis tractable at scale."
+  ],
+  "quiz": {
+    "question": "Which activity helps a team decide which regression tests must be re-run after a code change?",
+    "options": [
+      "Defect triage",
+      "Impact analysis using traceability between code, requirements, and tests",
+      "Acceptance criteria writing",
+      "Performance benchmarking"
+    ],
+    "correct": 1,
+    "explanation": "Impact analysis traces from the changed item to all dependent items — including the test cases that cover them — so the team can choose which regression tests are necessary. Defect triage prioritises defects; acceptance criteria define done; benchmarking measures performance."
+  },
+  "exercise": { "type": "none" }
+}

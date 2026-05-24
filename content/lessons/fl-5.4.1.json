@@ -1,0 +1,25 @@
+{
+  "id": "fl-5.4.1",
+  "chapter": 5,
+  "section": "5.4",
+  "kLevel": "K2",
+  "title": "Configuration Management",
+  "concept": "**Configuration management (CM)** establishes and maintains the integrity of work products throughout the lifecycle. For testing, CM ensures that:\n\n- The test basis (requirements, designs) is versioned and referenced unambiguously — 'test case 42 covers requirement REQ-100 v1.3'.\n- Testware (test cases, scripts, data, environment configs) is versioned and tied to the software versions it tests.\n- Test results are recorded against the specific build tested.\n- The test environment can be re-created (infrastructure as code).\n\nKey CM activities for testers:\n- Naming and versioning testware artifacts.\n- Branching/merging testware alongside code branches.\n- Tagging testware versions at release points.\n- Maintaining baselines (the agreed-on combination of code + testware + environment).\n- Tracking changes via a CM tool (Git, Subversion, ALM tools).\n\nWithout CM, a defect found yesterday may be irreproducible today (different build, different test data, different environment). Audits become impossible. Regression tests drift out of sync with the code they were written for.\n\nIn DevOps, CM is automated end-to-end: every commit triggers a pipeline that pulls a specific version of code + testware + environment config and runs tests deterministically.",
+  "keyPoints": [
+    "CM establishes integrity of work products: versioned, traceable, reproducible.",
+    "For testing: testware versioned alongside code, results recorded per build, environments reproducible.",
+    "DevOps automates CM end-to-end — every pipeline run pins code + testware + env."
+  ],
+  "quiz": {
+    "question": "A tester discovers a defect on Monday. By Tuesday, the development team has merged 12 commits and rebuilt the environment. Which configuration management practice would BEST allow the tester to reproduce the original defect?",
+    "options": [
+      "Daily standup meetings.",
+      "Tagging the specific build, testware version, and environment configuration that exhibited the defect.",
+      "Increasing the number of automated tests.",
+      "Adding more testers to the team."
+    ],
+    "correct": 1,
+    "explanation": "Tagging the exact combination of build, testware, and environment that produced the defect lets the team return to that baseline, reproduce the failure, and verify any fix. Standups and team size don't address reproducibility; more tests don't help with reproducing this specific defect."
+  },
+  "exercise": { "type": "none" }
+}

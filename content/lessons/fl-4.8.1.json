@@ -1,0 +1,25 @@
+{
+  "id": "fl-4.8.1",
+  "chapter": 4,
+  "section": "4.8",
+  "kLevel": "K2",
+  "title": "Combining Test Techniques",
+  "concept": "Test techniques are not used in isolation. A practical test plan combines several techniques to address different concerns.\n\n**Functional coverage** — black-box techniques (EP, BVA, decision tables, state transition, use case) cover what the system is supposed to do.\n\n**Structural coverage** — white-box techniques (statement, branch) ensure code paths are exercised.\n\n**Risk and experience** — error guessing, exploratory testing, and checklists target high-risk corners and unknown unknowns.\n\nA typical mix at the **component level**: EP/BVA on inputs, decision tables for complex logic, branch coverage of the implementation, error guessing for known defect patterns.\n\nAt the **system level**: use cases and scenarios (black-box), decision tables for business rules, exploratory sessions for new features, checklists for non-functional aspects.\n\nThe team chooses techniques based on:\n- **The nature of the test object** (data-heavy → EP/BVA; stateful → state transition; rule-driven → decision tables).\n- **The risk level** (high risk → more techniques and stricter coverage).\n- **The available test basis** (specifications enable systematic techniques; their absence forces experience-based).\n- **Team skills** (some techniques require training and experience).\n\nDocumenting the rationale in the test plan helps stakeholders understand and trust the choices.",
+  "keyPoints": [
+    "Mix techniques: black-box for functional coverage, white-box for structural coverage, experience-based for unknown unknowns.",
+    "Component-level often combines EP/BVA + decision tables + branch coverage; system level adds scenarios, exploratory, checklists.",
+    "Choice depends on test object nature, risk, test basis availability, and team skills — document the rationale."
+  ],
+  "quiz": {
+    "question": "Which combination of techniques is MOST appropriate for testing a tax-calculation module whose behaviour depends on a complex set of rules (income level, filing status, deductions, credits)?",
+    "options": [
+      "Statement coverage alone.",
+      "Equivalence partitioning + decision tables + boundary value analysis.",
+      "Exploratory testing only.",
+      "State transition diagrams."
+    ],
+    "correct": 1,
+    "explanation": "Complex business rules are the canonical use case for decision tables; the inputs (income, deductions, etc.) benefit from EP (categorising into brackets) and BVA (testing bracket boundaries). Exploratory complements but should not replace systematic techniques here; state transitions don't apply (the module is not history-driven); statement coverage alone misses functional defects."
+  },
+  "exercise": { "type": "none" }
+}

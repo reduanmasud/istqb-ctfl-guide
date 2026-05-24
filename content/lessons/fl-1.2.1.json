@@ -1,0 +1,25 @@
+{
+  "id": "fl-1.2.1",
+  "chapter": 1,
+  "section": "1.2",
+  "kLevel": "K2",
+  "title": "Why Testing is Necessary",
+  "concept": "Testing is necessary because software is built by humans and humans make mistakes. A **mistake** (error) is the human action — a misunderstanding of the requirements, a typo, a wrong algorithm choice. The mistake introduces a **defect** (also called a fault or bug) in a work product such as code, design, or requirement. When the defective code is executed, it may cause a **failure** — an externally observable deviation from expected behaviour.\n\nNot every defect causes a failure: a defect in a code path that is never executed remains dormant. Conversely, failures can have non-defect causes such as environmental conditions (radiation, electromagnetic fields, pollution) that flip bits in memory.\n\nTesting contributes to the success of a project by detecting failures and the defects behind them early, reducing the risk of inadequate quality reaching production, providing stakeholders with information for risk-informed decisions, and supporting compliance with contracts, laws, and standards. Testing also contributes to quality at multiple levels: catching defects (corrective), preventing them via early review (preventive), and confirming the system meets stakeholder needs (validation).",
+  "keyPoints": [
+    "Mistake (error) → Defect (fault, bug) → Failure: a person makes a mistake, introducing a defect; executing the defective code may produce a failure.",
+    "Failures can also have non-human causes such as radiation, EMF, or pollution that affect hardware.",
+    "Testing reduces risk, supports decision-making, and helps comply with contractual, legal, and regulatory requirements."
+  ],
+  "quiz": {
+    "question": "A developer mistypes `<` as `<=` in a comparison. The mistake is committed but the line is never reached during a particular execution. Which statement is correct?",
+    "options": [
+      "There is no defect because no failure occurred.",
+      "There is a mistake and a defect; a failure may or may not occur depending on execution.",
+      "There is a failure but no defect.",
+      "Mistakes only become defects when a customer notices them."
+    ],
+    "correct": 1,
+    "explanation": "The mistake (typing the wrong operator) introduces a defect in the code. A failure is a runtime manifestation: it only occurs if the defective code path is exercised with inputs that expose it. A defect can exist dormantly without ever producing a failure."
+  },
+  "exercise": { "type": "none" }
+}

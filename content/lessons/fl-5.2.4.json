@@ -1,0 +1,25 @@
+{
+  "id": "fl-5.2.4",
+  "chapter": 5,
+  "section": "5.2",
+  "kLevel": "K2",
+  "title": "Risk Assessment Techniques",
+  "concept": "Several structured techniques help teams assess risk consistently.\n\n**FMEA (Failure Modes and Effects Analysis)** — for each component, brainstorm possible failure modes, their effects, their detection means. Compute a Risk Priority Number (RPN) = Severity × Occurrence × Detection. Originated in automotive/aerospace; widely used.\n\n**HAZOP (Hazard and Operability Study)** — guided word analysis. For each parameter (flow, pressure, etc.) apply guide words (NO, MORE, LESS, REVERSE) and consider the consequences. Used heavily in process industries.\n\n**PRAT (Pragmatic Risk Analysis and Testing)** — a lightweight workshop technique. The team brainstorms risks, scores each on likelihood and impact (e.g., 1–5), and the matrix drives test priorities. Suitable for software projects without the formality of FMEA.\n\n**Risk poker** — like planning poker but for risks: each participant votes on likelihood and impact for each risk; outliers discuss and re-vote.\n\n**Heuristic-based** — use frameworks like SFDIPOT (Structure, Function, Data, Interfaces, Platform, Operations, Time) or checklists of typical risk categories to prompt the team.\n\nWhichever technique is chosen, the goal is a documented, agreed risk register that drives test planning. Without this discipline, 'risk-based' testing collapses into 'whatever-the-loudest-stakeholder-asks-for' testing.",
+  "keyPoints": [
+    "Techniques: FMEA (severity × occurrence × detection), HAZOP (guide words), PRAT (lightweight), risk poker, heuristic checklists.",
+    "Output: documented risk register with owners and mitigations.",
+    "Without structured assessment, RBT decays into ad-hoc reactive testing."
+  ],
+  "quiz": {
+    "question": "Which risk assessment technique computes a Risk Priority Number as Severity × Occurrence × Detection?",
+    "options": [
+      "HAZOP",
+      "FMEA",
+      "PRAT",
+      "Risk poker"
+    ],
+    "correct": 1,
+    "explanation": "FMEA (Failure Modes and Effects Analysis) is the technique with the RPN = Severity × Occurrence × Detection formula. HAZOP uses guide words; PRAT is a lightweight workshop without a fixed formula; risk poker is a voting variant."
+  },
+  "exercise": { "type": "none" }
+}

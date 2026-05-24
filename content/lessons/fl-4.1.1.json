@@ -1,0 +1,25 @@
+{
+  "id": "fl-4.1.1",
+  "chapter": 4,
+  "section": "4.1",
+  "kLevel": "K2",
+  "title": "Categories of Test Techniques",
+  "concept": "Test techniques are systematic methods for deriving test cases. CTFL groups them into three categories.\n\n**Black-box (specification-based) techniques** derive tests from the specification of the test object — requirements, user stories, design documents — *without* reference to internal structure. The tester treats the system as a black box: feed inputs, observe outputs, compare against the spec. Techniques include equivalence partitioning, boundary value analysis, decision tables, state transition testing, and use case testing.\n\n**White-box (structure-based) techniques** derive tests from the *internal* structure of the test object — control flow, data flow, code paths. Tests are designed to exercise structural elements (statements, branches, paths). Techniques include statement coverage and branch coverage.\n\n**Experience-based techniques** rely on the tester's knowledge, experience, and intuition rather than formal derivation. Techniques include error guessing, exploratory testing, and checklist-based testing. They complement formal techniques by finding defects that the formal techniques might miss.\n\nThese categories are not exclusive — a single test plan combines techniques. Black-box catches missing functionality; white-box ensures structural coverage; experience-based catches the unexpected.",
+  "keyPoints": [
+    "Three categories: black-box (specification-based), white-box (structure-based), experience-based.",
+    "Black-box derives from external spec; white-box from internal structure; experience-based from tester knowledge.",
+    "Effective testing combines all three categories — they catch different kinds of defects."
+  ],
+  "quiz": {
+    "question": "A tester reads the requirements and designs test cases by partitioning the inputs into equivalence classes. The tester does not have access to the source code. Which category of test technique is being used?",
+    "options": [
+      "Black-box (specification-based)",
+      "White-box (structure-based)",
+      "Experience-based",
+      "Maintenance-based"
+    ],
+    "correct": 0,
+    "explanation": "Deriving test cases from the specification (requirements) without reference to internal structure is black-box / specification-based testing. White-box requires code access; experience-based relies on intuition rather than formal partitioning."
+  },
+  "exercise": { "type": "none" }
+}

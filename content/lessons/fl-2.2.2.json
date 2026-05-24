@@ -1,0 +1,25 @@
+{
+  "id": "fl-2.2.2",
+  "chapter": 2,
+  "section": "2.2",
+  "kLevel": "K2",
+  "title": "Test Types",
+  "concept": "A **test type** is a group of test activities focused on specific test objectives. Whereas a test *level* tells you what stage of development you're at, a test *type* tells you what quality characteristic you're exercising. The four main test types apply at every test level.\n\n**Functional testing** evaluates what the system does — does it implement the required functions correctly? Derived from functional requirements; can use black-box techniques.\n\n**Non-functional testing** evaluates how well the system performs its functions — performance, usability, reliability, security, compatibility, portability, maintainability (the ISO 25010 quality characteristics minus functional suitability). Often requires specialised tools (load generators, security scanners).\n\n**Black-box (specification-based) testing** derives tests from the specification of the test object without reference to its internal structure. Both functional and non-functional tests can be black-box.\n\n**White-box (structure-based) testing** derives tests from the internal structure of the test object — control flow, data flow, code. Typical at component level: statement coverage, branch coverage.\n\nA single test can combine types: a load test (non-functional) using functional scenarios (functional) executed against a system whose internal structure is unknown (black-box).",
+  "keyPoints": [
+    "Four test types: functional, non-functional, black-box (specification-based), white-box (structure-based).",
+    "Types apply at every test level — you can do functional, non-functional, black-box, and white-box at component, integration, system, and acceptance levels.",
+    "Test types are based on objectives; types and levels are independent dimensions."
+  ],
+  "quiz": {
+    "question": "A tester verifies that a checkout page loads in under 2 seconds with 1000 concurrent users. Which test types is this BEST classified as?",
+    "options": [
+      "Functional and white-box",
+      "Non-functional (performance) and black-box",
+      "Functional and black-box",
+      "Non-functional and white-box"
+    ],
+    "correct": 1,
+    "explanation": "Response time under load is a performance characteristic — non-functional. The tester does not need access to the internal code to apply load and measure response time — black-box."
+  },
+  "exercise": { "type": "none" }
+}

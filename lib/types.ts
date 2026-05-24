@@ -9,6 +9,9 @@ export type ExerciseType =
   | "dataset-constraint"
   | "metamorphic"
   | "eda-explorer"
+  | "ep-table"
+  | "bva"
+  | "decision-table"
   | "none";
 
 export interface QuizOption {
@@ -18,10 +21,10 @@ export interface QuizOption {
 export interface Quiz {
   question: string;
   options: string[];
-  correct: number; // 0-indexed
+  correct: number;
   explanation: string;
-  multiSelect?: boolean; // for "select TWO" questions
-  correctMulti?: number[]; // for multi-select
+  multiSelect?: boolean;
+  correctMulti?: number[];
 }
 
 export interface ExerciseData {
@@ -30,12 +33,12 @@ export interface ExerciseData {
 }
 
 export interface Lesson {
-  id: string; // e.g. "ai-1.1.1"
+  id: string;
   chapter: number;
-  section: string; // e.g. "1.1"
+  section: string;
   kLevel: KLevel | HLevel;
   title: string;
-  concept: string; // markdown
+  concept: string;
   keyPoints: string[];
   quiz: Quiz;
   exercise: ExerciseData;
@@ -44,8 +47,8 @@ export interface Lesson {
 export interface ChapterMeta {
   id: number;
   title: string;
-  duration: number; // minutes
-  color: string; // tailwind color class
+  duration: number;
+  color: string;
   description: string;
   loIds: string[];
 }
@@ -62,13 +65,23 @@ export interface GlossaryTerm {
 export interface ExamQuestion {
   id: number;
   points: number;
-  loRef: string; // e.g. "AI-1.1.1"
+  loRef: string;
   chapter: number;
   stem: string;
   options: string[];
-  correct: number | number[]; // single or multi
+  correct: number | number[];
   multiSelect?: boolean;
   explanation: string;
+}
+
+export type ExamSet = "a" | "b" | "c" | "d";
+
+export interface ExamSetResult {
+  set: ExamSet;
+  score: number;
+  total: number;
+  passed: boolean;
+  completedAt: string;
 }
 
 // ── Progress types ────────────────────────────────────────────────────────────
@@ -78,13 +91,15 @@ export interface ExamAttempt {
   score: number;
   maxScore: number;
   answers: Record<number, number | number[]>;
-  timeSpent: number; // seconds
+  timeSpent: number;
+  set?: ExamSet;
 }
 
 export interface Progress {
-  completedLessons: string[]; // LO IDs
-  quizAnswers: Record<string, number | number[]>; // loId → answer
-  quizCorrect: Record<string, boolean>; // loId → correct?
+  completedLessons: string[];
+  quizAnswers: Record<string, number | number[]>;
+  quizCorrect: Record<string, boolean>;
   examAttempts: ExamAttempt[];
+  examSetResults: Partial<Record<ExamSet, ExamSetResult>>;
   lastVisited: string;
 }

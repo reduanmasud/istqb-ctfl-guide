@@ -1,0 +1,25 @@
+{
+  "id": "fl-1.4.2",
+  "chapter": 1,
+  "section": "1.4",
+  "kLevel": "K2",
+  "title": "Test Process in Context",
+  "concept": "While the seven test activities are universal, *how* they are performed varies significantly with context. The factors that shape the test process include:\n\n**Software Development Lifecycle (SDLC)** — In a sequential lifecycle (waterfall, V-model), test planning and analysis occur early but execution is concentrated at the end. In iterative/Agile lifecycles, all seven activities happen in every iteration, often within a single sprint.\n\n**Test object characteristics** — A safety-critical embedded system requires extensive formal documentation and traceability; an internal admin tool may need only minimal documentation.\n\n**Risks** — High-risk systems demand more rigorous activities (more analysis, more design coverage, more independent execution); low-risk systems can use lighter-weight approaches.\n\n**Business domain and regulations** — Healthcare, aerospace, automotive, and finance have specific testing standards that constrain the process (IEC 62304, DO-178C, ISO 26262, PCI-DSS).\n\n**Organisational and project constraints** — Available skills, tools, budget, and timeline all influence what is feasible.\n\n**Stakeholders** — Their needs and expectations drive coverage decisions and reporting formats.\n\nThe test process is therefore tailored: the same activities are present, but the depth, formality, documentation, and order are adjusted to fit.",
+  "keyPoints": [
+    "The seven test activities are universal; their depth and formality depend on context.",
+    "SDLC, test object, risks, domain regulations, and stakeholders all shape how the process is tailored.",
+    "Agile teams compress all activities into every iteration; sequential teams spread them across phases."
+  ],
+  "quiz": {
+    "question": "A team is testing pacemaker firmware. Which contextual factors MOST strongly increase the formality and rigor of their test process?",
+    "options": [
+      "Stakeholder preferences alone.",
+      "The team's preferred programming language.",
+      "Safety risks and regulatory requirements (e.g., IEC 62304).",
+      "The number of testers available."
+    ],
+    "correct": 2,
+    "explanation": "Safety-critical systems and the regulatory standards that govern them (IEC 62304 for medical device software) drive formal traceability, documented coverage, and independent verification. While team size and tools matter, regulatory and safety factors dominate."
+  },
+  "exercise": { "type": "none" }
+}

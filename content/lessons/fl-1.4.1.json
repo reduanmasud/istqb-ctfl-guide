@@ -1,0 +1,25 @@
+{
+  "id": "fl-1.4.1",
+  "chapter": 1,
+  "section": "1.4",
+  "kLevel": "K2",
+  "title": "Test Activities and Tasks",
+  "concept": "The test process is the set of activities performed to plan, design, execute, and report on testing. ISTQB groups test activities into a logical, iterative sequence that recurs at every test level (component, integration, system, acceptance):\n\n**Test Planning** — defining test objectives, approach, schedule, scope, and resources. The test plan is updated as the project evolves.\n\n**Test Monitoring and Control** — collecting metrics on test progress and product quality, comparing them to the plan, and taking corrective action.\n\n**Test Analysis** — analysing the test basis (requirements, designs, code) to identify what to test and to derive test conditions, including risk assessment.\n\n**Test Design** — elaborating test conditions into concrete test cases with inputs, expected results, and execution preconditions.\n\n**Test Implementation** — creating or organising what's needed to run tests: test data, environments, automation scripts, test suites.\n\n**Test Execution** — running the tests (manually or automatically), comparing actual to expected results, and logging incidents.\n\n**Test Completion** — closing the test activity: archiving artifacts, evaluating lessons learned, communicating results to stakeholders.\n\nThe activities are not strictly sequential — analysis, design, and implementation often run in parallel, and monitoring/control runs throughout.",
+  "keyPoints": [
+    "Seven test activities: planning, monitoring & control, analysis, design, implementation, execution, completion.",
+    "Activities are iterative and overlapping, not strictly sequential.",
+    "Monitoring and control runs throughout to keep testing aligned with the plan and adjust when conditions change."
+  ],
+  "quiz": {
+    "question": "Which test activity is concerned with creating concrete test cases (inputs, expected results, preconditions) from previously identified test conditions?",
+    "options": [
+      "Test analysis",
+      "Test design",
+      "Test implementation",
+      "Test execution"
+    ],
+    "correct": 1,
+    "explanation": "Test design transforms abstract test conditions (identified during test analysis) into concrete test cases. Test implementation then prepares the data, environment, and scripts needed to actually run those cases."
+  },
+  "exercise": { "type": "none" }
+}

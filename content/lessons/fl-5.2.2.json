@@ -1,0 +1,25 @@
+{
+  "id": "fl-5.2.2",
+  "chapter": 5,
+  "section": "5.2",
+  "kLevel": "K2",
+  "title": "Project Risks and Product Risks",
+  "concept": "Distinguishing project from product risks is foundational to test planning.\n\n**Product risks** affect the test object's quality. Examples:\n- A payment-processing defect could lose customer money (impact: severe; likelihood: medium).\n- A performance bottleneck under peak load could make the system unusable (impact: high; likelihood: medium).\n- A security weakness could allow data exfiltration (impact: severe; likelihood: low-medium).\n- A usability issue could cause user errors (impact: medium; likelihood: high).\n\nProduct risks are mitigated by testing — the higher the risk, the more rigorous and thorough the testing of that area.\n\n**Project risks** affect the project's ability to test or deliver. Examples:\n- Key tester resignation could delay test design (impact: high; likelihood: low-medium).\n- Test environment instability could block execution (impact: high; likelihood: medium).\n- Late delivery of code from development could compress the test window (impact: high; likelihood: high).\n- Tool licence renewal failure could halt automation (impact: medium; likelihood: low).\n\nProject risks are mitigated by management actions: cross-training, backup environments, contractual penalties, phased delivery, contingency time in the schedule.\n\nA risk register tracks both, with assigned owners, mitigation plans, and review dates.",
+  "keyPoints": [
+    "Product risks affect product quality; testing depth/breadth mitigates them.",
+    "Project risks affect the project's ability to deliver; management actions mitigate them.",
+    "A risk register tracks risks with owners, mitigations, and review dates."
+  ],
+  "quiz": {
+    "question": "Which is a PROJECT risk rather than a product risk?",
+    "options": [
+      "The login function may have a security vulnerability.",
+      "The test environment may not be ready in time for the integration test phase.",
+      "The performance of the checkout page may not meet the 2-second SLA.",
+      "The new payment provider's API may not handle high-volume transactions correctly."
+    ],
+    "correct": 1,
+    "explanation": "Test environment readiness is a *project* risk — it affects the team's ability to deliver testing on schedule. The other options describe potential product defects (security, performance, API integration), which are product risks mitigated by testing."
+  },
+  "exercise": { "type": "none" }
+}

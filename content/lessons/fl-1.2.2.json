@@ -1,0 +1,25 @@
+{
+  "id": "fl-1.2.2",
+  "chapter": 1,
+  "section": "1.2",
+  "kLevel": "K1",
+  "title": "Testing's Contribution to Success",
+  "concept": "Testing contributes to the success of software development in several concrete ways. First, **defect prevention**: involving testers early in requirements review and design review prevents defects from being injected into the code in the first place — fixing a misunderstood requirement during review is orders of magnitude cheaper than fixing it after release. Second, **defect detection**: dynamic testing finds defects that escaped earlier static activities. Third, **risk reduction**: by testing the highest-risk areas first and most thoroughly, testing reduces the probability of severe failures in production. Fourth, **compliance and contractual evidence**: testing produces documentation that can demonstrate conformance to standards (ISO 25010, IEC 61508, ISO 26262, DO-178C) and contractual quality criteria.\n\nTesting also contributes to **stakeholder confidence**. A well-tested system gives the product owner, the business sponsor, and the end user evidence that the system will behave acceptably. Without testing, confidence rests purely on developer assurance — which history shows is insufficient. Finally, testing supports **continuous improvement**: defects found are analysed for root causes and patterns, feeding back into the development process to reduce similar defects in future iterations.",
+  "keyPoints": [
+    "Testing prevents defects (early reviews), detects defects (dynamic testing), and reduces risk by focusing on high-risk areas.",
+    "Testing produces evidence needed for compliance with contracts, laws, regulations, and standards.",
+    "Testing builds stakeholder confidence and supports continuous process improvement via defect root cause analysis."
+  ],
+  "quiz": {
+    "question": "Which of the following is NOT a typical way testing contributes to project success?",
+    "options": [
+      "Detecting defects before they reach production.",
+      "Preventing defects through early review involvement.",
+      "Guaranteeing that the software contains no defects.",
+      "Providing evidence required for regulatory compliance."
+    ],
+    "correct": 2,
+    "explanation": "Testing cannot guarantee a defect-free system — one of the seven testing principles is that exhaustive testing is impossible and testing shows the presence of defects, not their absence. The other three options are recognised contributions of testing."
+  },
+  "exercise": { "type": "none" }
+}

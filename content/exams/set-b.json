@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "points": 1,
+    "loRef": "FL-1.1.1",
+    "chapter": 1,
+    "stem": "Which of the following BEST describes verification compared to validation?",
+    "options": [
+      "Verification asks 'did we build the right thing?'; validation asks 'did we build it right?'.",
+      "Verification asks 'did we build it right (per spec)?'; validation asks 'did we build the right thing (for users)?'.",
+      "Verification and validation are synonyms.",
+      "Verification applies only to acceptance testing; validation only to unit testing."
+    ],
+    "correct": 1,
+    "explanation": "Verification checks conformance to specification ('did we build it right?'). Validation checks fitness for user needs ('did we build the right thing?'). Both are testing objectives that complement each other."
+  },
+  {
+    "id": 2,
+    "points": 1,
+    "loRef": "FL-1.2.1",
+    "chapter": 1,
+    "stem": "Which is NOT a recognised cause of a software failure?",
+    "options": [
+      "A defect introduced by a developer's mistake.",
+      "Hardware-level interference (e.g., cosmic ray flipping a memory bit).",
+      "Environmental conditions affecting the running system.",
+      "The mere existence of unexecuted code on disk."
+    ],
+    "correct": 3,
+    "explanation": "Failures occur when defective code executes or when environmental/hardware conditions interfere. Code that simply exists on disk but is never executed cannot cause a runtime failure."
+  },
+  {
+    "id": 3,
+    "points": 1,
+    "loRef": "FL-1.2.2",
+    "chapter": 1,
+    "stem": "Which is NOT a typical contribution of testing to a project's success?",
+    "options": [
+      "Detecting defects before they reach production.",
+      "Preventing defects through early reviews.",
+      "Guaranteeing a defect-free product.",
+      "Providing evidence for regulatory compliance."
+    ],
+    "correct": 2,
+    "explanation": "Testing shows the presence of defects, not their absence - a defect-free guarantee is impossible. The other three are recognised contributions of testing."
+  },
+  {
+    "id": 4,
+    "points": 1,
+    "loRef": "FL-1.3.1",
+    "chapter": 1,
+    "stem": "A bank's testing team finds that 80% of defects come from 20% of the system's modules. Which testing principle does this illustrate?",
+    "options": [
+      "Pesticide paradox.",
+      "Defect clustering.",
+      "Exhaustive testing is impossible.",
+      "Absence-of-errors fallacy."
+    ],
+    "correct": 1,
+    "explanation": "The Pareto-like observation that defects cluster in a small set of modules is exactly the defect-clustering principle."
+  },
+  {
+    "id": 5,
+    "points": 1,
+    "loRef": "FL-1.4.2",
+    "chapter": 1,
+    "stem": "Which factor MOST strongly increases the formality of a test process?",
+    "options": [
+      "The size of the development team.",
+      "The team's preferred programming language.",
+      "Regulatory and safety requirements applicable to the system.",
+      "The number of features in the release."
+    ],
+    "correct": 2,
+    "explanation": "Safety-critical and regulated domains (medical, aerospace, automotive, finance) impose specific documentation, traceability, and rigor requirements. Team size and language matter less for formality."
+  },
+  {
+    "id": 6,
+    "points": 1,
+    "loRef": "FL-1.4.3",
+    "chapter": 1,
+    "stem": "Which of the following is NOT testware?",
+    "options": [
+      "The test plan for the next release.",
+      "The application's source code.",
+      "Automated regression test scripts.",
+      "Test data files used during system testing."
+    ],
+    "correct": 1,
+    "explanation": "The application's source code is the test object, not testware. Testware is the work products produced for and by testing: plans, scripts, data, logs, reports."
+  },
+  {
+    "id": 7,
+    "points": 1,
+    "loRef": "FL-1.4.5",
+    "chapter": 1,
+    "stem": "On a small Agile team, a tester writes the sprint test report and tracks open defect closures. Which roles is the tester filling?",
+    "options": [
+      "Only the testing role.",
+      "Only the test management role.",
+      "Both the testing role and (part of) the test management role.",
+      "Neither - these are developer responsibilities."
+    ],
+    "correct": 2,
+    "explanation": "Designing/executing tests is the testing role; writing reports and tracking defects is the test management role. The tester fills both in a blended way - common on small Agile teams."
+  },
+  {
+    "id": 8,
+    "points": 1,
+    "loRef": "FL-2.1.2",
+    "chapter": 2,
+    "stem": "What is the canonical Test-Driven Development (TDD) cycle?",
+    "options": [
+      "Code first -> write a passing test -> refactor.",
+      "Write a failing test -> write the minimum code to pass -> refactor.",
+      "Write the test plan -> write the code -> review.",
+      "Write the user story -> demo it -> write tests after."
+    ],
+    "correct": 1,
+    "explanation": "TDD's red-green-refactor cycle is: write a failing test, write the minimum code to make it pass, refactor. Tests come first; code follows."
+  },
+  {
+    "id": 9,
+    "points": 1,
+    "loRef": "FL-2.1.3",
+    "chapter": 2,
+    "stem": "In a CI/CD pipeline, what is the PRIMARY role of automated tests at each stage?",
+    "options": [
+      "To replace human testers entirely.",
+      "To act as quality gates that block faulty changes from progressing.",
+      "To generate documentation.",
+      "To slow down releases."
+    ],
+    "correct": 1,
+    "explanation": "Automated tests in a pipeline serve as quality gates - a failure blocks the change from progressing, enabling fast, safe delivery."
+  },
+  {
+    "id": 10,
+    "points": 1,
+    "loRef": "FL-2.2.2",
+    "chapter": 2,
+    "stem": "A tester measures the response time of a checkout page under 5000 concurrent users. Which test types is this?",
+    "options": [
+      "Functional and white-box.",
+      "Non-functional (performance) and black-box.",
+      "Functional and black-box.",
+      "Non-functional and white-box."
+    ],
+    "correct": 1,
+    "explanation": "Response time under load is a performance characteristic (non-functional). External-only access without code inspection is black-box."
+  },
+  {
+    "id": 11,
+    "points": 1,
+    "loRef": "FL-2.2.3",
+    "chapter": 2,
+    "stem": "Why is regression testing performed AFTER a defect fix?",
+    "options": [
+      "To verify the original defect is fixed (this is the developer's responsibility).",
+      "To verify that the fix did not introduce new defects elsewhere in previously-working functionality.",
+      "To document the fix.",
+      "To find new exploratory defects."
+    ],
+    "correct": 1,
+    "explanation": "Regression testing checks that the change did not break unchanged areas. Confirmation testing (separate) verifies the fix works."
+  },
+  {
+    "id": 12,
+    "points": 1,
+    "loRef": "FL-2.3.1",
+    "chapter": 2,
+    "stem": "Which activity determines which regression tests must be re-run after a code change?",
+    "options": [
+      "Defect triage.",
+      "Impact analysis using traceability.",
+      "Acceptance criteria writing.",
+      "Performance benchmarking."
+    ],
+    "correct": 1,
+    "explanation": "Impact analysis traces from the changed item to dependent items - including test cases - to identify what must be re-run."
+  },
+  {
+    "id": 13,
+    "points": 1,
+    "loRef": "FL-2.4.2",
+    "chapter": 2,
+    "stem": "Which combination of level and type is MOST typical for measuring a 5-second SLA on a checkout flow?",
+    "options": [
+      "Acceptance + non-functional (performance).",
+      "Component + functional.",
+      "Integration + white-box.",
+      "Unit + structural coverage."
+    ],
+    "correct": 0,
+    "explanation": "An end-to-end SLA on a user flow is exercised at the acceptance (or system) level, and timing under SLA is a non-functional (performance) concern."
+  },
+  {
+    "id": 14,
+    "points": 1,
+    "loRef": "FL-3.1.2",
+    "chapter": 3,
+    "stem": "Beyond finding defects, what is a recognised benefit of reviews?",
+    "options": [
+      "They guarantee defect-free work products.",
+      "They eliminate the need for dynamic testing.",
+      "They spread knowledge across the team and surface assumptions early.",
+      "They replace the need for traceability."
+    ],
+    "correct": 2,
+    "explanation": "Knowledge sharing, alignment, and surfacing assumptions are recognised review benefits. Reviews do not guarantee zero defects, do not replace dynamic testing or traceability."
+  },
+  {
+    "id": 15,
+    "points": 1,
+    "loRef": "FL-3.1.3",
+    "chapter": 3,
+    "stem": "Which static testing objective is BEST served by a structured peer review of acceptance criteria with product owner, developer, and tester present?",
+    "options": [
+      "Building consensus among stakeholders that the criteria are clear and complete.",
+      "Measuring code coverage.",
+      "Stress-testing the system under load.",
+      "Detecting runtime memory leaks."
+    ],
+    "correct": 0,
+    "explanation": "Reviewing acceptance criteria with the three amigos primarily builds consensus. Coverage and runtime behaviours are dynamic concerns."
+  },
+  {
+    "id": 16,
+    "points": 1,
+    "loRef": "FL-3.2.1",
+    "chapter": 3,
+    "stem": "Which review type is led by the author and primarily aims to share knowledge and surface misunderstandings?",
+    "options": [
+      "Inspection.",
+      "Walkthrough.",
+      "Technical review.",
+      "Static analysis."
+    ],
+    "correct": 1,
+    "explanation": "Walkthroughs are author-led and emphasise explanation. Inspections are moderator-led and the most formal; technical reviews focus on consensus; static analysis is tool-based."
+  },
+  {
+    "id": 17,
+    "points": 1,
+    "loRef": "FL-3.2.2",
+    "chapter": 3,
+    "stem": "In a formal inspection, who is PRIMARILY responsible for paraphrasing the work product section by section?",
+    "options": [
+      "The author.",
+      "The moderator.",
+      "The reader.",
+      "The scribe."
+    ],
+    "correct": 2,
+    "explanation": "The reader is unique to inspections and paraphrases the document, forcing explicit articulation. Moderator chairs; author answers questions; scribe records."
+  },
+  {
+    "id": 18,
+    "points": 1,
+    "loRef": "FL-4.1.2",
+    "chapter": 4,
+    "stem": "A team measures 100% branch coverage of the code. Which statement is correct?",
+    "options": [
+      "Every branch was taken in both directions; statement coverage is also 100%.",
+      "Every requirement is covered.",
+      "The software is defect-free.",
+      "Statement coverage may be less than 100%."
+    ],
+    "correct": 0,
+    "explanation": "100% branch coverage implies 100% statement coverage (every branch direction executes the statements on it). It does NOT imply requirement coverage or defect-free state."
+  },
+  {
+    "id": 19,
+    "points": 1,
+    "loRef": "FL-4.2.2",
+    "chapter": 4,
+    "stem": "A function accepts day-of-month integers and partitions are {< 1}, {1-28}, {29-30}, {31}, {> 31}. How many tests are needed for full partition coverage?",
+    "options": [
+      "1",
+      "2",
+      "5",
+      "31"
+    ],
+    "correct": 2,
+    "explanation": "Full partition coverage requires one representative test from each of the five partitions."
+  },
+  {
+    "id": 20,
+    "points": 1,
+    "loRef": "FL-4.3.2",
+    "chapter": 4,
+    "stem": "A spec says orders may contain 1 to 50 items. Using three-value BVA, how many boundary tests are needed?",
+    "options": [
+      "2",
+      "4",
+      "6",
+      "8"
+    ],
+    "correct": 2,
+    "explanation": "Three-value BVA at each end: just-below, boundary, just-above. Lower: 0, 1, 2. Upper: 49, 50, 51. Total = 6."
+  },
+  {
+    "id": 21,
+    "points": 1,
+    "loRef": "FL-4.4.2",
+    "chapter": 4,
+    "stem": "A decision table has 4 conditions and the team reduces it to 7 collapsed rules. To achieve FULL decision-table coverage, how many test cases are required?",
+    "options": [
+      "4",
+      "7",
+      "11",
+      "16"
+    ],
+    "correct": 3,
+    "explanation": "Full decision-table coverage requires every rule of the unreduced 2^4 = 16-rule table to be exercised. Collapsed coverage would require only 7."
+  },
+  {
+    "id": 22,
+    "points": 1,
+    "loRef": "FL-4.5.1",
+    "chapter": 4,
+    "stem": "A function has 25 executable statements. Tests execute 20 of them. What is the statement coverage?",
+    "options": [
+      "20%",
+      "80%",
+      "100%",
+      "Cannot be determined."
+    ],
+    "correct": 1,
+    "explanation": "20 / 25 x 100% = 80%."
+  },
+  {
+    "id": 23,
+    "points": 1,
+    "loRef": "FL-4.5.3",
+    "chapter": 4,
+    "stem": "Which defect is MORE likely to be caught by white-box testing than black-box testing?",
+    "options": [
+      "A missing requirement that is omitted from the spec.",
+      "Dead code that no input ever reaches.",
+      "A confusing user interface.",
+      "A slow response under heavy load."
+    ],
+    "correct": 1,
+    "explanation": "Dead code is invisible to black-box (no input reaches it). White-box coverage tools highlight statements never executed."
+  },
+  {
+    "id": 24,
+    "points": 1,
+    "loRef": "FL-4.6.1",
+    "chapter": 4,
+    "stem": "Which technique uses tester experience and past defect knowledge to anticipate where new defects may be?",
+    "options": [
+      "Equivalence partitioning.",
+      "Boundary value analysis.",
+      "Error guessing.",
+      "Statement coverage."
+    ],
+    "correct": 2,
+    "explanation": "Error guessing is the experience-based technique that uses past defects, common mistakes, and intuition to design targeted tests."
+  },
+  {
+    "id": 25,
+    "points": 1,
+    "loRef": "FL-4.6.3",
+    "chapter": 4,
+    "stem": "A tester runs through OWASP Top 10 to verify a web app handles common web attacks. Which technique is this?",
+    "options": [
+      "Equivalence partitioning.",
+      "Checklist-based testing.",
+      "State transition testing.",
+      "Branch coverage testing."
+    ],
+    "correct": 1,
+    "explanation": "Running through a published checklist (OWASP Top 10) is the canonical example of checklist-based testing."
+  },
+  {
+    "id": 26,
+    "points": 1,
+    "loRef": "FL-4.8.1",
+    "chapter": 4,
+    "stem": "Which combination of techniques is MOST appropriate for testing a tax calculator with complex rules over income, deductions, and credits?",
+    "options": [
+      "Statement coverage alone.",
+      "Equivalence partitioning + decision tables + boundary value analysis.",
+      "Only exploratory testing.",
+      "State transition diagrams alone."
+    ],
+    "correct": 1,
+    "explanation": "Decision tables model the complex rules; EP partitions the inputs (income brackets); BVA tests the bracket boundaries. State transitions don't apply (no history-dependent behaviour)."
+  },
+  {
+    "id": 27,
+    "points": 1,
+    "loRef": "FL-5.1.1",
+    "chapter": 5,
+    "stem": "Which is NOT typically a section of a test plan?",
+    "options": [
+      "Test approach (levels, types, techniques).",
+      "Entry and exit criteria.",
+      "Full source code of the application.",
+      "Schedule and resources."
+    ],
+    "correct": 2,
+    "explanation": "Test plans describe what and how testing will be done. The application source code is the test object, not a section of the plan."
+  },
+  {
+    "id": 28,
+    "points": 1,
+    "loRef": "FL-5.1.2",
+    "chapter": 5,
+    "stem": "During sprint planning a tester realises a story depends on a third-party API not yet ready. What is the BEST action?",
+    "options": [
+      "Accept the story silently and hope for the best.",
+      "Raise the dependency and risk so the story is deferred, split, or stub-tested.",
+      "Note it for retrospective and continue.",
+      "Refuse to test the story when it's delivered."
+    ],
+    "correct": 1,
+    "explanation": "Active testers raise dependencies and risks during planning so the team can decide. Silently accepting causes end-of-sprint surprises."
+  },
+  {
+    "id": 29,
+    "points": 1,
+    "loRef": "FL-5.1.4",
+    "chapter": 5,
+    "stem": "PERT estimation gives O=2, M=4, P=12 days. Expected effort is:",
+    "options": [
+      "4 days",
+      "5 days",
+      "6 days",
+      "7 days"
+    ],
+    "correct": 1,
+    "explanation": "(O + 4M + P) / 6 = (2 + 16 + 12) / 6 = 30 / 6 = 5 days."
+  },
+  {
+    "id": 30,
+    "points": 1,
+    "loRef": "FL-5.2.2",
+    "chapter": 5,
+    "stem": "Which is a PRODUCT risk?",
+    "options": [
+      "A key tester may resign before the release.",
+      "The test environment may be unavailable.",
+      "The login function may have a security vulnerability.",
+      "The tool licence may expire before testing completes."
+    ],
+    "correct": 2,
+    "explanation": "A security vulnerability in the product is a product risk. Resignations, environment availability, and licence expiry threaten the project's ability to deliver - project risks."
+  },
+  {
+    "id": 31,
+    "points": 1,
+    "loRef": "FL-5.2.1",
+    "chapter": 5,
+    "stem": "What is the formula for risk level?",
+    "options": [
+      "Likelihood x Impact.",
+      "Likelihood + Impact.",
+      "Likelihood - Impact.",
+      "Impact / Likelihood."
+    ],
+    "correct": 0,
+    "explanation": "Risk level = Likelihood x Impact. Often visualised as a 5x5 heat map for prioritisation."
+  },
+  {
+    "id": 32,
+    "points": 1,
+    "loRef": "FL-5.3.2",
+    "chapter": 5,
+    "stem": "Which item is MOST likely in a final test summary report but NOT in interim progress reports?",
+    "options": [
+      "Number of open defects.",
+      "Current coverage achieved.",
+      "Lessons learned and recommendations for the next release.",
+      "Execution status by test suite."
+    ],
+    "correct": 2,
+    "explanation": "Lessons learned and recommendations are retrospective items in the final summary. The other items appear in both interim and final reports."
+  },
+  {
+    "id": 33,
+    "points": 1,
+    "loRef": "FL-5.3.1",
+    "chapter": 5,
+    "stem": "Defect arrival rate (new defects opened per week) trends DOWNWARD over a release. Which conclusion is MOST appropriate?",
+    "options": [
+      "Testing is incomplete and finding nothing.",
+      "The system is converging - fewer new defects are being discovered.",
+      "Testers are not motivated.",
+      "Coverage has decreased."
+    ],
+    "correct": 1,
+    "explanation": "A downward defect-arrival trend typically indicates convergence: the product is stabilising and fewer new defects are being found. Combined with stable execution and coverage, this signals readiness."
+  },
+  {
+    "id": 34,
+    "points": 1,
+    "loRef": "FL-5.4.2",
+    "chapter": 5,
+    "stem": "A defect's severity is 'critical' but its priority is 'low'. Which scenario is consistent with this?",
+    "options": [
+      "The defect affects an unused legacy module that the team plans to deprecate.",
+      "The defect crashes every login attempt.",
+      "The defect changes a button colour by one shade.",
+      "The defect is in a feature used by 100% of customers."
+    ],
+    "correct": 0,
+    "explanation": "Severity is impact (critical -> severe impact); priority is urgency (low -> not urgent). A critical defect in an unused legacy module being deprecated may have low priority because the module won't be used. The other scenarios would have high priority."
+  },
+  {
+    "id": 35,
+    "points": 1,
+    "loRef": "FL-5.4.1",
+    "chapter": 5,
+    "stem": "Which item is NOT typically under configuration management for testing?",
+    "options": [
+      "Test cases and scripts.",
+      "Test data.",
+      "Test environment configuration.",
+      "Each tester's daily Slack messages."
+    ],
+    "correct": 3,
+    "explanation": "Testware (cases, scripts, data, environment config) is under CM. Ad-hoc Slack messages are not testware and not under CM."
+  },
+  {
+    "id": 36,
+    "points": 1,
+    "loRef": "FL-6.1.1",
+    "chapter": 6,
+    "stem": "Which tool category is BEST for measuring response time under simulated load?",
+    "options": [
+      "API testing tool.",
+      "Performance test tool (e.g., JMeter, k6).",
+      "Static analysis tool.",
+      "Test management tool."
+    ],
+    "correct": 1,
+    "explanation": "Performance and load tools (JMeter, k6, Gatling) simulate load and measure response time, throughput, and resource utilisation."
+  },
+  {
+    "id": 37,
+    "points": 1,
+    "loRef": "FL-6.1.2",
+    "chapter": 6,
+    "stem": "Which is NOT a recognised benefit of test automation?",
+    "options": [
+      "Faster, more frequent execution.",
+      "Higher per-execution cost over time.",
+      "Repeatable, reproducible checks.",
+      "Frees tester time for exploration."
+    ],
+    "correct": 1,
+    "explanation": "Automation REDUCES per-execution cost over time (after the up-front investment), it does not raise it. The other items are recognised benefits."
+  },
+  {
+    "id": 38,
+    "points": 1,
+    "loRef": "FL-6.1.4",
+    "chapter": 6,
+    "stem": "Which test automation approach uses Given/When/Then scenarios that double as documentation?",
+    "options": [
+      "Capture/playback.",
+      "Behaviour-Driven Development (BDD) with tools like Cucumber.",
+      "Model-based.",
+      "Programmatic JUnit tests."
+    ],
+    "correct": 1,
+    "explanation": "BDD uses Given/When/Then Gherkin scenarios, executed by tools like Cucumber/SpecFlow, which double as living documentation."
+  },
+  {
+    "id": 39,
+    "points": 1,
+    "loRef": "FL-6.1.3",
+    "chapter": 6,
+    "stem": "Which is a common risk of test automation?",
+    "options": [
+      "Test execution becomes slower.",
+      "Maintenance cost may exceed manual effort if the suite is poorly designed.",
+      "Tests can no longer be run more than once a day.",
+      "Stakeholders never see results."
+    ],
+    "correct": 1,
+    "explanation": "Poorly-designed automation creates maintenance burden that can exceed the original manual effort. Speed, frequency, and visibility are typically benefits, not risks."
+  },
+  {
+    "id": 40,
+    "points": 1,
+    "loRef": "FL-6.1.5",
+    "chapter": 6,
+    "stem": "Which is the LEAST important activity when introducing a new test tool?",
+    "options": [
+      "Defining the problem the tool will solve.",
+      "Piloting on a representative project.",
+      "Branding the tool with the company logo.",
+      "Training the team and integrating with ALM/CI/CD."
+    ],
+    "correct": 2,
+    "explanation": "Branding has no impact on adoption success. Problem-fit, piloting, and training are essential."
+  }
+]

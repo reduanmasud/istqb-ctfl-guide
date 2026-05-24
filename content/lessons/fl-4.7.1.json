@@ -1,0 +1,25 @@
+{
+  "id": "fl-4.7.1",
+  "chapter": 4,
+  "section": "4.7",
+  "kLevel": "K2",
+  "title": "Collaboration-Based Test Approaches",
+  "concept": "**Collaboration-based testing** emphasises working with stakeholders — business analysts, developers, product owners, operations, customers — to derive tests that reflect a shared understanding of the system.\n\nKey practices:\n\n**Acceptance Criteria Workshops (Three Amigos)** — business, developer, and tester collaborate to agree what 'done' means for each user story before development starts. The agreed criteria become acceptance tests.\n\n**Example Mapping** — a structured workshop technique where the team works through a story by mapping rules, examples, and questions on cards. Examples become acceptance tests; unanswered questions surface ambiguity early.\n\n**Specification by Example (SBE)** — concrete examples (rather than abstract rules) define how the system should behave. Each example becomes an executable test. Behaviour-Driven Development (BDD) tools (Cucumber, SpecFlow) operationalise SBE.\n\n**User Story Reviews** — the team reviews each story for clarity, testability, and completeness. Refinement happens collaboratively rather than by the product owner alone.\n\n**Pair Testing / Mob Testing** — a tester pairs with a developer (or several team members) to test together. Knowledge spreads, defects are found faster, and tests benefit from multiple perspectives.\n\nThese practices share a goal: replace contracts and documents with shared examples that the whole team agrees on and that double as executable tests.",
+  "keyPoints": [
+    "Collaboration-based testing involves stakeholders in test creation: three amigos, example mapping, SBE, user story reviews, pair/mob testing.",
+    "Acceptance criteria emerge from collaborative workshops, not from one role acting alone.",
+    "Concrete examples (BDD/Cucumber Given-When-Then) double as executable tests and shared documentation."
+  ],
+  "quiz": {
+    "question": "Three roles (business analyst, developer, tester) meet before each user story enters development to agree on concrete acceptance examples. Which collaboration-based approach is being practised?",
+    "options": [
+      "Pair testing",
+      "Three amigos (acceptance criteria workshop)",
+      "Pesticide paradox mitigation",
+      "Code inspection"
+    ],
+    "correct": 1,
+    "explanation": "The three amigos workshop is exactly this practice: BA + dev + tester collaborate on concrete acceptance criteria before coding starts. Pair testing is one-on-one execution; pesticide paradox is a principle; inspection is a formal review type."
+  },
+  "exercise": { "type": "none" }
+}

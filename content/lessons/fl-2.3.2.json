@@ -1,0 +1,25 @@
+{
+  "id": "fl-2.3.2",
+  "chapter": 2,
+  "section": "2.3",
+  "kLevel": "K2",
+  "title": "Maintenance Testing",
+  "concept": "**Maintenance testing** is the testing of changes made to a system that is already in operation. It applies whether the change is corrective (fixing defects), perfective (adding features), adaptive (adapting to environment changes such as new OS, new browser, new regulation), or preventive (refactoring to reduce future maintenance cost).\n\nMaintenance testing has two complementary parts:\n\n**Testing the changes** — confirmation testing of the fix or feature, plus tests of any new functionality.\n\n**Regression testing** — to verify that the rest of the system still works. The scope depends on the size of the change and the risk: a tiny config tweak may only need smoke tests; a major refactor needs full regression.\n\nTriggers for maintenance testing include: a release into production, a migration to new infrastructure, retirement (decommissioning) of part of the system, archive procedures, data conversion, security patches, and adopting a new external integration.\n\nMaintenance testing is often constrained: limited test environment access, limited test data (production-like data is sensitive), and limited time (a security patch must ship today). Test teams use risk-based prioritisation and well-maintained regression suites to manage these constraints.",
+  "keyPoints": [
+    "Maintenance testing covers changes to a system already in operation: corrective, perfective, adaptive, preventive.",
+    "It combines testing of the changes (confirmation + new functionality) with regression testing of unchanged areas.",
+    "Triggers include releases, infrastructure migration, retirement, data conversion, security patches, and new integrations."
+  ],
+  "quiz": {
+    "question": "An organisation upgrades the underlying OS that hosts its production system. The application code is unchanged. Which type of maintenance testing is MOST relevant?",
+    "options": [
+      "Corrective maintenance testing — fixing defects in the application.",
+      "Adaptive maintenance testing — adapting the system to a changed environment.",
+      "Perfective maintenance testing — adding new functionality.",
+      "No maintenance testing is needed because the application code did not change."
+    ],
+    "correct": 1,
+    "explanation": "An OS upgrade is an environment change — the application has to continue working in a new environment. This is adaptive maintenance. Regression testing is essential because OS APIs, libraries, and behaviours may have shifted in ways that subtly affect the application."
+  },
+  "exercise": { "type": "none" }
+}

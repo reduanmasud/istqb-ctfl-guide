@@ -1,0 +1,25 @@
+{
+  "id": "fl-2.2.1",
+  "chapter": 2,
+  "section": "2.2",
+  "kLevel": "K2",
+  "title": "Test Levels",
+  "concept": "A **test level** is a group of test activities organised and managed together at a particular stage in development, distinguished by what is being tested and against which test basis. CTFL recognises four canonical test levels.\n\n**Component (unit) testing** — tests individual units of code (functions, methods, classes) in isolation. Test basis: detailed design, code, data model. Performed mostly by developers; defects fixed immediately without formal logging.\n\n**Integration testing** — tests interactions between components or between systems. Two main flavours: **component integration testing** (interfaces between units of one system) and **system integration testing** (interfaces between independent systems). Test basis: software/system design, interface specifications, sequence diagrams.\n\n**System testing** — tests the integrated system end-to-end as a whole. Verifies that the system meets specified functional and non-functional requirements. Test basis: system requirements, use cases, risk reports.\n\n**Acceptance testing** — tests from the user's or stakeholder's perspective to determine whether the system is acceptable for release. Test basis: business processes, user requirements, contracts. Subtypes include User Acceptance Testing (UAT), Operational Acceptance Testing (OAT), contractual and regulatory acceptance testing, and Alpha/Beta testing.\n\nEach level has distinct objectives, test bases, and test objects, and finds different kinds of defects.",
+  "keyPoints": [
+    "Four levels: component, integration, system, acceptance — each with distinct test object, test basis, and primary defects found.",
+    "Component testing isolates units; integration tests interfaces; system tests the whole; acceptance tests against business needs.",
+    "Acceptance has subtypes: UAT, OAT, contractual, regulatory, alpha, beta."
+  ],
+  "quiz": {
+    "question": "A defect causes two services to fail to exchange data correctly because one expects JSON and the other sends XML. Which test level is MOST appropriate for finding this defect?",
+    "options": [
+      "Component testing",
+      "Integration testing",
+      "System testing",
+      "Acceptance testing"
+    ],
+    "correct": 1,
+    "explanation": "An interface-format mismatch between two services is precisely what integration testing targets. Component testing would not find it (units are tested in isolation). System and acceptance testing might find it indirectly via downstream effects but are not the most appropriate level."
+  },
+  "exercise": { "type": "none" }
+}

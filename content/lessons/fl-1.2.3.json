@@ -1,0 +1,25 @@
+{
+  "id": "fl-1.2.3",
+  "chapter": 1,
+  "section": "1.2",
+  "kLevel": "K2",
+  "title": "Testing and Quality Assurance",
+  "concept": "Quality is the degree to which a component, system, or process meets specified requirements and/or user/customer needs and expectations. **Quality Assurance (QA)** is a part of quality management that focuses on providing confidence that quality requirements will be fulfilled. QA is process-oriented — it is concerned with the *process* of building software being correct and capable of producing quality outcomes.\n\n**Quality Control (QC)** focuses on the *product*: it includes activities, including testing, that verify the product meets quality requirements. Testing is one form of QC: a dynamic activity that examines whether the product meets expectations.\n\nThe relationship: QA encompasses QC encompasses testing. A team that has only testing has QC without rigorous QA — they catch defects but do not improve the process that creates them. A team that does only QA without testing has process discipline but no evidence that the product is actually correct. Mature organisations combine both: process discipline that prevents defects (QA), and product checks that detect them (QC, including testing).",
+  "keyPoints": [
+    "QA is process-oriented and aims to provide confidence quality requirements will be met; QC is product-oriented and verifies they were met.",
+    "Testing is a form of quality control — a product-focused activity that examines the test object dynamically or statically.",
+    "Effective quality management uses both QA (process discipline) and QC (testing and other product checks)."
+  ],
+  "quiz": {
+    "question": "Which statement correctly describes the relationship between Quality Assurance (QA), Quality Control (QC), and testing?",
+    "options": [
+      "QA, QC, and testing are three synonyms for the same activity.",
+      "Testing is a form of QC, which is product-focused; QA is process-focused and aims to provide confidence that quality requirements will be met.",
+      "QA performs all dynamic testing; QC performs only static reviews.",
+      "Testing replaces the need for QA in agile teams."
+    ],
+    "correct": 1,
+    "explanation": "QA is process-focused (improving how software is built), QC is product-focused (checking the product against requirements), and testing is one kind of QC activity. None of these activities replaces the others."
+  },
+  "exercise": { "type": "none" }
+}

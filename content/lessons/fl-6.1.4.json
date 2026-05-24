@@ -1,0 +1,25 @@
+{
+  "id": "fl-6.1.4",
+  "chapter": 6,
+  "section": "6.1",
+  "kLevel": "K2",
+  "title": "Special Considerations for Test Execution and Test Management Tools",
+  "concept": "Test execution and test management tools deserve specific consideration.\n\n**Test execution (automation) tools**:\n- **Capture/playback** — recording user actions and replaying them. Easy to start, but produces brittle scripts that break on every UI change. Generally a stepping stone to better approaches.\n- **Data-driven testing** — separate the test script from the data. The same script runs with many data sets. Reduces script count for parameterised testing.\n- **Keyword-driven testing** — express tests in high-level keywords (e.g., 'login', 'add to cart') that map to lower-level code. Non-programmers can author tests; the keyword library is the maintained code.\n- **Behaviour-driven (BDD)** — Cucumber-style Given/When/Then linked to step definitions. Tests double as documentation.\n- **Model-based** — generate tests from a model of the system (state machine, decision table).\n\nFor any approach, abstractions (page objects for GUI, API wrappers for services) are essential for maintainability.\n\n**Test management tools**:\n- Integrate with ALM / requirements management / defect tracking.\n- Provide traceability matrices, coverage reports, dashboards.\n- Often integrate with CI/CD to record automated test results alongside manual.\n- The choice depends on integration with the existing stack: a team on Jira + Bitbucket + Confluence typically picks Jira-native test management; an enterprise on Polarion uses its built-in test management.",
+  "keyPoints": [
+    "Execution approaches: capture/playback (brittle), data-driven, keyword-driven, BDD, model-based — each with trade-offs.",
+    "Page objects and API wrappers are essential abstractions for maintainable automation.",
+    "Test management tools must integrate with the team's ALM/CI/CD stack; choose for integration, not features."
+  ],
+  "quiz": {
+    "question": "A team wants non-programmer testers to author automated tests while a developer maintains the underlying code. Which test execution approach BEST fits?",
+    "options": [
+      "Capture/playback recording.",
+      "Keyword-driven testing.",
+      "Model-based testing.",
+      "Pure JUnit programmatic tests."
+    ],
+    "correct": 1,
+    "explanation": "Keyword-driven testing is designed for this split: non-programmers compose tests from a library of high-level keywords; programmers maintain the keyword implementations. Capture/playback creates brittle scripts; model-based requires modelling skills; pure JUnit requires programming for every test."
+  },
+  "exercise": { "type": "none" }
+}
