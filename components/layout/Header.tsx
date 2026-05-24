@@ -20,9 +20,9 @@ export function Header() {
           className="flex items-center gap-2 font-bold text-slate-900"
         >
           <span className="rounded-md bg-blue-600 px-2 py-0.5 text-xs font-bold text-white tracking-wide">
-            CT-AI
+            CTFL
           </span>
-          <span className="hidden sm:inline text-slate-700">v2.0 Study Guide</span>
+          <span className="hidden sm:inline text-slate-700">v4.0 Study Guide</span>
         </Link>
         <nav className="flex items-center gap-1">
           {navItems.map(({ href, label, icon: Icon }) => (
