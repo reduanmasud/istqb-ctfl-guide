@@ -58,8 +58,7 @@ export default function GlossaryPage() {
       <main className="mx-auto max-w-4xl px-4 py-8">
         <h1 className="text-2xl font-bold text-slate-900 mb-1">Glossary</h1>
         <p className="text-slate-500 text-sm mb-6">
-          {glossary.length} AI-specific terms from the official CT-AI v2.0
-          syllabus
+          {glossary.length} terms from the official ISTQB CTFL v4.0 syllabus
         </p>
 
         {/* Search + filter */}

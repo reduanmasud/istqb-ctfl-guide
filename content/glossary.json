@@ -1,1 +1,908 @@
-[]
+[
+  {
+    "term": "Testing",
+    "definition": "A set of activities performed to discover defects and to evaluate the quality of a test object. Testing includes both static activities (such as reviews) and dynamic activities (such as executing tests). It provides information to stakeholders to allow informed decisions.",
+    "chapter": 1,
+    "relatedLo": "fl-1.1.1"
+  },
+  {
+    "term": "Test",
+    "definition": "A set of test case preconditions, inputs, and expected results developed to drive the execution of a test item to meet a test objective. A test is a specific instance of a test procedure.",
+    "chapter": 1,
+    "relatedLo": "fl-1.1.1"
+  },
+  {
+    "term": "Test Object",
+    "definition": "The work product that is to be tested. Test objects can include software, hardware, configuration data, and documentation such as requirements specifications or design documents.",
+    "chapter": 1,
+    "relatedLo": "fl-1.1.1"
+  },
+  {
+    "term": "Test Basis",
+    "definition": "The body of knowledge used as the source of information for test analysis. The test basis can include requirements specifications, design documents, source code, and risk analyses, and provides the foundation from which test conditions are derived.",
+    "chapter": 1,
+    "relatedLo": "fl-1.1.1"
+  },
+  {
+    "term": "Test Oracle",
+    "definition": "A source used to determine expected results for a test. An oracle can be a specification, an existing system, a user manual, or the tester's own domain knowledge. It allows the tester to verify whether actual results match expected results.",
+    "chapter": 1,
+    "relatedLo": "fl-1.1.1"
+  },
+  {
+    "term": "Test Condition",
+    "definition": "A testable aspect of a component or system identified as a basis for testing. Test conditions are derived from the test basis and may be decomposed into test cases. Examples include a business rule, a function, or a quality characteristic.",
+    "chapter": 1,
+    "relatedLo": "fl-1.1.2"
+  },
+  {
+    "term": "Test Case",
+    "definition": "A set of preconditions, inputs, actions, expected results, and postconditions developed based on test conditions. A test case specifies exactly how the test should be executed and what result is expected.",
+    "chapter": 1,
+    "relatedLo": "fl-1.1.2"
+  },
+  {
+    "term": "Testware",
+    "definition": "Work products produced during the test process for use in planning, designing, executing, evaluating, and reporting on testing. Examples include test plans, test cases, test scripts, test data, and test reports.",
+    "chapter": 1,
+    "relatedLo": "fl-1.1.2"
+  },
+  {
+    "term": "Error",
+    "definition": "A human action that produces an incorrect result. An error is a mistake made by a person that can lead to a defect in the software or other work product.",
+    "chapter": 1,
+    "relatedLo": "fl-1.2.3"
+  },
+  {
+    "term": "Defect",
+    "definition": "An imperfection or deficiency in a work product where it does not meet its requirements or specifications. When executed, a defect in code may cause a failure. Defects can also exist in requirements, design documents, or test cases.",
+    "chapter": 1,
+    "relatedLo": "fl-1.2.3"
+  },
+  {
+    "term": "Failure",
+    "definition": "An event in which a component or system does not perform a required function within specified limits. A failure is an observable external manifestation of a defect during execution of the software.",
+    "chapter": 1,
+    "relatedLo": "fl-1.2.3"
+  },
+  {
+    "term": "Root Cause",
+    "definition": "The fundamental reason for the occurrence of a problem or defect. Identifying the root cause enables effective prevention of future defects by addressing the underlying process or systemic issue rather than just the symptom.",
+    "chapter": 1,
+    "relatedLo": "fl-1.2.3"
+  },
+  {
+    "term": "Quality",
+    "definition": "The degree to which a work product satisfies stated and implied needs of its stakeholders. Quality encompasses characteristics such as functionality, reliability, usability, performance, and maintainability as defined in standards like ISO 25010.",
+    "chapter": 1,
+    "relatedLo": "fl-1.1.1"
+  },
+  {
+    "term": "Quality Assurance",
+    "definition": "Activities focused on providing confidence that quality requirements will be fulfilled. QA is process-oriented and preventive, aiming to improve development and test processes so that defects do not arise in the first place.",
+    "chapter": 1,
+    "relatedLo": "fl-1.2.1"
+  },
+  {
+    "term": "Quality Control",
+    "definition": "Activities designed to evaluate the quality of a work product. QC is product-oriented and corrective, using testing and inspection to detect defects in a deliverable. Testing is a form of quality control.",
+    "chapter": 1,
+    "relatedLo": "fl-1.2.1"
+  },
+  {
+    "term": "Debugging",
+    "definition": "The process of finding, analyzing, and removing the causes of failures in software. Debugging is performed by developers after a failure is observed. It is distinct from testing, which identifies failures but does not fix defects.",
+    "chapter": 1,
+    "relatedLo": "fl-1.2.2"
+  },
+  {
+    "term": "Confirmation Testing",
+    "definition": "Testing performed to confirm that a specific defect has been fixed. Also called re-testing, it executes the exact test case that originally exposed the defect to verify the fix is effective.",
+    "chapter": 1,
+    "relatedLo": "fl-1.2.2"
+  },
+  {
+    "term": "Regression Testing",
+    "definition": "Testing performed to detect unintended side effects caused by changes to a system or its environment. Regression testing ensures that previously working features have not been broken by recent modifications or fixes.",
+    "chapter": 1,
+    "relatedLo": "fl-1.2.2"
+  },
+  {
+    "term": "Static Testing",
+    "definition": "Testing activities that examine a work product without executing it. Static testing includes reviews and static analysis, can be applied to requirements, design, and code, and can detect defects without running the software.",
+    "chapter": 1,
+    "relatedLo": "fl-1.1.1"
+  },
+  {
+    "term": "Dynamic Testing",
+    "definition": "Testing that involves the execution of a test object. Dynamic testing requires the software to be run and observes its behavior in response to test inputs to validate that it meets requirements.",
+    "chapter": 1,
+    "relatedLo": "fl-1.1.1"
+  },
+  {
+    "term": "Test Coverage",
+    "definition": "The degree to which specified coverage items have been exercised by a test suite, expressed as a percentage. Coverage items can be requirements, code elements such as statements or branches, or conditions, depending on the criterion used.",
+    "chapter": 1,
+    "relatedLo": "fl-1.2.4"
+  },
+  {
+    "term": "Test Level",
+    "definition": "A specific instantiation of the test process that is managed and executed as a group of test activities. Test levels (component, integration, system, acceptance) differ in scope, objectives, and the level of the work product being tested.",
+    "chapter": 1,
+    "relatedLo": "fl-1.1.2"
+  },
+  {
+    "term": "Test Type",
+    "definition": "A group of test activities focused on specific quality characteristics of a software system. Test types include functional, non-functional, white-box, and change-related testing, and can be applied at any test level.",
+    "chapter": 1,
+    "relatedLo": "fl-1.1.2"
+  },
+  {
+    "term": "Independence of Testing",
+    "definition": "A separation of responsibilities that encourages objective reporting of defects. Greater independence (e.g., an independent test team or external tester) reduces bias but requires good communication and collaboration to remain effective.",
+    "chapter": 1,
+    "relatedLo": "fl-1.5.3"
+  },
+  {
+    "term": "Test Plan",
+    "definition": "A document describing the scope, approach, resources, and schedule of intended testing activities. A test plan defines objectives, test items, features to be tested, tasks, responsibilities, risks, and contingencies.",
+    "chapter": 1,
+    "relatedLo": "fl-1.4.2"
+  },
+  {
+    "term": "Test Process",
+    "definition": "A set of interrelated activities organized to achieve testing objectives. The generic test process includes test planning, test monitoring and control, test analysis, test design, test implementation, test execution, and test completion.",
+    "chapter": 1,
+    "relatedLo": "fl-1.4.1"
+  },
+  {
+    "term": "Seven Testing Principles",
+    "definition": "A set of foundational guidelines for effective testing: testing shows the presence of defects not their absence; exhaustive testing is impossible; early testing saves time and money; defects cluster together; tests wear out (pesticide paradox); testing is context-dependent; and absence-of-defects is a fallacy.",
+    "chapter": 1,
+    "relatedLo": "fl-1.3.1"
+  },
+  {
+    "term": "Test Monitoring",
+    "definition": "The activity of collecting information about testing and comparing it to the test plan. Test monitoring provides ongoing insight into test progress, coverage, and defect status to support management decisions.",
+    "chapter": 1,
+    "relatedLo": "fl-1.4.4"
+  },
+  {
+    "term": "Test Control",
+    "definition": "The activity of guiding and correcting the test process based on information gathered during test monitoring. Control actions may include re-prioritizing tests, changing the schedule, or requesting additional resources.",
+    "chapter": 1,
+    "relatedLo": "fl-1.4.4"
+  },
+  {
+    "term": "Configuration Management",
+    "definition": "A discipline applying technical and administrative direction to identify, document, and control configuration items. In testing, it ensures testware integrity and provides traceability between test items and the test basis.",
+    "chapter": 1,
+    "relatedLo": "fl-1.4.5"
+  },
+  {
+    "term": "Defect Management",
+    "definition": "The process of recognizing, investigating, taking action on, and disposing of defects. It involves logging defect reports, tracking their lifecycle from discovery through closure, and analyzing data for process improvement.",
+    "chapter": 1,
+    "relatedLo": "fl-1.5.4"
+  },
+  {
+    "term": "Test Objective",
+    "definition": "The reason or purpose behind a test activity. Common test objectives include finding defects, gaining confidence in quality, providing information for decision-making, preventing defects, and meeting regulatory requirements.",
+    "chapter": 1,
+    "relatedLo": "fl-1.1.1"
+  },
+  {
+    "term": "Pesticide Paradox",
+    "definition": "One of the seven testing principles stating that if the same tests are repeated over and over, they will eventually stop finding new defects. Tests must be regularly reviewed and new ones added to detect different defects.",
+    "chapter": 1,
+    "relatedLo": "fl-1.3.1"
+  },
+  {
+    "term": "Whole Team Approach",
+    "definition": "An Agile practice where all team members including testers, developers, and business representatives share responsibility for quality. Everyone participates in testing activities, integrating quality into the development process.",
+    "chapter": 1,
+    "relatedLo": "fl-1.5.2"
+  },
+  {
+    "term": "Test Analysis",
+    "definition": "The activity of identifying test conditions by analyzing the test basis. Test analysis determines what to test in terms of measurable coverage criteria and produces the list of test conditions that guide test design.",
+    "chapter": 1,
+    "relatedLo": "fl-1.4.2"
+  },
+  {
+    "term": "Test Design",
+    "definition": "The activity of elaborating test conditions into test cases and other testware. Test design produces test cases, test data requirements, and definitions of the required test environment and infrastructure.",
+    "chapter": 1,
+    "relatedLo": "fl-1.4.2"
+  },
+  {
+    "term": "Test Implementation",
+    "definition": "The activity that creates or acquires the testware needed for test execution. This includes finalizing test cases into test procedures, setting up the test environment, preparing test data, and scheduling test execution.",
+    "chapter": 1,
+    "relatedLo": "fl-1.4.2"
+  },
+  {
+    "term": "Test Environment",
+    "definition": "An environment containing hardware, software tools, and other supporting elements needed to conduct a test. A stable and representative test environment is essential for reproducible and reliable test results.",
+    "chapter": 1,
+    "relatedLo": "fl-1.4.3"
+  },
+  {
+    "term": "Test Data",
+    "definition": "Data created or selected to satisfy the execution preconditions and inputs needed for test execution. Appropriate test data covers valid, invalid, and boundary values and is essential for achieving the desired coverage.",
+    "chapter": 1,
+    "relatedLo": "fl-1.4.3"
+  },
+  {
+    "term": "Test Manager",
+    "definition": "A person responsible for the management, planning, monitoring, and control of test activities. A test manager coordinates testing efforts, manages the test team, communicates test status to stakeholders, and is accountable for testing deliverables.",
+    "chapter": 1,
+    "relatedLo": "fl-1.5.1"
+  },
+  {
+    "term": "Test Completion",
+    "definition": "The final activity in the test process, which occurs when defined exit criteria are met. It involves archiving testware, identifying lessons learned, communicating closure to stakeholders, and finalizing the test completion report.",
+    "chapter": 1,
+    "relatedLo": "fl-1.4.2"
+  },
+  {
+    "term": "SDLC",
+    "definition": "Software Development Life Cycle. A structured process used to plan, create, test, and deliver software. Common SDLC models include waterfall, V-model, iterative, incremental, and Agile. The choice of SDLC model influences how and when testing is performed.",
+    "chapter": 2,
+    "relatedLo": "fl-2.1.1"
+  },
+  {
+    "term": "V-model",
+    "definition": "A sequential software development model where each development phase has a corresponding testing phase. Development activities on the left arm of the V correspond to testing activities on the right arm, emphasizing early test planning.",
+    "chapter": 2,
+    "relatedLo": "fl-2.1.1"
+  },
+  {
+    "term": "Waterfall Model",
+    "definition": "A sequential software development model in which development flows downward through phases such as requirements, design, implementation, testing, and maintenance. Each phase must be completed before the next begins, making late changes costly.",
+    "chapter": 2,
+    "relatedLo": "fl-2.1.1"
+  },
+  {
+    "term": "Iterative Development",
+    "definition": "A software development approach in which the system is built and evaluated in repeated cycles. Each iteration refines the product based on feedback, allowing requirements and design to evolve over time.",
+    "chapter": 2,
+    "relatedLo": "fl-2.1.1"
+  },
+  {
+    "term": "Incremental Development",
+    "definition": "A software development approach in which the product is designed, implemented, and tested incrementally, with each increment delivering a portion of new functionality that builds on the previous increment.",
+    "chapter": 2,
+    "relatedLo": "fl-2.1.1"
+  },
+  {
+    "term": "Agile",
+    "definition": "An iterative and incremental software development approach guided by the Agile Manifesto values and principles. Agile emphasizes collaboration, customer feedback, and rapid delivery of working software in short time-boxes called sprints or iterations.",
+    "chapter": 2,
+    "relatedLo": "fl-2.1.2"
+  },
+  {
+    "term": "DevOps",
+    "definition": "An organizational approach that combines software development and IT operations to shorten delivery cycles and improve reliability. DevOps emphasizes automation, continuous integration, continuous delivery, and cross-functional collaboration.",
+    "chapter": 2,
+    "relatedLo": "fl-2.1.4"
+  },
+  {
+    "term": "Shift-Left Testing",
+    "definition": "An approach that moves testing activities earlier in the SDLC to detect defects as soon as possible. Shift-left includes early review of specifications, test-first approaches such as TDD and BDD, and static analysis, reducing the cost of late defect discovery.",
+    "chapter": 2,
+    "relatedLo": "fl-2.1.5"
+  },
+  {
+    "term": "Test Pyramid",
+    "definition": "A model illustrating the recommended proportion of test types, suggesting more component tests at the base, fewer integration tests in the middle, and fewer end-to-end tests at the top. Tests at the base are faster, cheaper, and more isolated.",
+    "chapter": 2,
+    "relatedLo": "fl-2.1.5"
+  },
+  {
+    "term": "Component Testing",
+    "definition": "A test level that focuses on individual software components in isolation. Also called unit testing, it typically uses stubs and drivers to simulate dependencies and is often performed by developers close to the source code.",
+    "chapter": 2,
+    "relatedLo": "fl-2.2.1"
+  },
+  {
+    "term": "Component Integration Testing",
+    "definition": "A test level that focuses on the interactions and interfaces between integrated components. It aims to detect defects in communication between units, such as incorrect data passing or interface mismatches.",
+    "chapter": 2,
+    "relatedLo": "fl-2.2.2"
+  },
+  {
+    "term": "System Testing",
+    "definition": "A test level that evaluates the complete and integrated software system against its specified requirements. It covers functional and non-functional behavior from an end-to-end perspective and is typically performed by an independent test team.",
+    "chapter": 2,
+    "relatedLo": "fl-2.2.3"
+  },
+  {
+    "term": "System Integration Testing",
+    "definition": "A test level that focuses on interactions between the system under test and other systems or external components such as databases, web services, or third-party APIs. It verifies that inter-system interfaces function correctly.",
+    "chapter": 2,
+    "relatedLo": "fl-2.2.4"
+  },
+  {
+    "term": "Acceptance Testing",
+    "definition": "A test level that determines whether a system satisfies acceptance criteria and enables the customer or authorized entity to decide whether to accept the system. It evaluates the system from a business or user perspective.",
+    "chapter": 2,
+    "relatedLo": "fl-2.2.5"
+  },
+  {
+    "term": "User Acceptance Testing",
+    "definition": "A form of acceptance testing performed by intended users or their representatives to evaluate whether a system satisfies actual business needs. UAT is typically the final validation before production release.",
+    "chapter": 2,
+    "relatedLo": "fl-2.2.5"
+  },
+  {
+    "term": "Alpha Testing",
+    "definition": "A type of acceptance testing performed at the developer's site by potential or internal users, typically before beta testing. Alpha testing evaluates usability and identifies defects while the software is still under development.",
+    "chapter": 2,
+    "relatedLo": "fl-2.2.5"
+  },
+  {
+    "term": "Beta Testing",
+    "definition": "A type of acceptance testing performed by potential or actual customers at external sites, typically after alpha testing. Beta testing gathers real-world feedback before the final product release.",
+    "chapter": 2,
+    "relatedLo": "fl-2.2.5"
+  },
+  {
+    "term": "Functional Testing",
+    "definition": "Testing that evaluates functions that a component or system should perform. Functional tests verify what the system does based on functional requirements, without regard to how the system achieves the results.",
+    "chapter": 2,
+    "relatedLo": "fl-2.3.1"
+  },
+  {
+    "term": "Non-Functional Testing",
+    "definition": "Testing that evaluates attributes of a system other than its functional behavior. Non-functional testing covers quality characteristics such as performance, reliability, usability, security, and maintainability as defined in ISO 25010.",
+    "chapter": 2,
+    "relatedLo": "fl-2.3.2"
+  },
+  {
+    "term": "Maintenance Testing",
+    "definition": "Testing performed on an existing system following changes made to correct defects, adapt it to a new environment, or add new features. It includes impact analysis to determine the scope of regression testing required.",
+    "chapter": 2,
+    "relatedLo": "fl-2.4.1"
+  },
+  {
+    "term": "Stub",
+    "definition": "A minimal implementation of a component that replaces a called component during testing. Stubs return hard-coded or configurable responses, enabling a component to be tested in isolation when its dependencies do not yet exist.",
+    "chapter": 2,
+    "relatedLo": "fl-2.2.1"
+  },
+  {
+    "term": "Driver",
+    "definition": "A component or tool that controls and calls the component under test. Drivers are used in component testing when the calling module has not yet been implemented, simulating the environment from which the test object is invoked.",
+    "chapter": 2,
+    "relatedLo": "fl-2.2.1"
+  },
+  {
+    "term": "Acceptance Criteria",
+    "definition": "The conditions that a software product must satisfy to be accepted by a user, customer, or other authorized entity. Acceptance criteria are defined in advance and form the basis for acceptance testing and the definition of done.",
+    "chapter": 2,
+    "relatedLo": "fl-2.2.5"
+  },
+  {
+    "term": "Definition of Done",
+    "definition": "A checklist of criteria that must be met before a user story or increment is considered complete. In Agile, it typically includes testing activities such as passing all automated tests and meeting agreed coverage targets.",
+    "chapter": 2,
+    "relatedLo": "fl-2.1.2"
+  },
+  {
+    "term": "Impact Analysis",
+    "definition": "An assessment of changes made to a system to identify their consequences and side effects. Impact analysis informs the scope of regression testing by identifying which parts of the system may have been affected by a change.",
+    "chapter": 2,
+    "relatedLo": "fl-2.4.1"
+  },
+  {
+    "term": "Change-Related Testing",
+    "definition": "Testing performed after changes to a system to ensure the change has been correctly implemented and has not caused adverse effects elsewhere. It encompasses both confirmation testing and regression testing.",
+    "chapter": 2,
+    "relatedLo": "fl-2.4.1"
+  },
+  {
+    "term": "Review",
+    "definition": "A type of static testing in which a work product is examined by people other than the author to detect defects and improve quality. Reviews range from informal checks to highly formal inspections and provide feedback to the author.",
+    "chapter": 3,
+    "relatedLo": "fl-3.2.1"
+  },
+  {
+    "term": "Informal Review",
+    "definition": "A review with no defined process. It may take the form of a buddy check or pair programming session. Informal reviews are low-overhead and provide quick feedback but lack formal documentation and defined roles.",
+    "chapter": 3,
+    "relatedLo": "fl-3.2.2"
+  },
+  {
+    "term": "Walkthrough",
+    "definition": "A review in which the author leads participants through a work product and the participants ask questions and comment. The purpose is to find defects, improve the product, and build shared understanding. It is less formal than an inspection.",
+    "chapter": 3,
+    "relatedLo": "fl-3.2.2"
+  },
+  {
+    "term": "Technical Review",
+    "definition": "A formal review performed by technically qualified personnel to evaluate a work product for conformance to standards and to identify defects. It often focuses on design documents and code rather than business requirements.",
+    "chapter": 3,
+    "relatedLo": "fl-3.2.2"
+  },
+  {
+    "term": "Inspection",
+    "definition": "The most formal review type, characterized by defined roles, a documented process, checklists, metrics collection, and a formal follow-up process. Inspections are led by a trained moderator and are highly effective at finding defects.",
+    "chapter": 3,
+    "relatedLo": "fl-3.2.2"
+  },
+  {
+    "term": "Static Analysis",
+    "definition": "The process of evaluating a work product without executing it, typically using automated tools. Static analysis tools detect coding standard violations, security vulnerabilities, dead code, and other structural defects in source code.",
+    "chapter": 3,
+    "relatedLo": "fl-3.1.1"
+  },
+  {
+    "term": "Work Product",
+    "definition": "A result of a work task. In software development and testing, work products include requirements specifications, design documents, source code, test plans, test cases, and reports. All can be subject to static testing.",
+    "chapter": 3,
+    "relatedLo": "fl-3.1.1"
+  },
+  {
+    "term": "Anomaly",
+    "definition": "Any condition that deviates from expectation based on requirements or standards. In a review context, an anomaly is any issue found in a work product, whether it is a defect, ambiguity, inconsistency, or opportunity for improvement.",
+    "chapter": 3,
+    "relatedLo": "fl-3.2.1"
+  },
+  {
+    "term": "Author",
+    "definition": "The person who created the work product being reviewed. In a review, the author provides context, answers questions, and is responsible for making corrections based on the feedback received from reviewers.",
+    "chapter": 3,
+    "relatedLo": "fl-3.2.3"
+  },
+  {
+    "term": "Moderator",
+    "definition": "A trained facilitator who leads a formal review or inspection. The moderator plans and runs the review meeting, ensures adherence to the process, and creates a constructive atmosphere without judging the work product content.",
+    "chapter": 3,
+    "relatedLo": "fl-3.2.3"
+  },
+  {
+    "term": "Reviewer",
+    "definition": "A person who participates in a review by examining the work product and identifying anomalies. Reviewers are selected based on relevant knowledge and may represent roles such as a domain expert, a developer, or a tester.",
+    "chapter": 3,
+    "relatedLo": "fl-3.2.3"
+  },
+  {
+    "term": "Scribe",
+    "definition": "A person who records all anomalies, action items, and issues identified during a review meeting. The scribe ensures that findings are captured accurately for follow-up action and metrics tracking.",
+    "chapter": 3,
+    "relatedLo": "fl-3.2.3"
+  },
+  {
+    "term": "Checklist-Based Reviewing",
+    "definition": "A review technique where reviewers use a predefined list of questions or items to guide their examination of a work product. Checklists ensure consistent coverage of common defect types and help reviewers be thorough.",
+    "chapter": 3,
+    "relatedLo": "fl-3.2.4"
+  },
+  {
+    "term": "Perspective-Based Reading",
+    "definition": "A review technique where each reviewer adopts a specific stakeholder perspective (such as end user, designer, or tester) when examining a work product. It improves defect detection by ensuring multiple viewpoints are considered.",
+    "chapter": 3,
+    "relatedLo": "fl-3.2.4"
+  },
+  {
+    "term": "Ad-Hoc Review",
+    "definition": "An informal review technique with little or no preparation, relying on the reviewer's experience and intuition. It is quick and low-cost but less systematic than structured techniques and may miss certain defect types.",
+    "chapter": 3,
+    "relatedLo": "fl-3.2.4"
+  },
+  {
+    "term": "Role-Based Review",
+    "definition": "A review technique where reviewers examine the work product from the perspective of individual stakeholder roles relevant to the product. It ensures that different concerns such as business, security, and usability are addressed systematically.",
+    "chapter": 3,
+    "relatedLo": "fl-3.2.4"
+  },
+  {
+    "term": "Review Metrics",
+    "definition": "Quantitative measures collected during and after reviews to evaluate effectiveness and process quality. Useful metrics include defect density, defect detection rate, review effort, and the number of major versus minor issues found.",
+    "chapter": 3,
+    "relatedLo": "fl-3.2.5"
+  },
+  {
+    "term": "Review Planning",
+    "definition": "The initial phase of a formal review where the scope, objectives, team, schedule, and review criteria are defined. Proper planning ensures participants understand their roles and have time to prepare before the review meeting.",
+    "chapter": 3,
+    "relatedLo": "fl-3.2.1"
+  },
+  {
+    "term": "Individual Review",
+    "definition": "The phase of a formal review where each reviewer independently examines the work product before the group meeting. Individual preparation enables reviewers to identify issues without being influenced by others' opinions.",
+    "chapter": 3,
+    "relatedLo": "fl-3.2.1"
+  },
+  {
+    "term": "Review Follow-Up",
+    "definition": "The final phase of a formal review process where actions from the review meeting are tracked and verified. The moderator checks that defects have been fixed, action items completed, and lessons learned are captured.",
+    "chapter": 3,
+    "relatedLo": "fl-3.2.1"
+  },
+  {
+    "term": "Black-Box Test Technique",
+    "definition": "A test technique based on an analysis of the specification of the test object, without reference to its internal structure. Black-box techniques derive test cases from requirements and expected behavior, not from code.",
+    "chapter": 4,
+    "relatedLo": "fl-4.2.1"
+  },
+  {
+    "term": "White-Box Test Technique",
+    "definition": "A test technique based on an analysis of the internal structure of the test object. White-box techniques use knowledge of the code to derive test cases that achieve structural coverage criteria such as statement or branch coverage.",
+    "chapter": 4,
+    "relatedLo": "fl-4.3.1"
+  },
+  {
+    "term": "Experience-Based Testing",
+    "definition": "A testing approach that leverages testers' knowledge, intuition, and experience to design and execute tests. Experience-based techniques include error guessing, exploratory testing, and checklist-based testing.",
+    "chapter": 4,
+    "relatedLo": "fl-4.4.1"
+  },
+  {
+    "term": "Equivalence Partitioning",
+    "definition": "A black-box test technique that divides the input domain into partitions of equivalent data from which test cases are derived. The assumption is that one representative value per partition is sufficient to expose any defect in that partition.",
+    "chapter": 4,
+    "relatedLo": "fl-4.2.2"
+  },
+  {
+    "term": "Valid Partition",
+    "definition": "An equivalence partition containing values that are accepted by the component or system under test. Valid partitions represent inputs that should be processed normally and produce the expected correct output.",
+    "chapter": 4,
+    "relatedLo": "fl-4.2.2"
+  },
+  {
+    "term": "Invalid Partition",
+    "definition": "An equivalence partition containing values that should not be accepted by the component or system under test. Invalid partitions represent erroneous or out-of-range inputs that should trigger error handling or rejection.",
+    "chapter": 4,
+    "relatedLo": "fl-4.2.2"
+  },
+  {
+    "term": "Boundary Value Analysis",
+    "definition": "A black-box test technique that focuses on values at and near the boundaries of equivalence partitions. Defects cluster at boundaries, so BVA tests the minimum, maximum, and values just inside or outside partition limits.",
+    "chapter": 4,
+    "relatedLo": "fl-4.2.3"
+  },
+  {
+    "term": "2-Value BVA",
+    "definition": "A boundary value analysis approach that generates two test values per boundary: one on the boundary and one value just across it in the adjacent partition. It tests the boundary itself and the transition to the next partition.",
+    "chapter": 4,
+    "relatedLo": "fl-4.2.3"
+  },
+  {
+    "term": "3-Value BVA",
+    "definition": "A boundary value analysis approach that generates three test values per boundary: one just below, one on, and one just above. This provides more thorough boundary coverage and is recommended for critical or safety-related systems.",
+    "chapter": 4,
+    "relatedLo": "fl-4.2.3"
+  },
+  {
+    "term": "Decision Table Testing",
+    "definition": "A black-box test technique used to test systems that have complex combinations of conditions and corresponding actions. A decision table maps all combinations of condition outcomes to expected actions, ensuring thorough combinatorial coverage.",
+    "chapter": 4,
+    "relatedLo": "fl-4.2.4"
+  },
+  {
+    "term": "Guard Condition",
+    "definition": "A condition in a decision table or state machine that must be true for a particular rule or transition to apply. Guard conditions combine inputs and states to determine which output or action is triggered by the system.",
+    "chapter": 4,
+    "relatedLo": "fl-4.2.4"
+  },
+  {
+    "term": "State Transition Testing",
+    "definition": "A black-box test technique used to test the behavior of a system that can be modeled as a state machine. Test cases are derived from states, transitions, events, and actions to verify that the system moves between states correctly.",
+    "chapter": 4,
+    "relatedLo": "fl-4.2.5"
+  },
+  {
+    "term": "State Transition Diagram",
+    "definition": "A graphical representation of a finite state machine showing states as nodes, transitions as directed arrows, and associated events and actions as labels. It serves as the basis for deriving test cases in state transition testing.",
+    "chapter": 4,
+    "relatedLo": "fl-4.2.5"
+  },
+  {
+    "term": "State",
+    "definition": "A distinguishable condition of a system or component at a given point in time. A state persists until an event triggers a transition to another state and represents the system's internal memory at that moment.",
+    "chapter": 4,
+    "relatedLo": "fl-4.2.5"
+  },
+  {
+    "term": "Transition",
+    "definition": "A directed connection between two states in a state machine, triggered by an event and possibly subject to a guard condition. A valid transition moves the system from a source state to a target state when its triggering event occurs.",
+    "chapter": 4,
+    "relatedLo": "fl-4.2.5"
+  },
+  {
+    "term": "Event",
+    "definition": "An occurrence that triggers a state transition in a state machine. Events can represent user inputs, time-outs, or messages received. An event may or may not cause a transition depending on the current state and guard conditions.",
+    "chapter": 4,
+    "relatedLo": "fl-4.2.5"
+  },
+  {
+    "term": "Action",
+    "definition": "An activity performed by a system as a result of a state transition or while in a particular state. Actions can include generating outputs, changing data values, or initiating other processes within the system.",
+    "chapter": 4,
+    "relatedLo": "fl-4.2.5"
+  },
+  {
+    "term": "Statement Coverage",
+    "definition": "A white-box coverage criterion measuring the percentage of executable statements in the code that have been exercised by a test suite. 100% statement coverage ensures every statement has been executed at least once.",
+    "chapter": 4,
+    "relatedLo": "fl-4.3.2"
+  },
+  {
+    "term": "Branch Coverage",
+    "definition": "A white-box coverage criterion measuring the percentage of branches (decision outcomes) in the code that have been exercised. Branch coverage subsumes statement coverage and requires both true and false outcomes of each decision be tested.",
+    "chapter": 4,
+    "relatedLo": "fl-4.3.2"
+  },
+  {
+    "term": "Decision Coverage",
+    "definition": "A white-box coverage criterion equivalent to branch coverage, measuring whether each possible outcome of every decision point has been executed. It is a stronger criterion than statement coverage.",
+    "chapter": 4,
+    "relatedLo": "fl-4.3.2"
+  },
+  {
+    "term": "MC/DC",
+    "definition": "Modified Condition/Decision Coverage. A white-box criterion requiring each condition in a decision to independently affect the outcome. MC/DC is mandatory for safety-critical systems such as avionics and subsumes branch coverage.",
+    "chapter": 4,
+    "relatedLo": "fl-4.3.2"
+  },
+  {
+    "term": "Error Guessing",
+    "definition": "An experience-based test technique where the tester uses knowledge of past defects, common mistakes, and intuition to anticipate where errors are likely to occur and design tests targeting those areas.",
+    "chapter": 4,
+    "relatedLo": "fl-4.4.2"
+  },
+  {
+    "term": "Exploratory Testing",
+    "definition": "An experience-based approach where test design, execution, and learning happen simultaneously. The tester dynamically adapts the approach based on observations, using a test charter to guide but not over-constrain the session.",
+    "chapter": 4,
+    "relatedLo": "fl-4.4.3"
+  },
+  {
+    "term": "Test Charter",
+    "definition": "A document that provides the scope, objective, and possible approaches for an exploratory testing session. A charter guides the tester without over-specifying, enabling freedom to investigate and follow interesting findings.",
+    "chapter": 4,
+    "relatedLo": "fl-4.4.3"
+  },
+  {
+    "term": "Checklist-Based Testing",
+    "definition": "An experience-based test technique where tests are designed and executed based on a checklist of items to verify. Checklists may derive from experience, standards, or domain knowledge and guide coverage without prescribing exact test cases.",
+    "chapter": 4,
+    "relatedLo": "fl-4.4.4"
+  },
+  {
+    "term": "Coverage Item",
+    "definition": "An attribute or combination of attributes derived from one or more test conditions by using a test technique. Coverage items are the specific elements a test technique requires to be exercised, such as an equivalence partition or a code statement.",
+    "chapter": 4,
+    "relatedLo": "fl-4.1.1"
+  },
+  {
+    "term": "Test Technique",
+    "definition": "A procedure used to define test conditions, design test cases, and specify test data. Test techniques are categorized as black-box (specification-based), white-box (structure-based), or experience-based.",
+    "chapter": 4,
+    "relatedLo": "fl-4.1.1"
+  },
+  {
+    "term": "Cause-Effect Graphing",
+    "definition": "A black-box test technique that uses a graphical model to represent logical relationships between inputs (causes) and outputs (effects). The resulting graph can be converted into a decision table for systematic test case derivation.",
+    "chapter": 4,
+    "relatedLo": "fl-4.2.4"
+  },
+  {
+    "term": "All-Transitions Coverage",
+    "definition": "A state transition test coverage criterion requiring that every valid and invalid transition in a state machine has been tested at least once. It provides more thorough coverage than all-states coverage.",
+    "chapter": 4,
+    "relatedLo": "fl-4.2.5"
+  },
+  {
+    "term": "Pair Testing",
+    "definition": "A collaborative testing approach where two people work together at a single workstation to design and execute tests. Pair testing encourages knowledge sharing, improves defect detection through diverse perspectives, and supports skill development.",
+    "chapter": 4,
+    "relatedLo": "fl-4.4.3"
+  },
+  {
+    "term": "Test Planning",
+    "definition": "The activity of defining the objectives of testing and the approach for meeting test objectives within constraints imposed by the context. A test plan documents scope, approach, resources, schedule, risks, and exit criteria.",
+    "chapter": 5,
+    "relatedLo": "fl-5.1.1"
+  },
+  {
+    "term": "Entry Criteria",
+    "definition": "The preconditions that must be met before a test activity or test level can begin. Typical entry criteria include availability of a testable build, completed environment setup, and approved test plans and test cases.",
+    "chapter": 5,
+    "relatedLo": "fl-5.1.3"
+  },
+  {
+    "term": "Exit Criteria",
+    "definition": "The conditions that must be achieved in order to declare a defined task officially complete. Exit criteria for a test level might include achieving specified coverage, closing all critical defects, or completing the test schedule.",
+    "chapter": 5,
+    "relatedLo": "fl-5.1.3"
+  },
+  {
+    "term": "Risk Analysis",
+    "definition": "A process of assessing identified risks to estimate their likelihood and impact. In testing, risk analysis informs prioritization of test activities, ensuring that the most critical and risky areas receive the most thorough testing.",
+    "chapter": 5,
+    "relatedLo": "fl-5.2.2"
+  },
+  {
+    "term": "Product Risk",
+    "definition": "A risk related to quality characteristics of the test object. Product risks include risks of failing to meet functional requirements, performance targets, security standards, or usability requirements and directly affect end users.",
+    "chapter": 5,
+    "relatedLo": "fl-5.2.1"
+  },
+  {
+    "term": "Project Risk",
+    "definition": "A risk related to the management and control of the test project. Project risks include schedule delays, budget overruns, staff turnover, unclear requirements, and environment unavailability, affecting the ability to deliver testing on time.",
+    "chapter": 5,
+    "relatedLo": "fl-5.2.1"
+  },
+  {
+    "term": "Risk-Based Testing",
+    "definition": "An approach to testing in which test activities are selected and prioritized based on risk analysis. Tests targeting high-risk areas are executed first, ensuring critical failures are found early if testing must be curtailed.",
+    "chapter": 5,
+    "relatedLo": "fl-5.2.3"
+  },
+  {
+    "term": "Risk Level",
+    "definition": "The combined measure of the likelihood and impact of a risk, used to prioritize test activities. High-risk areas receive more thorough and earlier testing effort, while low-risk areas may receive reduced coverage.",
+    "chapter": 5,
+    "relatedLo": "fl-5.2.2"
+  },
+  {
+    "term": "Test Estimation",
+    "definition": "The activity of predicting the amount of effort required to complete testing activities. Estimation techniques include expert-based estimation, metric-based estimation, and three-point estimation.",
+    "chapter": 5,
+    "relatedLo": "fl-5.1.4"
+  },
+  {
+    "term": "Expert-Based Estimation",
+    "definition": "A test estimation approach that relies on the experience and judgment of subject matter experts. Wideband Delphi is a common technique where experts provide estimates independently and then discuss to reach consensus.",
+    "chapter": 5,
+    "relatedLo": "fl-5.1.4"
+  },
+  {
+    "term": "Metric-Based Estimation",
+    "definition": "A test estimation approach that uses historical data, metrics, and statistical techniques to predict test effort. Examples include using defect density from past projects or function point analysis to estimate effort for a new project.",
+    "chapter": 5,
+    "relatedLo": "fl-5.1.4"
+  },
+  {
+    "term": "Defect Report",
+    "definition": "A document reporting on the occurrence, nature, and status of a defect. A defect report includes defect ID, severity, priority, description, reproduction steps, expected result, actual result, and current lifecycle status.",
+    "chapter": 5,
+    "relatedLo": "fl-5.5.1"
+  },
+  {
+    "term": "Test Progress Report",
+    "definition": "A document summarizing testing activities and results within a reporting period. It provides stakeholders with current status on test execution, coverage achieved, defects found, risks, and plans for the next period.",
+    "chapter": 5,
+    "relatedLo": "fl-5.3.2"
+  },
+  {
+    "term": "Test Summary Report",
+    "definition": "A document providing an evaluation of the testing activities and results for a completed test project or test phase. It consolidates data on execution, coverage, defects, and provides an overall assessment of software quality.",
+    "chapter": 5,
+    "relatedLo": "fl-5.3.2"
+  },
+  {
+    "term": "Test Completion Report",
+    "definition": "A document produced at project milestones to summarize testing performed, lessons learned, and recommendations. It captures the final defect status, coverage achieved, and outstanding risks for use in future projects or iterations.",
+    "chapter": 5,
+    "relatedLo": "fl-5.3.2"
+  },
+  {
+    "term": "Traceability",
+    "definition": "The ability to identify related items in documentation and software by means of recorded relationships. In testing, traceability links test conditions and cases back to the test basis, supporting coverage analysis and impact assessment.",
+    "chapter": 5,
+    "relatedLo": "fl-5.1.2"
+  },
+  {
+    "term": "Test Prioritization",
+    "definition": "The process of ordering tests for execution based on importance, risk, or business value. Prioritization ensures that the most critical tests are run first so important defects are found early even if testing is cut short.",
+    "chapter": 5,
+    "relatedLo": "fl-5.1.5"
+  },
+  {
+    "term": "Defect Severity",
+    "definition": "The degree of impact that a defect has on the operation of a component or system. Severity ratings such as critical, major, and minor are typically assigned by testers based on the functional effect of the defect.",
+    "chapter": 5,
+    "relatedLo": "fl-5.5.1"
+  },
+  {
+    "term": "Defect Priority",
+    "definition": "The level of business urgency assigned to fixing a defect. Priority is typically set by a product owner or manager and reflects how quickly the defect needs to be resolved relative to other defects and project activities.",
+    "chapter": 5,
+    "relatedLo": "fl-5.5.1"
+  },
+  {
+    "term": "Defect Density",
+    "definition": "A metric expressing the number of defects found per unit size of a work product, such as defects per thousand lines of code. Defect density helps identify error-prone areas and assess overall software quality.",
+    "chapter": 5,
+    "relatedLo": "fl-5.3.1"
+  },
+  {
+    "term": "Test Tool",
+    "definition": "Software used to support one or more test activities. Test tools include tools for test management, execution, static analysis, and performance testing. Tools can improve efficiency but require configuration and ongoing maintenance.",
+    "chapter": 6,
+    "relatedLo": "fl-6.1.1"
+  },
+  {
+    "term": "Test Automation",
+    "definition": "The use of software to perform or support test activities that would otherwise be done manually. Automation increases test execution speed, repeatability, and coverage, but requires investment in tooling, scripting, and maintenance.",
+    "chapter": 6,
+    "relatedLo": "fl-6.2.1"
+  },
+  {
+    "term": "Test Management Tool",
+    "definition": "A tool that supports test planning, test case management, test execution tracking, and defect reporting. Test management tools often integrate with issue tracking systems to provide end-to-end visibility across the testing lifecycle.",
+    "chapter": 6,
+    "relatedLo": "fl-6.1.1"
+  },
+  {
+    "term": "Test Execution Tool",
+    "definition": "A tool that automates the execution of tests and comparison of actual versus expected results. Test execution tools run regression suites at high speed and provide immediate pass/fail feedback.",
+    "chapter": 6,
+    "relatedLo": "fl-6.1.1"
+  },
+  {
+    "term": "Static Analysis Tool",
+    "definition": "A tool that analyzes source code or other work products without executing them to detect defects, coding standard violations, or security vulnerabilities. Examples include linters, code quality analyzers, and security scanners.",
+    "chapter": 6,
+    "relatedLo": "fl-6.1.1"
+  },
+  {
+    "term": "CI/CD Pipeline",
+    "definition": "An automated sequence of steps that builds, tests, and delivers software continuously. Continuous Integration merges code frequently and runs automated tests; Continuous Delivery automates deployment. CI/CD pipelines strongly support shift-left testing.",
+    "chapter": 6,
+    "relatedLo": "fl-6.2.2"
+  },
+  {
+    "term": "ATDD",
+    "definition": "Acceptance Test-Driven Development. A collaborative practice where acceptance tests are written by the whole team (developers, testers, business representatives) before implementation, ensuring developed features meet acceptance criteria from the start.",
+    "chapter": 6,
+    "relatedLo": "fl-6.2.3"
+  },
+  {
+    "term": "TDD",
+    "definition": "Test-Driven Development. A software development practice in which test cases are written before the code that makes them pass. TDD follows a red-green-refactor cycle and produces clean, testable code with high automated coverage.",
+    "chapter": 6,
+    "relatedLo": "fl-6.2.3"
+  },
+  {
+    "term": "BDD",
+    "definition": "Behavior-Driven Development. A collaborative approach using plain-language Given/When/Then scenarios to define system behavior. BDD scenarios serve as both specification and automated acceptance tests, bridging communication between business and technical teams.",
+    "chapter": 6,
+    "relatedLo": "fl-6.2.3"
+  },
+  {
+    "term": "Model-Based Testing",
+    "definition": "A testing approach in which test cases are derived from a model of the system under test. Models may represent behavior (state machines, activity diagrams) or data flows. Tools can automatically generate test cases from the model.",
+    "chapter": 6,
+    "relatedLo": "fl-6.1.1"
+  },
+  {
+    "term": "Keyword-Driven Testing",
+    "definition": "A test automation approach that uses keywords (action words) to represent test steps in a readable format. Business stakeholders can define tests using keywords without scripting knowledge, and the automation framework executes the corresponding actions.",
+    "chapter": 6,
+    "relatedLo": "fl-6.2.4"
+  },
+  {
+    "term": "Test Automation Framework",
+    "definition": "A set of guidelines, tools, and libraries providing a structured approach to automating tests. Frameworks promote reuse, maintainability, and consistency. Common types include data-driven, keyword-driven, and behavior-driven frameworks.",
+    "chapter": 6,
+    "relatedLo": "fl-6.2.4"
+  },
+  {
+    "term": "Continuous Integration",
+    "definition": "A DevOps practice where developers frequently merge code changes into a shared repository, triggering automated builds and tests. CI detects integration defects early and ensures the codebase is always in a working state.",
+    "chapter": 6,
+    "relatedLo": "fl-6.2.2"
+  },
+  {
+    "term": "Continuous Delivery",
+    "definition": "A DevOps practice extending Continuous Integration by automatically deploying tested builds to a staging or production-like environment. It ensures software is always in a releasable state, reducing the risk of large infrequent releases.",
+    "chapter": 6,
+    "relatedLo": "fl-6.2.2"
+  }
+]
