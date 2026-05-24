@@ -1,0 +1,604 @@
+[
+  {
+    "id": 1,
+    "points": 1,
+    "loRef": "FL-1.1.1",
+    "chapter": 1,
+    "stem": "A tester is reviewing test results and realizes that some defects found during testing were already known from previous projects. Which testing objective is BEST illustrated by this situation?",
+    "options": [
+      "Preventing future defects by learning from past projects",
+      "Providing information for risk-based decisions to stakeholders",
+      "Evaluating work products to ensure they satisfy specified requirements",
+      "Building confidence in the quality level of the test object"
+    ],
+    "correct": 0,
+    "explanation": "One of the objectives of testing is to prevent defects by applying testing and review techniques to work products early in the SDLC. Learning from known defects to prevent them in future projects exemplifies defect prevention as a testing objective."
+  },
+  {
+    "id": 2,
+    "points": 1,
+    "loRef": "FL-1.1.2",
+    "chapter": 1,
+    "stem": "A web application crashes when a user enters a date in an unsupported format. Which of the following CORRECTLY identifies the testing concepts involved?",
+    "options": [
+      "The unsupported date format is a defect; the crash is a failure; the developer who wrote the date parsing code made a mistake",
+      "The crash is a defect; the unsupported date format is a mistake; the missing validation is a failure",
+      "The developer's oversight is a failure; the date parsing code is a defect; the crash is a mistake",
+      "The crash, the defect, and the mistake are all synonymous terms for the same event"
+    ],
+    "correct": 0,
+    "explanation": "A mistake is made by a person (developer failing to handle the date format). A defect is the result of the mistake (missing validation code). A failure occurs when the defect manifests during execution (the crash). These three concepts follow a cause-and-effect chain: mistake → defect → failure."
+  },
+  {
+    "id": 3,
+    "points": 1,
+    "loRef": "FL-1.2.2",
+    "chapter": 1,
+    "stem": "A test team is asked to prove that the application has no defects before release. Which testing principle does this request VIOLATE?",
+    "options": [
+      "Testing shows the presence of defects, not their absence",
+      "Exhaustive testing is impossible",
+      "Testing is context dependent",
+      "Defects cluster together"
+    ],
+    "correct": 0,
+    "explanation": "The first testing principle states that testing can show the presence of defects but cannot prove their absence. No amount of testing can guarantee a defect-free product. The request to 'prove there are no defects' directly violates this principle."
+  },
+  {
+    "id": 4,
+    "points": 1,
+    "loRef": "FL-1.3.1",
+    "chapter": 1,
+    "stem": "A team uses the same test cases to test a new release every sprint for six months. The tests continue to pass but several production bugs are reported by users. Which testing principle BEST explains this situation?",
+    "options": [
+      "Absence-of-errors fallacy — the tests pass but quality may still be insufficient",
+      "Pesticide paradox — repeated testing with the same cases no longer finds new defects",
+      "Defects cluster together — the bugs are concentrated in untested modules",
+      "Early testing — testing started too late in the development cycle"
+    ],
+    "correct": 1,
+    "explanation": "The pesticide paradox (testing principle 5) states that if the same tests are repeated over and over, they will no longer find new defects. The test cases need to be regularly reviewed and updated to test different parts of the software."
+  },
+  {
+    "id": 5,
+    "points": 1,
+    "loRef": "FL-1.4.1",
+    "chapter": 1,
+    "stem": "During sprint planning, a tester reviews the user stories and identifies ambiguous acceptance criteria. The tester raises these issues before development begins. Which test activity is the tester performing?",
+    "options": [
+      "Test execution",
+      "Test analysis",
+      "Test design",
+      "Test implementation"
+    ],
+    "correct": 1,
+    "explanation": "Test analysis is the activity of analyzing the test basis to identify testable features and define test conditions. Reviewing user stories and identifying ambiguous acceptance criteria is part of test analysis — it happens before test design and before execution."
+  },
+  {
+    "id": 6,
+    "points": 1,
+    "loRef": "FL-1.4.3",
+    "chapter": 1,
+    "stem": "Which of the following activities is part of test IMPLEMENTATION?",
+    "options": [
+      "Identifying test conditions based on user stories",
+      "Prioritizing test cases based on identified risks",
+      "Organizing test cases into test suites and setting up the test environment",
+      "Analyzing defects identified during test execution"
+    ],
+    "correct": 2,
+    "explanation": "Test implementation involves creating and organizing test cases into test suites, setting up the test environment, and preparing all test data and infrastructure needed for test execution. Identifying conditions is test analysis; prioritizing is also part of analysis/planning; analyzing defects is part of test execution."
+  },
+  {
+    "id": 7,
+    "points": 1,
+    "loRef": "FL-1.4.5",
+    "chapter": 1,
+    "stem": "In an Agile team, a tester participates in sprint planning meetings and contributes to the definition of done. Which of the following statements about the tester's activities in an Agile context are CORRECT?\n\ni. Testers review and refine user stories before the sprint begins\nii. Testers only perform testing activities and do not contribute to development tasks\niii. Testers collaborate with developers to define acceptance criteria\niv. Testers maintain the product backlog and prioritize features\nv. Testers contribute to continuous integration by writing and running automated tests",
+    "options": [
+      "i, ii, iv",
+      "i, iii, v",
+      "ii, iii, iv",
+      "i, iv, v"
+    ],
+    "correct": 1,
+    "multiSelect": false,
+    "explanation": "In Agile, testers: (i) review and refine user stories before and during sprints to identify testability issues; (iii) collaborate with developers and business representatives on acceptance criteria; (v) contribute to CI by automating tests. Testers do NOT solely perform testing (ii is false) and do NOT maintain the product backlog — that is the product owner's role (iv is false)."
+  },
+  {
+    "id": 8,
+    "points": 1,
+    "loRef": "FL-2.1.1",
+    "chapter": 2,
+    "stem": "Which of the following BEST describes the principle that testing activities should be adapted to the software development lifecycle (SDLC) model used?",
+    "options": [
+      "Test levels and test types must always be the same regardless of the SDLC model",
+      "Testing should only occur at the end of the SDLC to ensure all code has been written first",
+      "Testing activities should be aligned with and integrated into the specific SDLC model being used",
+      "The SDLC model determines how many test cases should be written but not when testing occurs"
+    ],
+    "correct": 2,
+    "explanation": "For every software development activity, there should be a corresponding testing activity. Testing activities must be aligned with the SDLC model — in sequential models (Waterfall) testing is mostly at the end, while in iterative models (Agile) testing occurs throughout each iteration."
+  },
+  {
+    "id": 9,
+    "points": 1,
+    "loRef": "FL-2.1.3",
+    "chapter": 2,
+    "stem": "A team is implementing a new mobile app using Kanban. Which of the following statements BEST describes how testing should be integrated into this approach?",
+    "options": [
+      "Testing occurs only when a significant number of features are accumulated before the next release",
+      "Testing is treated as a separate phase at the end of each monthly release cycle",
+      "Testing is integrated as work items on the Kanban board and limited by work-in-progress limits",
+      "Kanban does not support testing integration due to its lack of sprints or iterations"
+    ],
+    "correct": 2,
+    "explanation": "In Kanban, work items (including testing tasks) flow through the board and are managed with work-in-progress (WIP) limits. Testing is a continuous activity that is represented as columns or work items on the Kanban board, not a separate phase."
+  },
+  {
+    "id": 10,
+    "points": 1,
+    "loRef": "FL-2.2.2",
+    "chapter": 2,
+    "stem": "A developer has just fixed a defect that caused a login page to crash when the username field was left empty. After the fix, which type of testing should be performed FIRST?",
+    "options": [
+      "Regression testing — to ensure the fix did not break other functionality",
+      "Confirmation testing — to verify that the specific defect has been fixed",
+      "Acceptance testing — to get sign-off from the business on the fix",
+      "Integration testing — to ensure the login component integrates correctly"
+    ],
+    "correct": 1,
+    "explanation": "Confirmation testing (also called re-testing) should be performed first to verify that the specific defect has been fixed. Only after the defect is confirmed to be fixed should regression testing be performed to ensure that the fix has not introduced new defects."
+  },
+  {
+    "id": 11,
+    "points": 1,
+    "loRef": "FL-2.3.1",
+    "chapter": 2,
+    "stem": "Which of the following BEST describes how testing is integrated into DevOps?",
+    "options": [
+      "Testing is performed manually after automated build pipelines complete their runs",
+      "Testing is automated as much as possible and integrated into the CI/CD pipeline",
+      "Testing is performed by a separate QA team independent of the DevOps team",
+      "Testing in DevOps focuses exclusively on performance and security testing"
+    ],
+    "correct": 1,
+    "explanation": "In DevOps, testing is automated and integrated into the continuous integration/continuous delivery (CI/CD) pipeline. Automated tests (unit, integration, regression) run automatically with each code commit, providing fast feedback while enabling frequent deployments."
+  },
+  {
+    "id": 12,
+    "points": 1,
+    "loRef": "FL-2.4.1",
+    "chapter": 2,
+    "stem": "An organization is adopting a shift-left approach to testing. Which of the following activities is MOST consistent with this approach?",
+    "options": [
+      "Delaying test design until all code has been written and unit tested by developers",
+      "Conducting static analysis and peer reviews on requirements and design documents",
+      "Performing all regression testing at the system testing level before release",
+      "Assigning testing responsibilities solely to a dedicated QA team at the end of the project"
+    ],
+    "correct": 1,
+    "explanation": "Shift-left means involving testing as early as possible in the SDLC. Conducting static analysis and peer reviews on requirements and design documents is an early testing activity that catches defects before code is written, which is the core principle of shift-left testing."
+  },
+  {
+    "id": 13,
+    "points": 1,
+    "loRef": "FL-2.4.2",
+    "chapter": 2,
+    "stem": "Which of the following BEST describes an activity that supports retrospectives in improving both development and testing quality?",
+    "options": [
+      "Documenting all test cases in a test management tool for future reuse",
+      "Analyzing what went well and what can be improved, then implementing process changes",
+      "Conducting root cause analysis of defects found in production only",
+      "Scheduling additional test cycles to cover missed test scenarios from the current sprint"
+    ],
+    "correct": 1,
+    "explanation": "Retrospectives are used for process improvement. Teams analyze what went well and what needs improvement, then agree on actionable changes. When appropriate follow-up activities are implemented, retrospectives drive continuous improvement of both development and testing processes."
+  },
+  {
+    "id": 14,
+    "points": 1,
+    "loRef": "FL-3.1.1",
+    "chapter": 3,
+    "stem": "A project team discovers that a requirement document contains contradictory statements about a security feature. This issue is found during a peer review, before any code has been written. Which benefit of static testing does this BEST illustrate?",
+    "options": [
+      "Static testing reduces the need for dynamic testing later in the project",
+      "Static testing detects defects that are more expensive to fix when found later",
+      "Static testing can be applied to executable code just like dynamic testing",
+      "Static testing validates that the software meets user expectations"
+    ],
+    "correct": 1,
+    "explanation": "One of the key benefits of static testing is finding defects early — when they are less expensive to fix. A contradictory requirement found before coding saves the cost of implementing, testing, and fixing based on incorrect requirements. The cost of fixing defects increases significantly the later they are found in the SDLC."
+  },
+  {
+    "id": 15,
+    "points": 1,
+    "loRef": "FL-3.1.2",
+    "chapter": 3,
+    "stem": "Which of the following is a defect type that can be found by static testing but NOT by dynamic testing?",
+    "options": [
+      "Functionality that does not match the requirement specification",
+      "Performance bottlenecks under high concurrent user loads",
+      "Dead code that can never be reached by any execution path",
+      "Incorrect calculation results returned to the user interface"
+    ],
+    "correct": 2,
+    "explanation": "Dead code (unreachable code) is a defect that can be found through static analysis or code review, but cannot be discovered through dynamic testing because it can never be executed. Dynamic testing can only find defects in code that gets executed."
+  },
+  {
+    "id": 16,
+    "points": 1,
+    "loRef": "FL-3.2.2",
+    "chapter": 3,
+    "stem": "A team is reviewing a complex algorithm. The review is unstructured, with no defined roles, process, or checklist, and the author participates informally. Which type of review is being described?",
+    "options": [
+      "Technical review",
+      "Walkthrough",
+      "Informal review",
+      "Inspection"
+    ],
+    "correct": 2,
+    "explanation": "An informal review has no defined process, no required roles, and is not formally documented. It is the least formal review type. A walkthrough is author-led but has defined participants. A technical review focuses on technical correctness with defined roles. An inspection is the most formal review with strict roles and entry/exit criteria."
+  },
+  {
+    "id": 17,
+    "points": 1,
+    "loRef": "FL-3.2.3",
+    "chapter": 3,
+    "stem": "Which of the following is MOST likely to be a success factor for formal reviews?",
+    "options": [
+      "Ensuring that all review participants are developers who wrote the code",
+      "Combining multiple review objectives into a single review meeting to save time",
+      "Having clearly defined roles with trained participants and management support",
+      "Conducting the review meeting without a moderator to allow free discussion"
+    ],
+    "correct": 2,
+    "explanation": "Success factors for formal reviews include clearly defined roles, adequately trained participants (especially the moderator), and management support and commitment to the review process. Combining too many objectives dilutes focus; all reviewers being code authors creates bias; a moderator is essential for structured reviews."
+  },
+  {
+    "id": 18,
+    "points": 1,
+    "loRef": "FL-4.1.1",
+    "chapter": 4,
+    "stem": "A tester derives test cases based on the internal code structure, measuring the percentage of branches executed by the tests. Which test technique category does this represent?",
+    "options": [
+      "Black-box test technique — the tester works from the specification only",
+      "White-box test technique — the tester uses knowledge of the internal structure",
+      "Experience-based test technique — the tester uses prior knowledge of the system",
+      "Risk-based test technique — the tester focuses on high-risk code paths"
+    ],
+    "correct": 1,
+    "explanation": "White-box (or structure-based) test techniques derive tests from the internal structure of the test object. Branch coverage, statement coverage, and path coverage are all white-box techniques that require knowledge of and access to the code's internal structure."
+  },
+  {
+    "id": 19,
+    "points": 1,
+    "loRef": "FL-4.1.2",
+    "chapter": 4,
+    "stem": "A black-box test technique is applied to an e-commerce checkout system. The test conditions are derived from the system specification. Which statement about black-box techniques is CORRECT?",
+    "options": [
+      "Black-box techniques can detect defects caused by missing code but not by incorrect code",
+      "Black-box techniques are only applicable to functional testing, not non-functional testing",
+      "Black-box test cases are derived from the test object's specification without knowledge of its internal structure",
+      "Black-box techniques can achieve 100% code coverage when thoroughly applied"
+    ],
+    "correct": 2,
+    "explanation": "Black-box (specification-based) test techniques derive test conditions and test cases from the test basis (requirements, specifications, user stories) without knowledge of the test object's internal structure. They can find gaps between specifications and implementation, including missing functionality."
+  },
+  {
+    "id": 20,
+    "points": 1,
+    "loRef": "FL-4.2.2",
+    "chapter": 4,
+    "stem": "A bank's loan approval system has three interest rate categories: Standard (5%), Premium (4.5%), and VIP (4%). The boundaries for Premium membership are credit score ≥ 700 (inclusive) and ≤ 850 (inclusive). Using 2-value boundary value analysis, which credit scores should be tested for the Premium category boundaries?",
+    "options": [
+      "699, 700, 850, 851",
+      "700, 850",
+      "699, 700, 849, 850, 851",
+      "700, 701, 849, 850"
+    ],
+    "correct": 0,
+    "explanation": "2-value boundary value analysis tests the boundary value itself and the value just outside the boundary. For the lower boundary of 700: test 699 (just outside) and 700 (boundary). For the upper boundary of 850: test 850 (boundary) and 851 (just outside). This gives test values: 699, 700, 850, 851."
+  },
+  {
+    "id": 21,
+    "points": 1,
+    "loRef": "FL-4.2.3",
+    "chapter": 4,
+    "stem": "A bicycle rental system applies discounts as follows: Gold members (≥20 rentals) get 30% off; Silver members (10–19 rentals) get 15% off; Bronze members (1–9 rentals) get 5% off; non-members get no discount. Using decision table testing, which of the following test cases represents an INVALID combination?",
+    "options": [
+      "Gold member with 20 rentals receiving 30% discount",
+      "Silver member with 15 rentals receiving 15% discount",
+      "Bronze member with 10 rentals receiving 5% discount",
+      "Non-member with 0 rentals receiving no discount"
+    ],
+    "correct": 2,
+    "explanation": "Decision table testing identifies valid and invalid input combinations. A Bronze member is defined as having 1–9 rentals. A customer with 10 rentals falls in the Silver category (10–19 rentals). Therefore, a 'Bronze member with 10 rentals' is an invalid combination — 10 rentals means Silver membership, not Bronze."
+  },
+  {
+    "id": 22,
+    "points": 1,
+    "loRef": "FL-4.2.4",
+    "chapter": 4,
+    "stem": "A state machine for a traffic light has states: Red, Green, Yellow, and Emergency. From Red, it transitions to Green (timer expires). From Green to Yellow (timer expires). From Yellow to Red (timer expires). From any state to Emergency (sensor triggered). How many test cases are needed to achieve state transition coverage (all transitions)?",
+    "options": [
+      "3 — one test case per normal cycle state",
+      "4 — one for each state",
+      "5 — one per transition in the normal cycle plus Emergency",
+      "6 — to cover each transition including the 3 Emergency transitions plus the 3 normal transitions"
+    ],
+    "correct": 3,
+    "explanation": "State transition coverage (all-transitions) requires testing every transition at least once. There are 6 transitions: Red→Green, Green→Yellow, Yellow→Red (3 normal), plus Red→Emergency, Green→Emergency, Yellow→Emergency (3 emergency transitions). Minimum coverage needs 6 transitions, achievable in as few as 2 test cases (one for normal cycle covering 3 transitions, and one testing emergency from each state)."
+  },
+  {
+    "id": 23,
+    "points": 1,
+    "loRef": "FL-4.3.1",
+    "chapter": 4,
+    "stem": "A tester is testing a new API without access to the specification, but has extensive experience with similar APIs. The tester uses knowledge of common API defects to design tests. Which test technique is being applied?",
+    "options": [
+      "Equivalence partitioning — grouping inputs into valid and invalid classes",
+      "Error guessing — using experience to anticipate likely defects",
+      "Exploratory testing — simultaneously learning, designing, and executing tests",
+      "Boundary value analysis — testing at the boundaries of input ranges"
+    ],
+    "correct": 1,
+    "explanation": "Error guessing is an experience-based test technique where the tester uses their knowledge and experience with similar systems to predict potential defects and design tests to find them. It relies on the tester's intuition and past experience with common defect patterns."
+  },
+  {
+    "id": 24,
+    "points": 1,
+    "loRef": "FL-4.3.3",
+    "chapter": 4,
+    "stem": "A tester is exploratory testing a new mobile app under a time-boxed session. During the session, the tester documents test ideas, explores the app, and records findings simultaneously. Which statement BEST describes exploratory testing?",
+    "options": [
+      "Exploratory testing is informal and unstructured, so it produces no documentation",
+      "Exploratory testing uses a test charter to guide learning and discovery while executing tests concurrently with design",
+      "Exploratory testing replaces all other test techniques and is sufficient on its own for complete coverage",
+      "Exploratory testing is only suitable for unit testing and not for system or acceptance testing"
+    ],
+    "correct": 1,
+    "explanation": "Exploratory testing simultaneously involves test design, execution, and learning about the software. It is often guided by a test charter that defines the scope and objectives. It is more structured than it might appear — sessions are time-boxed and findings are documented, even though specific test cases are not pre-defined."
+  },
+  {
+    "id": 25,
+    "points": 1,
+    "loRef": "FL-4.5.1",
+    "chapter": 4,
+    "stem": "A team is testing a user registration form with the following acceptance criteria:\n1. Username must be 6–20 characters\n2. Password must contain at least one uppercase letter, one number\n3. Email must be in valid format\n\nWhich approach to acceptance test-driven development (ATDD) BEST describes how these criteria should be used?",
+    "options": [
+      "The acceptance criteria are used as a post-condition to verify the final system after deployment",
+      "The acceptance criteria are transformed into executable acceptance tests before development begins",
+      "The acceptance criteria are documented but test design only starts after all code has been written",
+      "The acceptance criteria are optional guidance that testers can choose to implement or ignore"
+    ],
+    "correct": 1,
+    "explanation": "In ATDD (acceptance test-driven development), acceptance criteria are written as executable tests before development begins, forming the definition of done for each user story. Tests are created collaboratively and drive the development of the feature, following the test-first approach."
+  },
+  {
+    "id": 26,
+    "points": 1,
+    "loRef": "FL-4.6.2",
+    "chapter": 4,
+    "stem": "Which of the following BEST describes branch coverage in white-box testing?",
+    "options": [
+      "Branch coverage ensures every line of code is executed at least once",
+      "Branch coverage ensures every decision outcome (true/false) in the code is executed at least once",
+      "Branch coverage requires executing every possible path through the code",
+      "Branch coverage measures the percentage of user-visible features that have been tested"
+    ],
+    "correct": 1,
+    "explanation": "Branch coverage requires that every branch (decision outcome) in the code is executed at least once. For an if-else statement, both the 'true' branch and 'false' branch must be executed. Branch coverage is stronger than statement coverage — 100% branch coverage implies 100% statement coverage, but not vice versa."
+  },
+  {
+    "id": 27,
+    "points": 1,
+    "loRef": "FL-5.1.1",
+    "chapter": 5,
+    "stem": "A test manager is planning the testing for a healthcare application. The application processes critical patient medication data. Which test approach is MOST appropriate for this context?",
+    "options": [
+      "Risk-based testing focusing effort on high-criticality, high-likelihood failure areas",
+      "Exhaustive testing to ensure every possible input combination is verified",
+      "Ad-hoc testing since healthcare applications are too complex for structured testing",
+      "Developer-only testing since healthcare requires domain expertise not available in a testing team"
+    ],
+    "correct": 0,
+    "explanation": "Risk-based testing is appropriate for safety-critical systems like healthcare applications. It focuses testing effort where the product risk (combination of likelihood and impact of failure) is highest. Since exhaustive testing is impossible, prioritizing based on risk ensures the most critical aspects are thoroughly tested within time and resource constraints."
+  },
+  {
+    "id": 28,
+    "points": 1,
+    "loRef": "FL-5.1.2",
+    "chapter": 5,
+    "stem": "Which of the following would be classified as a PRODUCT risk (rather than a project risk) in software testing?",
+    "options": [
+      "Loss of key team members during the project timeline",
+      "Scope creep causing the project to exceed its allocated budget",
+      "Insufficient test automation leading to slow regression test cycles",
+      "A defect in the payment processing module causing incorrect billing to customers"
+    ],
+    "correct": 3,
+    "explanation": "Product risks are risks related to the quality of the software being developed — defects that could cause negative outcomes for users or the business. A defective payment module causing incorrect billing is a product risk. Loss of team members (project resource risk), budget overrun (project cost risk), and slow automation (project execution risk) are project risks."
+  },
+  {
+    "id": 29,
+    "points": 1,
+    "loRef": "FL-5.1.3",
+    "chapter": 5,
+    "stem": "A test plan specifies that system testing will begin when all unit and integration tests have passed and the build has been successfully deployed to the test environment. Which type of criterion is this?\n\ni. Entry criterion for system testing\nii. Exit criterion for integration testing\niii. Completion criterion for unit testing\niv. Exit criterion for system testing\nv. Suspension criterion for system testing",
+    "options": [
+      "i and iii",
+      "i and ii",
+      "ii and iv",
+      "iii and v"
+    ],
+    "correct": 1,
+    "multiSelect": false,
+    "explanation": "The conditions described (all prior tests passed, build deployed) are conditions that must be met before system testing begins — these are entry criteria for system testing (i). These same conditions also represent what must be achieved before the prior phase (integration testing) can be considered complete — which is an exit criterion for integration testing (ii)."
+  },
+  {
+    "id": 30,
+    "points": 1,
+    "loRef": "FL-5.1.4",
+    "chapter": 5,
+    "stem": "A project uses planning poker for test effort estimation. Team members show different cards (2, 5, 8, 13, 20 hours). The estimates vary widely. Which action BEST supports accurate effort estimation?",
+    "options": [
+      "Take the average of all estimates as the final estimate without further discussion",
+      "Accept the project manager's estimate as the authoritative estimate",
+      "Facilitate a discussion among team members with high and low estimates to share reasoning",
+      "Discard all estimates and use only historical data from similar past projects"
+    ],
+    "correct": 2,
+    "explanation": "When estimates vary significantly in planning poker, the team discusses the reasoning behind high and low estimates. This exchange of information helps reveal assumptions, risks, and complexities that others may not have considered, leading to a more informed and accurate consensus estimate."
+  },
+  {
+    "id": 31,
+    "points": 1,
+    "loRef": "FL-5.1.5",
+    "chapter": 5,
+    "stem": "A test team tracks test case execution status throughout a sprint. On day 5 of 10, 60% of planned tests are executed but the defect detection rate has dropped significantly. Which test monitoring activity provides the MOST useful information for deciding whether to continue with the current test approach?",
+    "options": [
+      "Calculating the total number of test cases written since the start of the project",
+      "Measuring the percentage of requirements covered by existing test cases",
+      "Analyzing the defect detection rate trend alongside remaining test coverage",
+      "Counting the total number of open defects regardless of severity"
+    ],
+    "correct": 2,
+    "explanation": "Analyzing the defect detection rate trend alongside remaining test coverage gives the most actionable information. A declining defect detection rate combined with incomplete coverage may suggest the current test set is not finding defects effectively, warranting a change in approach (e.g., more exploratory testing, focusing on high-risk areas)."
+  },
+  {
+    "id": 32,
+    "points": 1,
+    "loRef": "FL-5.1.6",
+    "chapter": 5,
+    "stem": "A test report shows that 95% of test cases have passed but 8 critical defects remain open. The release deadline is tomorrow. Which information in the test report is MOST important for the stakeholder's release decision?",
+    "options": [
+      "The overall pass rate of 95% as the primary indicator of release readiness",
+      "The number of test cases written and executed compared to the total planned",
+      "The severity, status, and business impact of the 8 open critical defects",
+      "The ratio of automated to manual test cases in the test suite"
+    ],
+    "correct": 2,
+    "explanation": "For release decisions, stakeholders need information about the risk of releasing with known defects. The severity, status, and business impact of open defects is the most critical information — 8 critical open defects may represent a significant risk even with a high overall pass rate."
+  },
+  {
+    "id": 33,
+    "points": 1,
+    "loRef": "FL-5.1.7",
+    "chapter": 5,
+    "stem": "A test manager is performing configuration management for test work products. Which of the following is a configuration management activity that supports testing?",
+    "options": [
+      "Writing test cases in a specific format to ensure stakeholder readability",
+      "Tracking the version of test scripts to ensure they match the correct version of the software under test",
+      "Estimating the number of test hours required for the upcoming release cycle",
+      "Selecting the appropriate test technique for each test level"
+    ],
+    "correct": 1,
+    "explanation": "Configuration management in testing involves tracking and controlling versions of test work products (test plans, test cases, test scripts, test data) to ensure they remain synchronized with the correct version of the software under test. This prevents testing against wrong versions and ensures reproducibility."
+  },
+  {
+    "id": 34,
+    "points": 1,
+    "loRef": "FL-5.2.1",
+    "chapter": 5,
+    "stem": "Which of the following BEST describes defect management in the context of software testing?",
+    "options": [
+      "Defect management is the process of ensuring all defects are fixed before release",
+      "Defect management covers the lifecycle of defects from initial discovery through investigation and resolution",
+      "Defect management is solely the responsibility of the development team, not the testers",
+      "Defect management only applies to defects found in production, not during testing"
+    ],
+    "correct": 1,
+    "explanation": "Defect management is the process of recognizing, investigating, classifying, and resolving defects throughout their lifecycle. It covers all phases from discovery (by testing, review, or production monitoring) through investigation, prioritization, fixing, and verification. Testers play a key role in reporting and verifying defects."
+  },
+  {
+    "id": 35,
+    "points": 1,
+    "loRef": "FL-5.3.1",
+    "chapter": 5,
+    "stem": "A test manager needs to establish a complete test team for a large enterprise project. Which skill set should a well-rounded test team member possess?",
+    "options": [
+      "Only deep programming skills, since testing automation is the most important capability",
+      "Only domain knowledge of the business area being tested",
+      "A combination of testing knowledge, domain knowledge, technical skills, and interpersonal skills",
+      "Primarily certification credentials, since formal qualifications are the key indicator of test quality"
+    ],
+    "correct": 2,
+    "explanation": "Effective testers need a combination of skills: testing knowledge (test techniques, defect management), domain knowledge (understanding the business context), technical skills (tools, automation where needed), and interpersonal skills (communication, critical thinking, collaboration). No single skill alone is sufficient."
+  },
+  {
+    "id": 36,
+    "points": 1,
+    "loRef": "FL-6.1.1",
+    "chapter": 6,
+    "stem": "Which of the following BEST describes the purpose of a test management tool?",
+    "options": [
+      "To automatically execute test cases and report results without human intervention",
+      "To support planning, tracking, and reporting of testing activities and work products",
+      "To record and replay user interactions for automated regression testing",
+      "To analyze source code statically to find potential defects without execution"
+    ],
+    "correct": 1,
+    "explanation": "Test management tools support test planning, tracking test execution progress, managing test cases, recording results, and generating reports. They help test managers and teams organize testing activities, track coverage, and communicate test status to stakeholders."
+  },
+  {
+    "id": 37,
+    "points": 1,
+    "loRef": "FL-6.1.2",
+    "chapter": 6,
+    "stem": "A team wants to introduce test automation to their regression testing process. Which of the following represents a realistic BENEFIT of test automation?",
+    "options": [
+      "Test automation eliminates the need for manual testing entirely once implemented",
+      "Automated tests always find more defects than manual tests for the same investment",
+      "Automated regression tests can be run more frequently and consistently than manual tests",
+      "Test automation immediately reduces testing costs from the moment it is implemented"
+    ],
+    "correct": 2,
+    "explanation": "A key benefit of test automation is the ability to run tests more frequently and consistently, especially for regression testing. Automated tests do not suffer from human variability, can run overnight or continuously, and provide faster feedback. However, automation does not eliminate manual testing (some tests remain manual), and there is an initial investment before costs are reduced."
+  },
+  {
+    "id": 38,
+    "points": 1,
+    "loRef": "FL-6.1.3",
+    "chapter": 6,
+    "stem": "A team is evaluating whether to automate their current manual test suite of 500 test cases. Which factor is MOST important to consider when deciding which tests to automate?",
+    "options": [
+      "All 500 tests should be automated since automation is always better than manual testing",
+      "Tests that are most frequently executed, stable, and provide high value should be prioritized for automation",
+      "Only tests that are difficult to execute manually should be automated",
+      "Automation should start with the most recently written tests as they are most relevant"
+    ],
+    "correct": 1,
+    "explanation": "When deciding what to automate, priority should be given to tests that are: frequently executed (high reuse value), stable (won't require frequent rework), and provide high value (regression tests, smoke tests, tests on critical paths). Not all tests are suitable for automation — exploratory testing, usability testing, and tests that change frequently may be better left as manual."
+  },
+  {
+    "id": 39,
+    "points": 1,
+    "loRef": "FL-6.1.4",
+    "chapter": 6,
+    "stem": "A test team has recently adopted a new test automation framework. After six months, the team reports that maintaining the automated tests takes almost as much effort as running them manually. Which of the following is MOST likely the cause?",
+    "options": [
+      "The tests are too simple and should be more complex to justify automation",
+      "The automated tests are tightly coupled to the UI implementation details, making them brittle",
+      "Too many automated tests were written — the team should reduce the test suite size",
+      "Automation frameworks are inherently less efficient than manual testing for any project"
+    ],
+    "correct": 1,
+    "explanation": "Brittle automated tests — typically those that are tightly coupled to UI implementation details (specific selectors, coordinates, exact UI text) — break frequently when the application changes, even for minor UI updates. This creates high maintenance overhead. Using higher-level abstractions and the Page Object Model pattern can help reduce this problem."
+  },
+  {
+    "id": 40,
+    "points": 1,
+    "loRef": "FL-6.1.5",
+    "chapter": 6,
+    "stem": "Which of the following BEST describes a risk associated with introducing test automation into an organization?",
+    "options": [
+      "Automation always leads to reduced test quality because machines cannot think creatively",
+      "Automation may create a false sense of security if the automated tests are insufficient or poorly designed",
+      "Test automation prevents teams from performing exploratory testing",
+      "Automation tools are only available as expensive commercial products with no open-source alternatives"
+    ],
+    "correct": 1,
+    "explanation": "A significant risk of test automation is that teams may over-rely on automated tests and develop a false sense of security. If the automated tests are insufficient, test poorly-chosen scenarios, or contain bugs themselves, teams may miss critical defects. Automated tests require quality design and regular maintenance to remain effective."
+  }
+]

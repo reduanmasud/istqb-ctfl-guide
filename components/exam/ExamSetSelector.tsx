@@ -10,10 +10,12 @@ interface Props {
 }
 
 const SETS: { id: ExamSet; label: string; color: string }[] = [
-  { id: "a", label: "Set A", color: "blue" },
-  { id: "b", label: "Set B", color: "purple" },
-  { id: "c", label: "Set C", color: "green" },
-  { id: "d", label: "Set D", color: "orange" },
+  { id: "a", label: "Set A — Official Sample Exam (ISTQB)", color: "blue" },
+  { id: "b", label: "Set B — Official Sample Exam (ISTQB)", color: "purple" },
+  { id: "c", label: "Set C — Practice Exam", color: "green" },
+  { id: "d", label: "Set D — Practice Exam", color: "orange" },
+  { id: "e", label: "Set E — Practice Exam", color: "teal" },
+  { id: "f", label: "Set F — Practice Exam", color: "rose" },
 ];
 
 const accentMap: Record<string, { border: string; bar: string; text: string }> =
@@ -33,6 +35,16 @@ const accentMap: Record<string, { border: string; bar: string; text: string }> =
       border: "border-orange-200",
       bar: "bg-orange-500",
       text: "text-orange-700",
+    },
+    teal: {
+      border: "border-teal-200",
+      bar: "bg-teal-500",
+      text: "text-teal-700",
+    },
+    rose: {
+      border: "border-rose-200",
+      bar: "bg-rose-500",
+      text: "text-rose-700",
     },
   };
 

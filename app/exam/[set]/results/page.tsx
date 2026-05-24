@@ -1,7 +1,7 @@
 import { ExamResultsClient } from "@/components/exam/ExamResultsClient";
 
 export function generateStaticParams() {
-  return [{ set: "a" }, { set: "b" }, { set: "c" }, { set: "d" }];
+  return [{ set: "a" }, { set: "b" }, { set: "c" }, { set: "d" }, { set: "e" }, { set: "f" }];
 }
 
 export default async function Page({

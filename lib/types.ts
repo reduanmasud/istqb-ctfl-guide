@@ -74,7 +74,7 @@ export interface ExamQuestion {
   explanation: string;
 }
 
-export type ExamSet = "a" | "b" | "c" | "d";
+export type ExamSet = "a" | "b" | "c" | "d" | "e" | "f";
 
 export interface ExamSetResult {
   set: ExamSet;

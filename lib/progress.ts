@@ -71,6 +71,8 @@ export function getAllExamSetResults(): Record<ExamSet, ExamSetResult | null> {
     b: p.examSetResults.b ?? null,
     c: p.examSetResults.c ?? null,
     d: p.examSetResults.d ?? null,
+    e: p.examSetResults.e ?? null,
+    f: p.examSetResults.f ?? null,
   };
 }
 

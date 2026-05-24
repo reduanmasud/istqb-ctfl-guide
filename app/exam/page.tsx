@@ -12,6 +12,8 @@ export default function ExamHubPage() {
     b: null,
     c: null,
     d: null,
+    e: null,
+    f: null,
   });
 
   useEffect(() => {

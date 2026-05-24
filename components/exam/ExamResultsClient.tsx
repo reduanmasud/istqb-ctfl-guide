@@ -23,12 +23,16 @@ import setA from "@/content/exams/set-a.json";
 import setB from "@/content/exams/set-b.json";
 import setC from "@/content/exams/set-c.json";
 import setD from "@/content/exams/set-d.json";
+import setE from "@/content/exams/set-e.json";
+import setF from "@/content/exams/set-f.json";
 
 const SET_DATA: Record<ExamSet, ExamQuestion[]> = {
   a: setA as ExamQuestion[],
   b: setB as ExamQuestion[],
   c: setC as ExamQuestion[],
   d: setD as ExamQuestion[],
+  e: setE as ExamQuestion[],
+  f: setF as ExamQuestion[],
 };
 
 const chapters = chaptersData as ChapterMeta[];

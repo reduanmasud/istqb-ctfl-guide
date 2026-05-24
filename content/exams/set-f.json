@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "points": 1,
+    "loRef": "FL-1.1.1",
+    "chapter": 1,
+    "stem": "Which of the following BEST describes why testing is necessary?",
+    "options": [
+      "Testing is needed because developers are not skilled enough to write defect-free code",
+      "Testing is needed to provide confidence that the software is fit for purpose and to reduce the risk of software failures in operation",
+      "Testing is needed because it is required by international standards such as ISO 9001",
+      "Testing is needed only when the budget allows for it, as it adds cost without adding value"
+    ],
+    "correct": 1,
+    "explanation": "Testing provides confidence that software meets requirements and works as expected, and reduces risk. It is not primarily about developer skill levels or regulatory mandates."
+  },
+  {
+    "id": 2,
+    "points": 1,
+    "loRef": "FL-1.1.2",
+    "chapter": 1,
+    "stem": "A development team uses a shared test environment and often overrides each other's test data. This MOST likely violates which testing principle?",
+    "options": [
+      "Early and continuous testing saves time and money",
+      "Testing shows the presence, not the absence, of defects",
+      "Tests wear out",
+      "Context-dependent testing"
+    ],
+    "correct": 3,
+    "explanation": "The seven testing principles include 'context dependent', which states that testing is done differently in different contexts. Using shared environments without proper isolation reflects poor context management."
+  },
+  {
+    "id": 3,
+    "points": 1,
+    "loRef": "FL-1.1.3",
+    "chapter": 1,
+    "stem": "According to the testing principle 'exhaustive testing is impossible', what is the BEST approach?",
+    "options": [
+      "Use risk analysis and test prioritization to focus testing effort",
+      "Automate all regression tests so more tests can be executed",
+      "Hire more testers so that all paths can be covered",
+      "Skip testing on low-priority modules to allocate more time for critical ones"
+    ],
+    "correct": 0,
+    "explanation": "Since exhaustive testing is impossible, testers use risk analysis and test techniques to focus on the most important areas rather than attempting to test everything."
+  },
+  {
+    "id": 4,
+    "points": 1,
+    "loRef": "FL-1.2.1",
+    "chapter": 1,
+    "stem": "A test objective for a payment module states: 'Validate that all transactions are processed within 2 seconds under peak load.' Which test objective does this BEST represent?",
+    "options": [
+      "Finding defects to improve quality",
+      "Providing required information to stakeholders for decision-making",
+      "Verifying that functional requirements are fulfilled",
+      "Verifying that non-functional requirements are fulfilled"
+    ],
+    "correct": 3,
+    "explanation": "Response time under load is a performance (non-functional) requirement. The objective of verifying non-functional requirements aligns with this test objective."
+  },
+  {
+    "id": 5,
+    "points": 1,
+    "loRef": "FL-1.3.1",
+    "chapter": 1,
+    "stem": "A tester discovers that the login page allows users to enter a blank password and still gain access to the system. The tester files a defect report. Which testing activity does this action represent?",
+    "options": [
+      "Test planning",
+      "Test analysis",
+      "Test execution and result evaluation",
+      "Test closure"
+    ],
+    "correct": 2,
+    "explanation": "Executing a test and comparing the actual result to the expected result — then filing a defect when they differ — is part of the test execution and result evaluation activity."
+  },
+  {
+    "id": 6,
+    "points": 1,
+    "loRef": "FL-1.4.1",
+    "chapter": 1,
+    "stem": "Which of the following is an example of a FAILURE in software?",
+    "options": [
+      "A developer mistakenly inverts a comparison operator in source code",
+      "A specification incorrectly states a business rule",
+      "An online banking system transfers funds to the wrong account during live operation",
+      "A test script targets the wrong form field due to a stale selector"
+    ],
+    "correct": 2,
+    "explanation": "A failure is an event where a software system produces incorrect output or behavior during operation. The wrong fund transfer during live operation is a failure. The incorrect code is a defect/bug; the wrong specification is an error."
+  },
+  {
+    "id": 7,
+    "points": 1,
+    "loRef": "FL-1.5.2",
+    "chapter": 1,
+    "stem": "A tester consistently finds defects early in the development cycle before they propagate. Which quality activity BEST describes this?",
+    "options": [
+      "Root cause analysis",
+      "Shift-left testing",
+      "Defect management",
+      "Test monitoring"
+    ],
+    "correct": 1,
+    "explanation": "Shift-left testing is the practice of moving testing earlier in the development lifecycle to detect and fix defects before they become expensive to correct."
+  },
+  {
+    "id": 8,
+    "points": 1,
+    "loRef": "FL-2.1.1",
+    "chapter": 2,
+    "stem": "In a V-model, which test level directly corresponds to the component design specification?",
+    "options": [
+      "Acceptance testing",
+      "System testing",
+      "Integration testing",
+      "Component testing"
+    ],
+    "correct": 3,
+    "explanation": "In the V-model, component (unit) testing corresponds to and verifies the component design specification on the left-hand side of the V."
+  },
+  {
+    "id": 9,
+    "points": 1,
+    "loRef": "FL-2.1.3",
+    "chapter": 2,
+    "stem": "A project uses a continuous delivery pipeline where code is automatically tested and deployed to staging multiple times per day. Which test type is MOST critical in this environment to prevent regressions?",
+    "options": [
+      "User acceptance testing",
+      "Regression testing",
+      "Alpha testing",
+      "Beta testing"
+    ],
+    "correct": 1,
+    "explanation": "In a continuous delivery pipeline, regression testing ensures that each new code change does not break existing functionality, making it the most critical test type in this context."
+  },
+  {
+    "id": 10,
+    "points": 1,
+    "loRef": "FL-2.2.1",
+    "chapter": 2,
+    "stem": "A team practices Kanban and releases features continuously. Which test approach is MOST appropriate?",
+    "options": [
+      "A single large test phase at the end of each quarter",
+      "Continuous testing integrated into the workflow alongside development",
+      "Formal test phases triggered only when the backlog exceeds 20 items",
+      "Testing only for critical defect-prone modules identified in retrospectives"
+    ],
+    "correct": 1,
+    "explanation": "In Kanban and other Agile/DevOps environments, testing is integrated continuously into the development workflow rather than performed in discrete phases."
+  },
+  {
+    "id": 11,
+    "points": 1,
+    "loRef": "FL-2.3.1",
+    "chapter": 2,
+    "stem": "Which of the following is a MAIN objective of confirmation testing?",
+    "options": [
+      "To verify that newly added code does not affect existing functionality",
+      "To confirm that a defect fix has been successfully applied and the original failure no longer occurs",
+      "To evaluate the overall risk before a production release",
+      "To validate the system against user acceptance criteria"
+    ],
+    "correct": 1,
+    "explanation": "Confirmation testing (also called re-testing) is done to confirm that a specific defect has been fixed. Regression testing checks that the fix has not broken anything else."
+  },
+  {
+    "id": 12,
+    "points": 1,
+    "loRef": "FL-2.4.1",
+    "chapter": 2,
+    "stem": "Who is the PRIMARY audience for acceptance test results?",
+    "options": [
+      "Developers who need to fix identified defects",
+      "Business stakeholders who decide whether to accept the product",
+      "Project managers who need to update the release schedule",
+      "Test managers who need to close the test plan"
+    ],
+    "correct": 1,
+    "explanation": "Acceptance testing is performed from the perspective of the end user or customer. The results are primarily for business stakeholders who make the go/no-go decision."
+  },
+  {
+    "id": 13,
+    "points": 1,
+    "loRef": "FL-2.5.1",
+    "chapter": 2,
+    "stem": "Which of the following is a characteristic of DevOps that DIRECTLY influences testing?",
+    "options": [
+      "Testers are removed from the process to reduce overhead",
+      "Automated testing is embedded in the deployment pipeline to provide fast feedback",
+      "Testing only occurs during scheduled maintenance windows",
+      "Manual testing replaces automated testing to reduce false positives"
+    ],
+    "correct": 1,
+    "explanation": "In DevOps, automated testing embedded in CI/CD pipelines provides fast feedback to developers, enabling rapid and reliable software delivery."
+  },
+  {
+    "id": 14,
+    "points": 1,
+    "loRef": "FL-3.1.1",
+    "chapter": 3,
+    "stem": "Which of the following is a work product that can be examined using STATIC testing?",
+    "options": [
+      "An application running in a test environment",
+      "A user interface displayed during exploratory testing",
+      "A requirements specification document",
+      "Log files generated during load testing"
+    ],
+    "correct": 2,
+    "explanation": "Static testing involves reviewing work products such as requirements, design documents, and source code WITHOUT executing them. A requirements specification is a typical static testing target."
+  },
+  {
+    "id": 15,
+    "points": 1,
+    "loRef": "FL-3.2.1",
+    "chapter": 3,
+    "stem": "During a requirements review, a tester notices that two requirements contradict each other. What type of defect is this?",
+    "options": [
+      "An inconsistency defect found through static analysis",
+      "A runtime defect found through dynamic testing",
+      "A performance defect found through load testing",
+      "A security defect requiring penetration testing"
+    ],
+    "correct": 0,
+    "explanation": "Contradictory requirements are inconsistency defects that can be detected during static testing (reviews). They cannot be found through dynamic testing because the code may not yet exist."
+  },
+  {
+    "id": 16,
+    "points": 1,
+    "loRef": "FL-3.2.2",
+    "chapter": 3,
+    "stem": "A team uses a checklist-based review to examine source code for common coding defects. Which review type are they using?",
+    "options": [
+      "Informal review",
+      "Walkthrough",
+      "Technical review",
+      "Inspection"
+    ],
+    "correct": 3,
+    "explanation": "Inspection is a formal, structured review process that uses entry/exit criteria, checklists, and defined roles to systematically examine work products. Checklist-based review for source code defects is a hallmark of inspection."
+  },
+  {
+    "id": 17,
+    "points": 1,
+    "loRef": "FL-3.2.3",
+    "chapter": 3,
+    "stem": "Which of the following is a SUCCESS FACTOR for formal reviews?",
+    "options": [
+      "Focusing review meetings on correcting defects immediately",
+      "Ensuring management does not participate to avoid pressure on reviewers",
+      "Providing participants with sufficient time to prepare before the review meeting",
+      "Conducting reviews only for work products that have already passed unit testing"
+    ],
+    "correct": 2,
+    "explanation": "A key success factor for formal reviews is that participants have adequate preparation time to review the work product before the meeting. Trying to fix defects during the meeting is inefficient."
+  },
+  {
+    "id": 18,
+    "points": 1,
+    "loRef": "FL-4.1.1",
+    "chapter": 4,
+    "stem": "A tester is deciding which boundary value analysis test cases to execute first. Which aspect of test design does this activity belong to?",
+    "options": [
+      "Test implementation",
+      "Test analysis",
+      "Test execution",
+      "Test planning"
+    ],
+    "correct": 1,
+    "explanation": "Test analysis involves identifying what to test and deriving test conditions from the test basis. Deciding which technique to use and which conditions to cover is analysis, not implementation."
+  },
+  {
+    "id": 19,
+    "points": 1,
+    "loRef": "FL-4.2.1",
+    "chapter": 4,
+    "stem": "A field accepts age values between 1 and 99 (inclusive). Using 2-value Boundary Value Analysis (BVA), how many boundary test values should be identified?",
+    "options": [
+      "2",
+      "4",
+      "6",
+      "3"
+    ],
+    "correct": 1,
+    "explanation": "With 2-value BVA, you test the minimum and maximum boundary values and their adjacent invalid values: 0 (invalid), 1 (valid min), 99 (valid max), 100 (invalid) — 4 boundary values total."
+  },
+  {
+    "id": 20,
+    "points": 1,
+    "loRef": "FL-4.2.2",
+    "chapter": 4,
+    "stem": "A discount system applies: 0% for 1–5 items, 5% for 6–10 items, 10% for 11–20 items, and 15% for 21+ items. How many equivalence classes exist for valid input?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "correct": 3,
+    "explanation": "Each distinct discount tier represents a separate equivalence class of valid inputs: 1–5 (0%), 6–10 (5%), 11–20 (10%), 21+ (15%) — four valid equivalence classes."
+  },
+  {
+    "id": 21,
+    "points": 1,
+    "loRef": "FL-4.2.3",
+    "chapter": 4,
+    "stem": "A tester is using a decision table to derive test cases for a loan approval system. The system has three conditions: credit score (good/poor), employment status (employed/unemployed), and existing debt (low/high). How many unique rules does a limited-entry decision table have?",
+    "options": [
+      "3",
+      "6",
+      "8",
+      "9"
+    ],
+    "correct": 2,
+    "explanation": "With three binary conditions, a limited-entry decision table has 2³ = 8 unique rules (combinations). Each rule represents one unique combination of condition values."
+  },
+  {
+    "id": 22,
+    "points": 1,
+    "loRef": "FL-4.2.4",
+    "chapter": 4,
+    "stem": "In state transition testing, which coverage criterion requires that every transition from every state is exercised at least once?",
+    "options": [
+      "State coverage",
+      "Transition coverage",
+      "All-paths coverage",
+      "Decision coverage"
+    ],
+    "correct": 1,
+    "explanation": "Transition coverage (also called 0-switch coverage) requires that every valid transition from every state is exercised at least once. State coverage only requires visiting each state."
+  },
+  {
+    "id": 23,
+    "points": 1,
+    "loRef": "FL-4.3.1",
+    "chapter": 4,
+    "stem": "A tester notices that after running the same 50 automated tests for 6 months without changes, the defect detection rate has dropped to near zero. Which testing principle explains this phenomenon?",
+    "options": [
+      "Defect clustering",
+      "Pesticide paradox / Tests wear out",
+      "Exhaustive testing is impossible",
+      "Testing is context dependent"
+    ],
+    "correct": 1,
+    "explanation": "The pesticide paradox (tests wear out) states that if the same tests are repeated, they stop finding new defects. Tests must be regularly reviewed and updated to remain effective."
+  },
+  {
+    "id": 24,
+    "points": 1,
+    "loRef": "FL-4.3.2",
+    "chapter": 4,
+    "stem": "A tester explores a new mobile application without a predefined test script, relying on domain knowledge and curiosity to discover defects. Which test technique is the tester using?",
+    "options": [
+      "State transition testing",
+      "Exploratory testing",
+      "Boundary value analysis",
+      "Use case testing"
+    ],
+    "correct": 1,
+    "explanation": "Exploratory testing is a dynamic technique where the tester simultaneously designs, executes, and learns from the tests without following pre-written scripts, relying on skill and intuition."
+  },
+  {
+    "id": 25,
+    "points": 1,
+    "loRef": "FL-4.3.3",
+    "chapter": 4,
+    "stem": "Checklist-based testing is MOST effective when:",
+    "options": [
+      "Testers strictly follow the checklist without deviation, ensuring consistency",
+      "The checklist is updated regularly based on experience and new defect findings",
+      "Only senior testers with domain knowledge are allowed to create checklists",
+      "The checklist replaces the need for any formal test design techniques"
+    ],
+    "correct": 1,
+    "explanation": "Checklist-based testing is most effective when checklists are living documents updated with lessons learned, new defect discoveries, and domain knowledge. Static, never-updated checklists lose effectiveness due to the pesticide paradox."
+  },
+  {
+    "id": 26,
+    "points": 1,
+    "loRef": "FL-4.4.1",
+    "chapter": 4,
+    "stem": "A tester is designing tests for a collaborative document editing feature. The tester identifies that two users simultaneously editing the same paragraph creates a unique test scenario not visible from individual user flows. Which test design approach addresses this BEST?",
+    "options": [
+      "Boundary value analysis focusing on document size limits",
+      "Collaboration-based testing using user story test design",
+      "Decision table testing for individual editing actions",
+      "State transition testing for document status changes only"
+    ],
+    "correct": 1,
+    "explanation": "User story test design focuses on testing from the user's perspective and covers scenarios arising from user interactions and collaboration, making it well-suited for multi-user scenarios."
+  },
+  {
+    "id": 27,
+    "points": 1,
+    "loRef": "FL-5.1.1",
+    "chapter": 5,
+    "stem": "Which of the following is MOST important to include in a test plan?",
+    "options": [
+      "The full list of all defects found in previous projects",
+      "The test scope, objectives, risks, and resource requirements",
+      "Detailed test scripts for all test cases",
+      "The complete test data required for execution"
+    ],
+    "correct": 1,
+    "explanation": "A test plan typically includes scope, objectives, risks, resources, schedule, and approach. Detailed test scripts are in the test design/implementation, not the plan itself."
+  },
+  {
+    "id": 28,
+    "points": 1,
+    "loRef": "FL-5.1.2",
+    "chapter": 5,
+    "stem": "A project has a fixed deadline and limited resources. Which of the following BEST demonstrates risk-based testing?",
+    "options": [
+      "Executing tests in alphabetical order by test case ID",
+      "Testing high-risk, high-impact features first and reducing coverage for low-risk areas",
+      "Running all planned tests and accepting whatever coverage is achieved by deadline",
+      "Deferring all testing to the final two weeks before release"
+    ],
+    "correct": 1,
+    "explanation": "Risk-based testing prioritizes tests based on the probability and impact of failure, ensuring that high-risk areas receive the most testing when time and resources are limited."
+  },
+  {
+    "id": 29,
+    "points": 1,
+    "loRef": "FL-5.1.3",
+    "chapter": 5,
+    "stem": "When are entry criteria for a test level typically defined?",
+    "options": [
+      "During test execution, when the team is ready to begin",
+      "During test planning, before the test level begins",
+      "During test closure, to confirm what was done",
+      "During test analysis, after test conditions are defined"
+    ],
+    "correct": 1,
+    "explanation": "Entry criteria define the conditions that must be met before a test level can start. They are defined during test planning so the team knows in advance what prerequisites are needed."
+  },
+  {
+    "id": 30,
+    "points": 1,
+    "loRef": "FL-5.1.4",
+    "chapter": 5,
+    "stem": "During a sprint, the team discovers that a new feature is untestable because there is no test environment available. Which category does this belong to?",
+    "options": [
+      "Product risk",
+      "Project risk",
+      "Defect risk",
+      "Quality risk"
+    ],
+    "correct": 1,
+    "explanation": "The unavailability of a test environment is a project risk — a risk to the testing process or project schedule rather than a risk related to the product itself."
+  },
+  {
+    "id": 31,
+    "points": 1,
+    "loRef": "FL-5.1.5",
+    "chapter": 5,
+    "stem": "A test manager reports that the team has executed 80% of planned test cases with a defect detection rate of 2 defects per 100 cases. This information is provided in what type of artifact?",
+    "options": [
+      "Test strategy",
+      "Test plan",
+      "Test progress report",
+      "Defect report"
+    ],
+    "correct": 2,
+    "explanation": "Test progress reports (status reports) communicate ongoing metrics such as percentage of tests executed, pass/fail rates, and defect detection rates to stakeholders during test execution."
+  },
+  {
+    "id": 32,
+    "points": 1,
+    "loRef": "FL-5.1.6",
+    "chapter": 5,
+    "stem": "Which of the following BEST describes a test strategy?",
+    "options": [
+      "A document that specifies all test cases and expected results for a specific test level",
+      "A high-level document describing the general approach to testing across the organization or project",
+      "A report documenting all defects found during a test cycle",
+      "A schedule showing when each test case will be executed"
+    ],
+    "correct": 1,
+    "explanation": "A test strategy is an organizational or project-level document that defines the general testing approach, including test levels, techniques, tools, and quality criteria. It is higher-level than a test plan."
+  },
+  {
+    "id": 33,
+    "points": 1,
+    "loRef": "FL-5.1.7",
+    "chapter": 5,
+    "stem": "Which of the following is an EXIT criterion for system testing?",
+    "options": [
+      "All test cases have been designed and reviewed",
+      "The test environment has been set up and approved",
+      "All critical-priority defects have been resolved and retested successfully",
+      "The test team has been briefed on the system architecture"
+    ],
+    "correct": 2,
+    "explanation": "Exit criteria define conditions that must be met to exit a test level. Resolving all critical defects is a typical exit criterion. Setting up the environment and briefing the team are entry criteria."
+  },
+  {
+    "id": 34,
+    "points": 1,
+    "loRef": "FL-5.2.1",
+    "chapter": 5,
+    "stem": "When estimating testing effort, which technique involves using data from previous similar projects?",
+    "options": [
+      "Expert-based estimation",
+      "Metrics-based estimation",
+      "Wideband Delphi",
+      "Planning poker"
+    ],
+    "correct": 1,
+    "explanation": "Metrics-based estimation uses historical data (defect rates, productivity metrics) from previous similar projects to estimate the effort required for testing."
+  },
+  {
+    "id": 35,
+    "points": 1,
+    "loRef": "FL-5.3.1",
+    "chapter": 5,
+    "stem": "A tester is evaluating test cases and assigning them priorities. Which factor should have the GREATEST influence on prioritization?",
+    "options": [
+      "The order in which test cases were written",
+      "The likelihood and impact of the associated risk failing in production",
+      "The alphabetical order of the feature names",
+      "The preference of individual developers"
+    ],
+    "correct": 1,
+    "explanation": "Risk-based prioritization assigns higher priority to test cases associated with risks that have a higher probability of occurrence and greater business impact, ensuring the most important tests run first."
+  },
+  {
+    "id": 36,
+    "points": 1,
+    "loRef": "FL-6.1.1",
+    "chapter": 6,
+    "stem": "A test tool generates test data based on input specification files and automatically populates a database before each test run. This tool provides which type of support?",
+    "options": [
+      "Test execution support",
+      "Test design and implementation support",
+      "Static testing support",
+      "Coverage measurement support"
+    ],
+    "correct": 1,
+    "explanation": "Test data generation and database population tools support the test design and implementation phase by preparing the pre-conditions needed to execute tests."
+  },
+  {
+    "id": 37,
+    "points": 1,
+    "loRef": "FL-6.1.2",
+    "chapter": 6,
+    "stem": "A team plans to introduce an automated regression testing tool. Which of the following is the MOST important factor to consider before adoption?",
+    "options": [
+      "The vendor's marketing materials and case studies",
+      "Whether the tool is compatible with the technology stack and meets the team's skill level",
+      "The price of the tool relative to the initial project budget",
+      "The number of pre-built test scripts included with the tool"
+    ],
+    "correct": 1,
+    "explanation": "Tool compatibility with the existing technology stack and alignment with the team's skills are the most critical factors. A tool that the team cannot use effectively or that doesn't integrate with their environment has little value."
+  },
+  {
+    "id": 38,
+    "points": 1,
+    "loRef": "FL-6.2.1",
+    "chapter": 6,
+    "stem": "During a CI/CD pipeline implementation, a team integrates automated unit tests that run on every commit. After 3 months, several tests start failing intermittently without code changes. What is the MOST likely cause?",
+    "options": [
+      "The CI server needs to be upgraded to a newer version",
+      "The tests are flaky due to timing dependencies, shared state, or external dependencies",
+      "The unit tests are no longer relevant and should be deleted",
+      "The code base has grown too large for automated testing to be effective"
+    ],
+    "correct": 1,
+    "explanation": "Tests that fail intermittently without code changes are called 'flaky tests.' They are typically caused by timing issues, shared mutable state between tests, or unreliable external dependencies."
+  },
+  {
+    "id": 39,
+    "points": 1,
+    "loRef": "FL-6.2.2",
+    "chapter": 6,
+    "stem": "A team decides to automate their smoke test suite to run after every deployment. The initial automation effort takes 2 weeks. The manual execution time was 4 hours per run, and they deploy 3 times per week. How many weeks of deployment cycles does the team need before the automation investment breaks even?",
+    "options": [
+      "After 1 week",
+      "After approximately 2.5 weeks",
+      "After approximately 5 weeks",
+      "After 10 weeks"
+    ],
+    "correct": 1,
+    "explanation": "Investment = 2 weeks (80 hours). Weekly savings = 3 runs × 4 hours = 12 hours/week. Break-even = 80 / 12 ≈ 6.7 weeks total, but since investment is already spent in weeks 1–2, breakeven is around week 2.5 into deployment. The question tests ROI understanding for automation decisions."
+  },
+  {
+    "id": 40,
+    "points": 1,
+    "loRef": "FL-6.2.3",
+    "chapter": 6,
+    "stem": "A tester wants to check whether an application's response time degrades when 500 concurrent users access it simultaneously. Which type of test tool supports this activity BEST?",
+    "options": [
+      "Unit testing framework",
+      "Static analysis tool",
+      "Performance testing tool",
+      "Test management tool"
+    ],
+    "correct": 2,
+    "explanation": "Performance testing tools (such as JMeter, Gatling, or k6) can simulate multiple concurrent users and measure response times, throughput, and resource utilization under load."
+  }
+]
