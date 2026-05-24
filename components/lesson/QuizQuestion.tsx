@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { CheckCircle2, XCircle, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/cn";
+import { Markdown } from "@/components/Markdown";
 import type { Quiz } from "@/lib/types";
 
 interface Props {
@@ -61,9 +62,9 @@ export function QuizQuestion({ quiz, onComplete }: Props) {
           {isMulti ? "Select TWO" : "Quick Check"}
         </span>
       </div>
-      <p className="text-slate-800 leading-relaxed mb-4">
-        {quiz.question}
-      </p>
+      <div className="text-slate-800 leading-relaxed mb-4">
+        <Markdown variant="inline">{quiz.question}</Markdown>
+      </div>
       <div className="flex flex-col gap-2 mb-4">
         {quiz.options.map((opt, idx) => {
           const state = getOptionState(idx);
@@ -96,7 +97,9 @@ export function QuizQuestion({ quiz, onComplete }: Props) {
               >
                 {String.fromCharCode(65 + idx)}
               </span>
-              <span className="leading-relaxed">{opt}</span>
+              <span className="leading-relaxed">
+                <Markdown variant="inline">{opt}</Markdown>
+              </span>
               {state === "correct" && (
                 <CheckCircle2 className="ml-auto mt-0.5 h-4 w-4 shrink-0 text-green-500" />
               )}
@@ -128,9 +131,9 @@ export function QuizQuestion({ quiz, onComplete }: Props) {
           <p className="font-semibold mb-1">
             {allCorrect ? "✓ Correct!" : "✗ Not quite"}
           </p>
-          <p className="text-slate-600 text-xs leading-relaxed">
-            {quiz.explanation}
-          </p>
+          <div className="text-slate-600 text-xs leading-relaxed">
+            <Markdown>{quiz.explanation}</Markdown>
+          </div>
         </div>
       )}
     </div>
